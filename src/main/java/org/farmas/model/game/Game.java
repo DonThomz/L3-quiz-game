@@ -17,23 +17,23 @@ public class Game {
     Phase[] phases;
     ArrayList<Player> players;
 
-    public Game(){
+    public Game() {
         phases = new Phase[]{new Phase1(), new Phase2(), new Phase3()};
         players = new ArrayList<>();
 
         // select 4 players
         pickPlayers();
-        
+
     }
 
-    private void pickPlayers(){
+    private void pickPlayers() {
         ArrayList<Integer> randomNbPick = new ArrayList<>();
         for (int i = 0; i < MAX_PLAYERS; i++) {
             Player tmp_p;
-            do{
+            do {
                 tmp_p = App.playerSet.selectPlayer();
 
-            }while(randomNbPick.contains(tmp_p.getId()));
+            } while (randomNbPick.contains(tmp_p.getId()));
             randomNbPick.add(tmp_p.getId());
             players.add(tmp_p);
         }

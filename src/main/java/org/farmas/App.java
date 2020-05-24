@@ -75,7 +75,6 @@ public class App extends Application {
         }*/
 
 
-
         Themes themes = new Themes();
         themes.selectFiveTheme();
 
