@@ -39,13 +39,4 @@ public class MCQ {
         return incorrectAnswers;
     }
 
-    @Override
-    public String toString() {
-        return "QuestionMCQ{" +
-                super.toString() + "\n" +
-                "question='" + question + '\'' +
-                ", correctAnswer='" + correctAnswer + '\'' +
-                ", incorrectAnswers=" + Arrays.toString(incorrectAnswers) +
-                '}';
-    }
 }
