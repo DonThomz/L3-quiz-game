@@ -1,26 +1,32 @@
-package org.farmas.model.questions;
+package org.farmas.model.questions.types;
 
 import java.util.Arrays;
 
-public class QuestionMCQ {
+public class MCQ {
 
     // Attributes
-
     private final String question;
     private final String correctAnswer;
     private final String[] incorrectAnswers;
 
 
     // Constructor
-
-    public QuestionMCQ(String question, String correctAnswer, String... incorrectAnswers) {
+    public MCQ(String question, String correctAnswer, String... incorrectAnswers) {
         this.question = question;
         this.correctAnswer = correctAnswer;
         this.incorrectAnswers = Arrays.copyOf(incorrectAnswers, incorrectAnswers.length); // deep copy
     }
 
-    // Getters
+    @Override
+    public String toString() {
+        return "MCQ{" +
+                "question='" + question + '\'' +
+                ", correctAnswer='" + correctAnswer + '\'' +
+                ", incorrectAnswers=" + Arrays.toString(incorrectAnswers) +
+                '}';
+    }
 
+    // Getters
     public String getQuestion() {
         return question;
     }
