@@ -5,20 +5,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.farmas.model.game.Game;
+import org.farmas.model.players.PlayerSet;
+import org.farmas.model.themes.Themes;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Scanner;
 
 /**
  * JavaFX App
  */
 public class App extends Application {
+
+    public static PlayerSet playerSet;
 
     private static Scene scene;
 
@@ -32,6 +30,11 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+
+        // init playerSet
+        playerSet = new PlayerSet(20);
+        Game game = new Game();
+
         launch();
     }
 
@@ -40,7 +43,7 @@ public class App extends Application {
         //scene = new Scene(loadFXML("primary"));
         //stage.setScene(scene);
 
-        URL url = new URL("https://opentdb.com/api.php?amount=10&category=20&difficulty=easy");
+        /*URL url = new URL("https://opentdb.com/api.php?amount=10&category=20&difficulty=easy");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
@@ -69,8 +72,12 @@ public class App extends Application {
                 ex.printStackTrace();
             }
 
-        }
+        }*/
 
+
+
+        Themes themes = new Themes();
+        themes.selectFiveTheme();
 
         stage.show();
     }

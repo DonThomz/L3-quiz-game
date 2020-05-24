@@ -1,5 +1,6 @@
 package org.farmas.model.players;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -12,7 +13,7 @@ public class PlayerSet implements Iterable<Player>{
      * Create player set with a custom size of players
      * @param numberOfPlayers pool size of players
      */
-    PlayerSet(int numberOfPlayers){
+    public PlayerSet(int numberOfPlayers){
         this.players = new Vector<>();
         this.numberOfPlayers = numberOfPlayers;
         this.build(); // initialization of players
@@ -23,7 +24,7 @@ public class PlayerSet implements Iterable<Player>{
      * Deep copy assured
      * @param players vector of players
      */
-    PlayerSet(Vector<Player> players){
+    public PlayerSet(Vector<Player> players){
         this.numberOfPlayers = players.size();
         this.players = new Vector<>();
         for (Player player: players
