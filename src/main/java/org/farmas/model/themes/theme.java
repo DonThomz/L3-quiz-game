@@ -17,7 +17,7 @@ public class theme {
     public void selectionerTheme(){
 
     }
-    public void selectionerCinqThemesTheme(){
+    public void selectionerCinqThemes(){
 
     }
     public void affiche(){

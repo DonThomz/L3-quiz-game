@@ -1,5 +1,7 @@
 package org.farmas.model.themes;
 
+import java.util.ArrayList;
+
 public class Themes {
 
     private String[] arrayOfThemes;
@@ -36,6 +38,9 @@ public class Themes {
             }
         }while(true);
     }
-    
+
+    public ArrayList<String> selectFiveTheme(){
+        return null;
+    }
 
 }

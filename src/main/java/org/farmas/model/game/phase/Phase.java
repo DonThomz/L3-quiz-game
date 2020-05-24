@@ -1,4 +1,4 @@
-package org.farmas.model;
+package org.farmas.model.game.phase;
 
 
 /**
@@ -8,7 +8,7 @@ package org.farmas.model;
  * - SelectionnerJoueurs
  * - PhasedeJeu
  */
-public interface phase {
+public interface Phase {
     public void selectPlayer();
     public void phaseDeJeu();
 }
