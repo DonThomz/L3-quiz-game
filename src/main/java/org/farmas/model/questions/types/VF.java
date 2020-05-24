@@ -1,21 +1,26 @@
-package org.farmas.model.questions;
+package org.farmas.model.questions.types;
 
-public class QuestionTF {
+public class VF {
+
+    @Override
+    public String toString() {
+        return "VF{" +
+                "question='" + question + '\'' +
+                ", correctAnswer=" + correctAnswer +
+                '}';
+    }
 
     // Attributes
-
     private final String question;
     private final boolean correctAnswer;
 
     // Constructor
-
-    public QuestionTF(String question, boolean correctAnswer) {
+    public VF(String question, boolean correctAnswer) {
         this.question = question;
         this.correctAnswer = correctAnswer;
     }
 
     // Getters
-
     public String getQuestion() {
         return question;
     }
