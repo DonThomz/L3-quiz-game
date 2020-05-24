@@ -1,6 +1,7 @@
 package org.farmas.model.questions;
 
 import java.util.LinkedList;
+
 /* Donner l’implémentation de la classe ListeQuestions contenant :
  * - Un constructeur
  * - TODO Une méthode AfficherListe

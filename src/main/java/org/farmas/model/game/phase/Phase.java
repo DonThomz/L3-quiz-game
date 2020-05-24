@@ -10,5 +10,6 @@ package org.farmas.model.game.phase;
  */
 public interface Phase {
     public void selectPlayer();
+
     public void phaseDeJeu();
 }

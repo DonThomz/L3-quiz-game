@@ -21,33 +21,33 @@ public class Themes {
         return indicator;
     }
 
-    public String getCurrentTheme(){
+    public String getCurrentTheme() {
         return this.getArrayOfThemes()[this.getIndicator()];
     }
 
-    public void modifyTheme(String theme, int indexTheme){
+    public void modifyTheme(String theme, int indexTheme) {
         this.getArrayOfThemes()[indexTheme] = theme;
     }
-    
-    public String selectTheme(){
+
+    public String selectTheme() {
         do {
             int randomIndex = (int) Math.round(Math.random() * themes.length + 1);
-            if(randomIndex != this.indicator){
+            if (randomIndex != this.indicator) {
                 this.indicator = randomIndex;
                 return this.themes[randomIndex];
             }
-        }while(true);
+        } while (true);
     }
 
-    public String[] selectFiveTheme(){
+    public String[] selectFiveTheme() {
         String[] themes = new String[5];
         ArrayList<Integer> randomNbPick = new ArrayList<>();
         int randomNumber;
         for (int i = 0; i < 5; i++) {
             // pick a random number
-            do{
+            do {
                 randomNumber = (int) (Math.random() * 10 + 1);
-            }while(randomNbPick.contains(randomNumber)); // check if previously taken
+            } while (randomNbPick.contains(randomNumber)); // check if previously taken
             randomNbPick.add(randomNumber);
             themes[i] = this.themes[randomNumber];
         }
