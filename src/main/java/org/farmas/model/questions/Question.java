@@ -1,6 +1,6 @@
 package org.farmas.model.questions;
 
-public class Question {
+public class Question implements Cloneable{
 
     // Attributes
 
@@ -30,5 +30,16 @@ public class Question {
         return level;
     }
 
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
 
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", theme='" + theme + '\'' +
+                ", level=" + level +
+                '}';
+    }
 }

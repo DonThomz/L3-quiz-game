@@ -24,4 +24,14 @@ public class QuestionSA {
     public String getCorrectAnswer() {
         return correctAnswer;
     }
+
+    @Override
+    public String toString() {
+        return "QuestionSA{" +
+                super.toString() + "\n" +
+                "question='" + question + '\'' +
+                ", correctAnswer='" + correctAnswer + '\'' +
+                '}';
+    }
+
 }

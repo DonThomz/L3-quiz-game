@@ -46,9 +46,9 @@ Features Principal :
 	-> score board ( bonus ) 
 	
 Lancement Programme :
-	
+	I - Initialization des joueurs
+	II - Charger les thèmes 
 	A - Lancer une partie 
-		I - Initialization des joueurs 
 		II - Lancement partie 
 
 			-> Choix de 4 joueurs 

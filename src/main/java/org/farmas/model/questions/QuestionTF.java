@@ -23,4 +23,14 @@ public class QuestionTF {
     public boolean isCorrectAnswer() {
         return correctAnswer;
     }
+
+    @Override
+    public String toString() {
+        return "QuestionTF{" +
+                super.toString() + "\n" +
+                "question='" + question + '\'' +
+                ", correctAnswer=" + correctAnswer +
+                '}';
+    }
+
 }
