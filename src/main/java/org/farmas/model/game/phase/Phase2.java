@@ -1,12 +1,8 @@
 package org.farmas.model.game.phase;
 
-<<<<<<< HEAD
-public class Phase2 implements Phase {
-=======
 import org.farmas.model.themes.Themes;
 
-public class Phase2 implements Phase{
->>>>>>> game
+public class Phase2 implements Phase {
     @Override
     public void selectPlayer() {
 
@@ -18,7 +14,7 @@ public class Phase2 implements Phase{
     }
 
     @Override
-    public void selectThemes(Themes themesl) {
+    public void selectThemes(Themes themes) {
 
     }
 }
