@@ -1,6 +1,8 @@
 package org.farmas.model.game.phase;
 
 
+import org.farmas.model.themes.Themes;
+
 /**
  * Une partie de jeu se déroule en plusieurs phases. A chaque phase, le joueur ayant le plus faible score
  * est éliminé et les autres sont sélectionnés pour la phase qui suit.
@@ -12,4 +14,7 @@ public interface Phase {
     public void selectPlayer();
 
     public void phaseDeJeu();
+
+    public void selectThemes(Themes themes);
+
 }
