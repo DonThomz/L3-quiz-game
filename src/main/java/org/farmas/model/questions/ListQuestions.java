@@ -1,5 +1,6 @@
 package org.farmas.model.questions;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /* Donner l’implémentation de la classe ListeQuestions contenant :
@@ -9,11 +10,11 @@ import java.util.LinkedList;
  * - Une méthode SupprimerQuestion de numéro n de la liste
  * - TODO Une (ou plusieurs) méthode(s) SelectionnerQuestion qui sélectionne une question pour un joueur selon une politique qui sera définie dans les différentes phases du jeu.
  */
-public class ListQuestions {
-    LinkedList<Question<?>> questions = new LinkedList<>();
+public class ListQuestions implements Iterable<Question<?>> {
+    private LinkedList<Question<?>> questions;
 
     public ListQuestions() {
-
+        questions = new LinkedList<>();
     }
 
     public void addQuestion(Question<?> question) {
@@ -22,5 +23,10 @@ public class ListQuestions {
 
     public void delQuestion(int index) {
         questions.remove(index);
+    }
+
+    @Override
+    public Iterator<Question<?>> iterator() {
+        return questions.iterator();
     }
 }

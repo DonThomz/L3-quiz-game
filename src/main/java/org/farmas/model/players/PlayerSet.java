@@ -2,6 +2,7 @@ package org.farmas.model.players;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Vector;
 
 public class PlayerSet implements Iterable<Player> {
@@ -60,7 +61,8 @@ public class PlayerSet implements Iterable<Player> {
     }
 
     public Player selectPlayer() {
-        int randomId = (int) Math.round((Math.random() * numberOfPlayers + 1));
+        int randomId = new Random().nextInt(numberOfPlayers);
+        System.out.println(randomId);
         return this.getPlayers().get(randomId);
     }
 
