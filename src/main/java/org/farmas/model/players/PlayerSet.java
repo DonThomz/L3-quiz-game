@@ -1,6 +1,8 @@
 package org.farmas.model.players;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Vector;
 
 public class PlayerSet implements Iterable<Player> {
@@ -13,7 +15,7 @@ public class PlayerSet implements Iterable<Player> {
      *
      * @param numberOfPlayers pool size of players
      */
-    PlayerSet(int numberOfPlayers) {
+    public PlayerSet(int numberOfPlayers) {
         this.players = new Vector<>();
         this.numberOfPlayers = numberOfPlayers;
         this.build(); // initialization of players
@@ -25,7 +27,7 @@ public class PlayerSet implements Iterable<Player> {
      *
      * @param players vector of players
      */
-    PlayerSet(Vector<Player> players) {
+    public PlayerSet(Vector<Player> players) {
         this.numberOfPlayers = players.size();
         this.players = new Vector<>();
         for (Player player : players
@@ -59,7 +61,8 @@ public class PlayerSet implements Iterable<Player> {
     }
 
     public Player selectPlayer() {
-        int randomId = (int) Math.round((Math.random() * numberOfPlayers + 1));
+        int randomId = new Random().nextInt(numberOfPlayers);
+        System.out.println(randomId);
         return this.getPlayers().get(randomId);
     }
 

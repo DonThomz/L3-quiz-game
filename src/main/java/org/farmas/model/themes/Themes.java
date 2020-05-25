@@ -1,15 +1,17 @@
 package org.farmas.model.themes;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Themes {
 
+    private static final int NB_OF_THEMES = 1;
     private String[] themes;
     private int indicator;
 
     public Themes() {
         // TODO charger les thèmes
-        this.themes = new String[10];
+        this.themes = new String[]{"Mythology"};
         this.indicator = -1;
     }
 
@@ -31,12 +33,19 @@ public class Themes {
 
     public String selectTheme() {
         do {
-            int randomIndex = (int) Math.round(Math.random() * themes.length + 1);
-            if (randomIndex != this.indicator) {
-                this.indicator = randomIndex;
-                return this.themes[randomIndex];
-            }
-        } while (true);
+            if(NB_OF_THEMES > 1) {
+                int randomIndex = new Random().nextInt(NB_OF_THEMES);
+                System.out.println(randomIndex);
+                if (randomIndex != this.indicator) {
+                    this.indicator = randomIndex;
+                    try {
+                        return this.themes[randomIndex];
+                    }catch(Exception ex){
+                        ex.printStackTrace();
+                    }
+                }
+            }else return this.themes[0];
+        }while(true);
     }
 
     public String[] selectFiveTheme() {
@@ -45,9 +54,9 @@ public class Themes {
         int randomNumber;
         for (int i = 0; i < 5; i++) {
             // pick a random number
-            do {
-                randomNumber = (int) (Math.random() * 10 + 1);
-            } while (randomNbPick.contains(randomNumber)); // check if previously taken
+            do{
+                randomNumber = new Random().nextInt(NB_OF_THEMES);
+            }while(randomNbPick.contains(randomNumber)); // check if previously taken
             randomNbPick.add(randomNumber);
             themes[i] = this.themes[randomNumber];
         }
