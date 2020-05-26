@@ -10,6 +10,8 @@ import org.farmas.model.players.PlayerSet;
 import org.farmas.model.themes.Themes;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Set;
 
 /**
  * JavaFX App
@@ -34,7 +36,6 @@ public class App extends Application {
         // init playerSet
         playerSet = new PlayerSet(20);
         Game game = new Game();
-
         launch();
     }
 

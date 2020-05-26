@@ -1,14 +1,9 @@
 package org.farmas.model.themes;
 
-import org.farmas.App;
 import org.farmas.model.tools.RessourcesScanner;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 
@@ -23,7 +18,7 @@ public class Themes {
 
         this.titles = new ArrayList<>();
 
-        this.indicator = -1;
+        this.indicator = 0;
 
         // load themes titles from json file
         getAllThemesFromJSON();
@@ -50,6 +45,7 @@ public class Themes {
     private void getAllThemesFromJSON() {
         // get file themes.json
         List<JSONObject> jsonFiles = RessourcesScanner.readJSONFilesFromRessources("themes");
+        System.out.println(jsonFiles);
         if (jsonFiles != null) {
             JSONArray themes = (JSONArray) jsonFiles.get(0).get("title_themes");
             for (int i = 0; i < NB_OF_THEMES; i++) {
@@ -64,7 +60,7 @@ public class Themes {
         this.getTitles().set(indexTheme, theme);
     }
 
-    public String selectTheme() {
+    public String selectRandomTheme() {
         do {
             if (NB_OF_THEMES > 1) {
                 int randomIndex = new Random().nextInt(NB_OF_THEMES);
@@ -78,6 +74,12 @@ public class Themes {
                 }
             } else return this.titles.get(0);
         } while (true);
+    }
+
+    public String selectTheme() {
+        indicator++;
+        if (indicator > 10) indicator = 0; // reset
+        return titles.get((indicator - 1));
     }
 
     public String[] selectFiveTheme() {

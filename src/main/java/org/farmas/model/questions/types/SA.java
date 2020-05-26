@@ -1,7 +1,9 @@
 package org.farmas.model.questions.types;
 
 
-public class SA {
+import org.json.simple.JSONObject;
+
+public class SA implements TypeQuestions {
 
     // Attributes
     private final String question;
@@ -13,6 +15,11 @@ public class SA {
         this.correctAnswer = correctAnswer;
     }
 
+    public SA(JSONObject question) {
+        this.question = question.get("question").toString();
+        this.correctAnswer = question.get("correct_answer").toString();
+    }
+
     @Override
     public String toString() {
         return "SA{" +
@@ -22,6 +29,7 @@ public class SA {
     }
 
     // Getters
+    @Override
     public String getQuestion() {
         return question;
     }

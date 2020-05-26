@@ -1,15 +1,15 @@
 {
-  "title_category": "General Knowledge",
+  "title_category": "General_Knowledge",
   "results":[
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"short_answer",
       "difficulty":"medium",
       "question":"What is the world&#039;s most expensive spice by weight?",
       "correct_answer":"Saffron"
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"Where is the train station &quot;Llanfair&shy;pwllgwyngyll&shy;gogery&shy;chwyrn&shy;drobwll&shy;llan&shy;tysilio&shy;gogo&shy;goch&quot;?",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"Which best selling toy of 1983 caused hysteria, resulting in riots breaking out in stores?",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"boolean",
       "difficulty":"medium",
       "question":"&quot;Typewriter&quot; is the longest word that can be typed using only the first row on a QWERTY keyboard.",
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"Area 51 is located in which US state?",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"boolean",
       "difficulty":"easy",
       "question":"French is an official language in Canada.",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"Which essential condiment is also known as Japanese horseradish?",
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"What geometric shape is generally used for stop signs?",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"What is the shape of the toy invented by Hungarian professor Ern\u0151 Rubik?",
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"What is the name of the Jewish New Year?",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"What is the name of the very first video uploaded to YouTube?",
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"hard",
       "question":"Before the 19th Century, the &quot;Living Room&quot; was originally called the...",
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"Which of these companies does NOT manufacture automobiles?",
@@ -149,7 +149,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"What was the nickname given to the Hughes H-4 Hercules, a heavy transport flying boat which achieved flight in 1947?",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"hard",
       "question":"What is the romanized Korean word for &quot;heart&quot;?",
@@ -173,14 +173,14 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"short_answer",
       "difficulty":"medium",
       "question":"What is the Italian word for &quot;tomato&quot;?",
       "correct_answer":"Pomodoro"
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"boolean",
       "difficulty":"easy",
       "question":"&quot;Ananas&quot; is mostly used as the word for Pineapple in other languages.",
@@ -190,7 +190,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"When was Nintendo founded?",
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"What was Mountain Dew&#039;s original slogan?",
@@ -214,7 +214,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"hard",
       "question":"What year was the RoboSapien toy robot released?",
@@ -226,7 +226,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"When did the website &quot;Facebook&quot; launch?",
@@ -238,7 +238,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"boolean",
       "difficulty":"medium",
       "question":"The scientific name for the Southern Lights is Aurora Australis?",
@@ -248,14 +248,14 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"short_answer",
       "difficulty":"hard",
       "question":"Chartreuse is a color between yellow and what?",
       "correct_answer":"Green"
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"Which of these words means &quot;idle spectator&quot;?",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"Which country drives on the left side of the road?",
@@ -279,7 +279,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"Which country, not including Japan, has the most people of japanese decent?",
@@ -291,7 +291,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"What zodiac sign is represented by a pair of scales?",
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"What nuts are used in the production of marzipan?",
@@ -315,7 +315,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"easy",
       "question":"The likeness of which president is featured on the rare $2 bill of USA currency?",
@@ -327,7 +327,7 @@
       ]
     },
     {
-      "category":"General Knowledge",
+      "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
       "question":"What is the full title of the Prime Minister of the UK?",
