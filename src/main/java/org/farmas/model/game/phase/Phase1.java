@@ -14,8 +14,8 @@ import java.util.Random;
 
 public class Phase1 implements Phase {
 
-    private static final int NB_OF_THEMES = 10;
-    private static final int NB_OF_QUESTIONS = 10;
+    private static final int NB_OF_THEMES = 4;
+    private static final int NB_OF_QUESTIONS = 4;
     ArrayList<Player> players;
     ListQuestions listQuestions;
     String[] themes;

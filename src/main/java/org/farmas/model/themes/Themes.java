@@ -11,14 +11,12 @@ public class Themes {
 
     private static final int NB_OF_THEMES = 10;
     private final ArrayList<String> titles;
-    private int indicator;
+    private static int indicator = 0;
 
 
     public Themes() {
 
         this.titles = new ArrayList<>();
-
-        this.indicator = 0;
 
         // load themes titles from json file
         getAllThemesFromJSON();
@@ -64,8 +62,8 @@ public class Themes {
         do {
             if (NB_OF_THEMES > 1) {
                 int randomIndex = new Random().nextInt(NB_OF_THEMES);
-                if (randomIndex != this.indicator) {
-                    this.indicator = randomIndex;
+                if (randomIndex != indicator) {
+                    indicator = randomIndex;
                     try {
                         return this.titles.get(randomIndex);
                     } catch (Exception ex) {
@@ -77,8 +75,8 @@ public class Themes {
     }
 
     public String selectTheme() {
+        if (indicator > 9) indicator = 0; // reset
         indicator++;
-        if (indicator > 10) indicator = 0; // reset
         return titles.get((indicator - 1));
     }
 
