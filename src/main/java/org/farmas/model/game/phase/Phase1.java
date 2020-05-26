@@ -1,6 +1,7 @@
 package org.farmas.model.game.phase;
 
 import org.farmas.model.players.Player;
+import org.farmas.model.questions.Level;
 import org.farmas.model.questions.ListQuestions;
 import org.farmas.model.questions.Question;
 import org.farmas.model.themes.Themes;
@@ -16,6 +17,7 @@ public class Phase1 implements Phase {
 
     private static final int NB_OF_THEMES = 4;
     private static final int NB_OF_QUESTIONS = 4;
+    private static String LEVEL = Level.EASY.toLowerCase();
     ArrayList<Player> players;
     ListQuestions listQuestions;
     String[] themes;
@@ -24,7 +26,6 @@ public class Phase1 implements Phase {
         this.players = players; // shallow copy
         this.listQuestions = new ListQuestions();
         this.themes = new String[NB_OF_THEMES];
-
         // pick themes
         selectThemes(themes);
 
@@ -42,7 +43,6 @@ public class Phase1 implements Phase {
     @Override
     public void phaseDeJeu() {
         // load questions
-
     }
 
     @Override
@@ -61,7 +61,7 @@ public class Phase1 implements Phase {
         // list of JSON Files
         List<JSONObject> questionsFileArray = RessourcesScanner.readJSONFilesFromRessources("questions", themes);
 
-        ArrayList<JSONObject> easyQuestions = new ArrayList<>();
+        ArrayList<JSONObject> selectedQuestions = new ArrayList<>();
         if (questionsFileArray != null) {
             questionsFileArray.forEach(questionsFile -> {
                 // get "results" array
@@ -71,20 +71,21 @@ public class Phase1 implements Phase {
                     JSONObject question = (JSONObject) result;
 
                     // get all easy questions
-                    if (question.get("difficulty").equals("easy")) easyQuestions.add(question);
+                    if (question.get("difficulty").equals(LEVEL)) selectedQuestions.add(question);
                 }
             });
         }
 
         // setup ListQuestions with the list of easy questions
-        setupListQuestions(easyQuestions);
+        if (selectedQuestions.size() > 0) setupListQuestions(selectedQuestions);
+        else System.out.println("No questions find ! :(");
 
     }
 
     private void setupListQuestions(ArrayList<JSONObject> questions) {
         ArrayList<Integer> nbRandom = new ArrayList<>();
         for (int i = 0; i < NB_OF_QUESTIONS; i++) {
-            int randomNb = 0;
+            int randomNb;
             do {
                 randomNb = new Random().nextInt(questions.size());
             } while (nbRandom.contains(randomNb));

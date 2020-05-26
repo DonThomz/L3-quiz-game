@@ -1,5 +1,9 @@
 package org.farmas.model.questions;
 
 public enum Level {
-    EASY, MEDIUM, HARD
+    EASY, MEDIUM, HARD;
+
+    public String toLowerCase() {
+        return this.name().toLowerCase();
+    }
 }
