@@ -1,5 +1,5 @@
 {
-   "comment": "geography questions",
+   "title_category": "Geography",
    "results":[
       {
          "category":"Geography",
@@ -15,15 +15,10 @@
       },
       {
          "category":"Geography",
-         "type":"multiple",
+         "type":"short_answer",
          "difficulty":"medium",
          "question":"Montreal is in which Canadian province?",
-         "correct_answer":"Quebec",
-         "incorrect_answers":[
-            "Ontario",
-            "Nova Scotia",
-            "Alberta"
-         ]
+         "correct_answer":"Quebec"
       },
       {
          "category":"Geography",
@@ -51,15 +46,10 @@
       },
       {
          "category":"Geography",
-         "type":"multiple",
+         "type":"short_answer",
          "difficulty":"medium",
          "question":"What is the name of the capital of Turkey?",
-         "correct_answer":"Ankara",
-         "incorrect_answers":[
-            "Istanbul",
-            "Izmir",
-            "Bursa"
-         ]
+         "correct_answer":"Ankara"
       },
       {
          "category":"Geography",
@@ -299,15 +289,10 @@
       },
       {
          "category":"Geography",
-         "type":"multiple",
+         "type":"short_answer",
          "difficulty":"medium",
-         "question":"How many countries share a land border with Luxembourg?",
-         "correct_answer":"3",
-         "incorrect_answers":[
-            "4",
-            "2",
-            "5"
-         ]
+         "question":"How many countries share a land border with Luxembourg? (answer a number like : 5)",
+         "correct_answer":"3"
       },
       {
          "category":"Geography",

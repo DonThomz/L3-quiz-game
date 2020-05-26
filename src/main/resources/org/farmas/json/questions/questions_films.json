@@ -1,5 +1,5 @@
 {
-  "comment": "films questions",
+  "title_category": "Films",
   "results":[
     {
       "category":"Films",
@@ -99,15 +99,10 @@
     },
     {
       "category":"Films",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"medium",
       "question":"In what year was the first Transformers movie released?",
-      "correct_answer":"1986",
-      "incorrect_answers":[
-        "2007",
-        "1984",
-        "2009"
-      ]
+      "correct_answer":"1986"
     },
     {
       "category":"Films",
@@ -193,15 +188,10 @@
     },
     {
       "category":"Films",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"In the movie &quot;Cast Away&quot; the main protagonist&#039;s best friend while on the island is named",
-      "correct_answer":"Wilson",
-      "incorrect_answers":[
-        "Carson",
-        "Jackson",
-        "Willy"
-      ]
+      "correct_answer":"Wilson"
     },
     {
       "category":"Films",
@@ -241,15 +231,10 @@
     },
     {
       "category":"Films",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"The 2002 film &quot;28 Days Later&quot; is mainly set in which European country?",
-      "correct_answer":"United Kingdom",
-      "incorrect_answers":[
-        "France",
-        "Italy",
-        "Germany"
-      ]
+      "correct_answer":"United Kingdom"
     },
     {
       "category":"Films",

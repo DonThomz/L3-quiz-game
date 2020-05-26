@@ -1,5 +1,5 @@
 {
-   "comment": "animals questions",
+   "title_category": "Animals",
    "results":[
       {
          "category":"Animals",
@@ -37,15 +37,10 @@
       },
       {
          "category":"Animals",
-         "type":"multiple",
+         "type":"short_answer",
          "difficulty":"medium",
          "question":"What type of animal is a natterjack?",
-         "correct_answer":"Toad",
-         "incorrect_answers":[
-            "Bird",
-            "Fish",
-            "Insect"
-         ]
+         "correct_answer":"Toad"
       },
       {
          "category":"Animals",
@@ -95,15 +90,10 @@
       },
       {
          "category":"Animals",
-         "type":"multiple",
+         "type":"short_answer",
          "difficulty":"easy",
          "question":"Hippocampus is the Latin name for which marine creature?",
          "correct_answer":"Seahorse",
-         "incorrect_answers":[
-            "Dolphin",
-            "Whale",
-            "Octopus"
-         ]
       },
       {
          "category":"Animals",
@@ -185,15 +175,10 @@
       },
       {
          "category":"Animals",
-         "type":"multiple",
+         "type":"short_answer",
          "difficulty":"hard",
          "question":"Unlike on most salamanders, this part of a newt is flat?",
          "correct_answer":"Tail",
-         "incorrect_answers":[
-            "Head",
-            "Teeth",
-            "Feet"
-         ]
       },
       {
          "category":"Animals",
