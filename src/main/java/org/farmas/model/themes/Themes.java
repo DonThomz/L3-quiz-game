@@ -47,10 +47,10 @@ public class Themes {
 
     // Methods
 
-    private void getAllThemesFromJSON(){
+    private void getAllThemesFromJSON() {
         // get file themes.json
         List<JSONObject> jsonFiles = RessourcesScanner.readJSONFilesFromRessources("themes");
-        if(jsonFiles != null) {
+        if (jsonFiles != null) {
             JSONArray themes = (JSONArray) jsonFiles.get(0).get("title_themes");
             for (int i = 0; i < NB_OF_THEMES; i++) {
                 // read each question bloc
@@ -58,8 +58,6 @@ public class Themes {
             }
         }
     }
-
-
 
 
     public void modifyTheme(String theme, int indexTheme) {

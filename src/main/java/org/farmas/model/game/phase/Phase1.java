@@ -1,21 +1,14 @@
 package org.farmas.model.game.phase;
 
-import org.farmas.App;
 import org.farmas.model.players.Player;
 import org.farmas.model.questions.ListQuestions;
 import org.farmas.model.themes.Themes;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
-import java.io.FileReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Phase1 implements Phase {
 
-    private static final int NB_OF_THEMES = 1;
+    private static final int NB_OF_THEMES = 5;
     ArrayList<Player> players;
     ListQuestions listQuestions;
     String[] themes;
@@ -47,7 +40,6 @@ public class Phase1 implements Phase {
     public void selectThemes(Themes themes) {
         for (int i = 0; i < NB_OF_THEMES; i++) {
             this.themes[i] = themes.selectTheme();
-            System.out.println(this.themes[i]);
         }
     }
 
@@ -56,7 +48,7 @@ public class Phase1 implements Phase {
             TODO | charger les questions depuis le fichier JSON selon les thèmes sélectionnés
             TODO | Mettre ça dans un thread
          */
-        try {
+        /*try {
             InputStream inputStreamQuestions = App.class.getResourceAsStream("json/questions.json");
             JSONParser parserJSON = new JSONParser();
             JSONObject questionJSON = (JSONObject) parserJSON.parse(new InputStreamReader(inputStreamQuestions, "UTF-8"));
@@ -74,7 +66,7 @@ public class Phase1 implements Phase {
         } catch (Exception ex) {
             System.out.println("Error loading JSON file");
             ex.printStackTrace();
-        }
+        }*/
 
     }
 }

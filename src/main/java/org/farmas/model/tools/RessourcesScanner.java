@@ -27,7 +27,7 @@ public class RessourcesScanner {
                 .collect(Collectors.toSet());
     }
 
-    /**
+    /*
      * read all files in a subfolder of resources/org/farmas/json/
      *
      * @param dir subfolder (ex : questions )

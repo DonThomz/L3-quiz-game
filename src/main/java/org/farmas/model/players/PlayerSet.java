@@ -62,7 +62,6 @@ public class PlayerSet implements Iterable<Player> {
 
     public Player selectPlayer() {
         int randomId = new Random().nextInt(numberOfPlayers);
-        System.out.println(randomId);
         return this.getPlayers().get(randomId);
     }
 
