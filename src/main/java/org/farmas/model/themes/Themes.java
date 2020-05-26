@@ -23,15 +23,15 @@ public class Themes {
         return indicator;
     }
 
-    public String getCurrentTheme(){
+    public String getCurrentTheme() {
         return this.getArrayOfThemes()[this.getIndicator()];
     }
 
-    public void modifyTheme(String theme, int indexTheme){
+    public void modifyTheme(String theme, int indexTheme) {
         this.getArrayOfThemes()[indexTheme] = theme;
     }
-    
-    public String selectTheme(){
+
+    public String selectTheme() {
         do {
             if(NB_OF_THEMES > 1) {
                 int randomIndex = new Random().nextInt(NB_OF_THEMES);
@@ -48,7 +48,7 @@ public class Themes {
         }while(true);
     }
 
-    public String[] selectFiveTheme(){
+    public String[] selectFiveTheme() {
         String[] themes = new String[5];
         ArrayList<Integer> randomNbPick = new ArrayList<>();
         int randomNumber;
