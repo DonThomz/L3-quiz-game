@@ -3,15 +3,10 @@
   "results":[
     {
       "category":"General Knowledge",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"medium",
       "question":"What is the world&#039;s most expensive spice by weight?",
-      "correct_answer":"Saffron",
-      "incorrect_answers":[
-        "Cinnamon",
-        "Cardamom",
-        "Vanilla"
-      ]
+      "correct_answer":"Saffron"
     },
     {
       "category":"General Knowledge",
@@ -179,15 +174,10 @@
     },
     {
       "category":"General Knowledge",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"medium",
       "question":"What is the Italian word for &quot;tomato&quot;?",
-      "correct_answer":"Pomodoro",
-      "incorrect_answers":[
-        "Aglio",
-        "Cipolla",
-        "Peperoncino"
-      ]
+      "correct_answer":"Pomodoro"
     },
     {
       "category":"General Knowledge",
@@ -259,15 +249,10 @@
     },
     {
       "category":"General Knowledge",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"hard",
       "question":"Chartreuse is a color between yellow and what?",
-      "correct_answer":"Green",
-      "incorrect_answers":[
-        "Red",
-        "Black",
-        "Purple"
-      ]
+      "correct_answer":"Green"
     },
     {
       "category":"General Knowledge",

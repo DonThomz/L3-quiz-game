@@ -3,15 +3,10 @@
   "results":[
     {
       "category":"Mythology",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"Who was the only god from Greece who did not get a name change in Rome?",
-      "correct_answer":"Apollo",
-      "incorrect_answers":[
-        "Demeter",
-        "Zeus",
-        "Athena"
-      ]
+      "correct_answer":"Apollo"
     },
     {
       "category":"Mythology",
@@ -167,15 +162,10 @@
     },
     {
       "category":"Mythology",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"hard",
       "question":"Nidhogg is a mythical creature from what mythology?",
-      "correct_answer":"Norse",
-      "incorrect_answers":[
-        "Egyptian",
-        "Greek",
-        "Hindu"
-      ]
+      "correct_answer":"Norse"
     },
     {
       "category":"Mythology",
@@ -247,15 +237,10 @@
     },
     {
       "category":"Mythology",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"Which of these mythological creatures is said to be half-man and half-horse?",
-      "correct_answer":"Centaur",
-      "incorrect_answers":[
-        "Minotaur",
-        "Pegasus",
-        "Gorgon"
-      ]
+      "correct_answer":"Centaur"
     },
     {
       "category":"Mythology",

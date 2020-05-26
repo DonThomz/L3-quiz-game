@@ -87,15 +87,10 @@
     },
     {
       "category":"Sports",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"Which country will host the 2020 Summer Olympics?",
-      "correct_answer":"Japan",
-      "incorrect_answers":[
-        "China",
-        "Australia",
-        "Germany"
-      ]
+      "correct_answer":"Japan"
     },
     {
       "category":"Sports",
@@ -293,15 +288,10 @@
     },
     {
       "category":"Sports",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"medium",
       "question":"How many premier league trophies did Sir Alex Ferguson win during his time at Manchester United?",
-      "correct_answer":"13",
-      "incorrect_answers":[
-        "11",
-        "20",
-        "22"
-      ]
+      "correct_answer":"13"
     },
     {
       "category":"Sports",

@@ -3,15 +3,10 @@
   "results":[
     {
       "category":"Vehicles",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"Where are the cars of the brand &quot;Ferrari&quot; manufactured?",
-      "correct_answer":"Italy",
-      "incorrect_answers":[
-        "Romania",
-        "Germany",
-        "Russia"
-      ]
+      "correct_answer":"Italy"
     },
     {
       "category":"Vehicles",
@@ -109,15 +104,10 @@
     },
     {
       "category":"Vehicles",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"medium",
       "question":"When was Tesla founded?",
-      "correct_answer":"2003",
-      "incorrect_answers":[
-        "2008",
-        "2005",
-        "2007"
-      ]
+      "correct_answer":"2003"
     },
     {
       "category":"Vehicles",

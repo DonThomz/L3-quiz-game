@@ -167,27 +167,17 @@
     },
     {
       "category":"Video Games",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"In what year was Garry&#039;s Mod released as a standalone title on Valve&#039;s Steam distribution service?",
-      "correct_answer":"2006",
-      "incorrect_answers":[
-        "2007",
-        "2004",
-        "2003"
-      ]
+      "correct_answer":"2006"
     },
     {
       "category":"Video Games",
-      "type":"multiple",
+      "type":"short_answer",
       "difficulty":"easy",
       "question":"In what year was the first &quot;Mass Effect&quot; game released?",
-      "correct_answer":"2007",
-      "incorrect_answers":[
-        "2008",
-        "2009",
-        "2010"
-      ]
+      "correct_answer":"2007"
     },
     {
       "category":"Video Games",
