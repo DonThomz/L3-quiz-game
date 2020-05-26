@@ -1,0 +1,359 @@
+{
+   "comment": "geography questions",
+   "results":[
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Which state of the United States is the smallest?",
+         "correct_answer":"Rhode Island ",
+         "incorrect_answers":[
+            "Maine",
+            "Vermont",
+            "Massachusetts"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Montreal is in which Canadian province?",
+         "correct_answer":"Quebec",
+         "incorrect_answers":[
+            "Ontario",
+            "Nova Scotia",
+            "Alberta"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Which city is the capital of Switzerland?",
+         "correct_answer":"Bern",
+         "incorrect_answers":[
+            "Z&uuml;rich",
+            "Frankfurt",
+            "Wien"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"In which English county is Stonehenge?",
+         "correct_answer":"Wiltshire",
+         "incorrect_answers":[
+            "Somerset",
+            "Cumbria",
+            "Herefordshire"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"What is the name of the capital of Turkey?",
+         "correct_answer":"Ankara",
+         "incorrect_answers":[
+            "Istanbul",
+            "Izmir",
+            "Bursa"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"The prefix Sino- (As in Sino-American) is used to refer to what nationality?",
+         "correct_answer":"Chinese",
+         "incorrect_answers":[
+            "Japanese",
+            "Russian",
+            "Indian"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"The land of Gotland is located in which European country?",
+         "correct_answer":"Sweden",
+         "incorrect_answers":[
+            "Denmark",
+            "Norway",
+            "Germany"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Which of the following countries does NOT recognize Armenia as an independent country?",
+         "correct_answer":"Pakistan",
+         "incorrect_answers":[
+            "Iran",
+            "Turkey",
+            "Azerbaijan"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"What African country has Portuguese as its official language?",
+         "correct_answer":"Mozambique",
+         "incorrect_answers":[
+            "Botswana",
+            "Gabon",
+            "Togo"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"The Japanese district Akihabara is also known by what nickname?",
+         "correct_answer":"Electric Town",
+         "incorrect_answers":[
+            "Moon Walk River",
+            "Otaku Central ",
+            "Big Eyes"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"The World Health Organization headquarters is located in which European country?",
+         "correct_answer":"Switzerland",
+         "incorrect_answers":[
+            "United Kingdom",
+            "France",
+            "Belgium"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What name was historically used for the Turkish city currently known as Istanbul?",
+         "correct_answer":"Constaninople",
+         "incorrect_answers":[
+            "H&uuml;davendigar",
+            "S&ouml;\u011f&uuml;t",
+            "Adrianople"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"What event led to Liechenstein adding a crown to its flag?",
+         "correct_answer":"The 1936 Olympics",
+         "incorrect_answers":[
+            "Coronation of Prince Johann I Joseph in 1805",
+            "Charles VI&#039;s decree in 1719",
+            "Signing of the 1862 Constitution of Liechtenstein"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Which of these is the name of the largest city in the US state Tennessee?",
+         "correct_answer":"Memphis",
+         "incorrect_answers":[
+            "Thebes",
+            "Alexandria",
+            "Luxor"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Where are the Nazca Lines located?",
+         "correct_answer":"Peru",
+         "incorrect_answers":[
+            "Brazil",
+            "Colombia",
+            "Ecuador"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"boolean",
+         "difficulty":"easy",
+         "question":"Ottawa is the capital of Canada.",
+         "correct_answer":"True",
+         "incorrect_answers":[
+            "False"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Which country has three capital cities?",
+         "correct_answer":"South Africa",
+         "incorrect_answers":[
+            "Somalia",
+            "China",
+            "United Kingdom"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"boolean",
+         "difficulty":"easy",
+         "question":"California is larger than Japan.",
+         "correct_answer":"True",
+         "incorrect_answers":[
+            "False"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What is Canada&#039;s smallest province?",
+         "correct_answer":"Prince Edward Island",
+         "incorrect_answers":[
+            "New Brunswick",
+            "Nova Scotia",
+            "Yukon"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"What is the name of the formerly rich fishing grounds off the island of Newfoundland, Canada?",
+         "correct_answer":"Grand Banks",
+         "incorrect_answers":[
+            "Great Barrier Reef",
+            "Mariana Trench",
+            "Hudson Bay"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Which of the following Japanese islands is the biggest?",
+         "correct_answer":"Honshu",
+         "incorrect_answers":[
+            "Hokkaido",
+            "Shikoku",
+            "Kyushu"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"What is the land connecting North America and South America?",
+         "correct_answer":"Isthmus of Panama",
+         "incorrect_answers":[
+            "Isthmus of Suez",
+            "Urals",
+            "Australasia"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"What continent is the country Lesotho in?",
+         "correct_answer":"Africa",
+         "incorrect_answers":[
+            "Asia",
+            "South America",
+            "Europe"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Which small country is located between the borders of France and Spain?",
+         "correct_answer":"Andorra",
+         "incorrect_answers":[
+            "San Marino",
+            "Vatican City",
+            "Lichtenstein"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"The Alps are a mountain range on which continent?",
+         "correct_answer":"Europe",
+         "incorrect_answers":[
+            "North America",
+            "Asia",
+            "Africa"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"How many countries share a land border with Luxembourg?",
+         "correct_answer":"3",
+         "incorrect_answers":[
+            "4",
+            "2",
+            "5"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Which English county will you find the University of East Anglia?",
+         "correct_answer":"Norfolk",
+         "incorrect_answers":[
+            "Suffolk",
+            "Essex",
+            "Cambridgeshire"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"boolean",
+         "difficulty":"medium",
+         "question":"The title of the 1969 film &quot;Krakatoa, East_of Java&quot; is incorrect, as Krakatoa is in fact west of Java.",
+         "correct_answer":"True",
+         "incorrect_answers":[
+            "False"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"Which of these cities is NOT in England?",
+         "correct_answer":"Edinburgh",
+         "incorrect_answers":[
+            "Oxford",
+            "Manchester",
+            "Southampton"
+         ]
+      },
+      {
+         "category":"Geography",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"Which of these is NOT a real tectonic plate?",
+         "correct_answer":"Atlantic Plate",
+         "incorrect_answers":[
+            "North American Plate",
+            "Eurasian Plate",
+            "Nazca Plate"
+         ]
+      }
+   ]
+}
