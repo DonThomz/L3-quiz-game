@@ -1,0 +1,18 @@
+/*
+    APP CSS FILE
+ */
+
+.jfx-button{
+    -jfx-disable-visual-focus: true;
+}
+
+.main_content{
+    -fx-background-color: #ffb300;
+}
+
+.custom_button{
+    -fx-background-color: #212121;
+    -fx-min-width: 160;
+    -fx-min-height: 52;
+    -fx-text-fill: azure;
+}

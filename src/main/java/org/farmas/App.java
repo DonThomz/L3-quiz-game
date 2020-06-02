@@ -7,17 +7,15 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.farmas.model.game.Game;
 import org.farmas.model.players.PlayerSet;
-import org.farmas.model.themes.Themes;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Set;
 
 /**
  * JavaFX App
  */
 public class App extends Application {
 
+    public static Stage window;
     public static PlayerSet playerSet;
 
     private static Scene scene;
@@ -27,8 +25,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+        return FXMLLoader.load(App.class.getResource("views/" +fxml+".fxml"));
     }
 
     public static void main(String[] args) {
@@ -36,13 +33,17 @@ public class App extends Application {
         // init playerSet
         playerSet = new PlayerSet(20);
         Game game = new Game();
+        Game game2 = new Game();
+        Game game3 = new Game();
+
         launch();
     }
 
     @Override
-    public void start(Stage stage) {
-        //scene = new Scene(loadFXML("primary"));
-        //stage.setScene(scene);
+    public void start(Stage stage) throws IOException {
+        window = stage;
+        scene = new Scene(loadFXML("home"));
+        stage.setScene(scene);
 
         stage.show();
     }
