@@ -3,7 +3,8 @@ module org.farmas {
     requires javafx.fxml;
     requires json.simple;
     requires com.jfoenix;
-    opens org.farmas to javafx.fxml;
-    opens org.farmas.controller to javafx.fxml;
+
+    opens org.farmas.controller.game to javafx.controls, javafx.fxml;
+    opens org.farmas.controller to javafx.controls, javafx.fxml;
     exports org.farmas;
 }

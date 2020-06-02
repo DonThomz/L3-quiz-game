@@ -24,18 +24,20 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
+    public static Parent loadFXML(String fxml) throws IOException {
         return FXMLLoader.load(App.class.getResource("views/" +fxml+".fxml"));
+    }
+
+    public static void setScene(String fxml) throws IOException {
+        Parent root = loadFXML(fxml);
+        window.setScene(new Scene(root));
     }
 
     public static void main(String[] args) {
 
         // init playerSet
         playerSet = new PlayerSet(20);
-        Game game = new Game();
-        Game game2 = new Game();
-        Game game3 = new Game();
-
+        
         launch();
     }
 
