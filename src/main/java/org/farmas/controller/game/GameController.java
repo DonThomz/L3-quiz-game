@@ -18,14 +18,20 @@ import javafx.stage.Modality;
 import org.farmas.App;
 import org.farmas.controller.InitController;
 import org.farmas.controller.game.questions.types.MCQController;
+import org.farmas.controller.game.questions.types.SAController;
+import org.farmas.controller.game.questions.types.TFController;
 import org.farmas.model.game.Game;
+import org.farmas.model.game.phase.Phase1;
 import org.farmas.model.players.Player;
 import org.farmas.model.questions.Question;
 import org.farmas.model.questions.types.MCQ;
+import org.farmas.model.questions.types.SA;
+import org.farmas.model.questions.types.TF;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class GameController implements Initializable, InitController {
 
@@ -33,13 +39,15 @@ public class GameController implements Initializable, InitController {
     @FXML private AnchorPane body;
     @FXML private HBox content;
     @FXML private Label titleStep;
-    @FXML private JFXButton startGameButton;
+    @FXML private JFXButton submitButton;
 
     public static Game game;
     public static ArrayList<VBox> playersProfiles;
+    private FXMLLoader controllerLoader;
 
     public static int STEP = 0;
     public static boolean LOCK = false;
+    public static int ID_PLAYER = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -55,7 +63,7 @@ public class GameController implements Initializable, InitController {
 
         returnButton.addEventHandler(MouseEvent.MOUSE_CLICKED, confirmReturnMenu);
 
-        startGameButton.setOnAction(event -> launchPhaseI());
+        submitButton.setOnAction(event -> launchPhaseI());
 
     }
 
@@ -101,34 +109,116 @@ public class GameController implements Initializable, InitController {
         setupStep();
         game.runPhaseI();
 
-        // clear center content
-        clearContent();
+
+
+        // change submit button
+        submitButton.setText("Submit Answer");
+
 
         // run the first round
-
-        loadPlayerQuestion(game.getPlayers().get(0), 0);
+        loadPlayerQuestionPhaseI(game.getPlayers().get(0), 0);
 
     }
 
-    private void loadPlayerQuestion(Player player, int ID) {
-        switch (game.getPhaseI().getListQuestions().get(ID).getContent().getClass().getSimpleName()){
-            case "MCQ":
-                loadMQCGUI(game.getPhaseI().getListQuestions().get(ID));
-                break;
-            case "SA":
-                break;
-            case "TF":
-                break;
+    private void loadPlayerQuestionPhaseI(Player player, int ID) {
+
+        // TODO add timer
+        System.out.println(ID);
+        // clear center content
+        clearContent();
+        System.out.println(ID);
+        if(ID < 4) {
+            AtomicInteger IDatomic = new AtomicInteger(ID);
+            switch (game.getPhaseI().getListQuestions().get(ID).getContent().getClass().getSimpleName()) {
+                case "MCQ":
+                    loadMQCGUI(game.getPhaseI().getListQuestions().get(ID));
+                    // update submit button action
+                    submitButton.setOnAction(event -> {
+                        boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) game.getPhaseI().getListQuestions().get(IDatomic.get()));
+                        player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                        IDatomic.getAndIncrement();
+                        if(IDatomic.get() < 4 ) loadPlayerQuestionPhaseI(game.getPlayers().get(IDatomic.get()), IDatomic.get());
+                        else exit();
+                    });
+                    break;
+                case "SA":
+                    loadSAGUI(game.getPhaseI().getListQuestions().get(ID));
+                    // update submit button action
+                    submitButton.setOnAction(event -> {
+                        boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) game.getPhaseI().getListQuestions().get(IDatomic.get()));
+                        player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                        IDatomic.getAndIncrement();
+                        if(IDatomic.get() < 4 ) loadPlayerQuestionPhaseI(game.getPlayers().get(IDatomic.get()), IDatomic.get());
+                        else exit();
+                    });
+                    break;
+                case "TF":
+                    loadTFGUI(game.getPhaseI().getListQuestions().get(ID));
+                    // update submit button action
+                    submitButton.setOnAction(event -> {
+                        boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) game.getPhaseI().getListQuestions().get(IDatomic.get()));
+                        System.out.println(isCorrect);
+                        player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                        IDatomic.getAndIncrement();
+                        if(IDatomic.get() < 4 ) loadPlayerQuestionPhaseI(game.getPlayers().get(IDatomic.get()), IDatomic.get());
+                        else exit();
+                    });
+                    break;
+            }
+        } else { // next to second round
+            // TODO check score
+            submitButton.setOnAction(event -> {
+                try {
+                    App.setScene("home");
+                    App.window.centerOnScreen();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+            });
         }
 
     }
 
+    private void exit(){
+        submitButton.setOnAction(event -> {
+            try {
+                App.setScene("home");
+                App.window.centerOnScreen();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        });
+    }
+
     private void loadMQCGUI(Question<?> question){
         try {
+            controllerLoader = new FXMLLoader(App.class.getResource("views/mcq.fxml"));
+            content.getChildren().add(0, controllerLoader.load());
+            controllerLoader.<MCQController>getController().initData((Question<MCQ>) question);
+        }catch (IOException ioException){
+            System.err.println("Error loading question QCM fxml");
+            System.err.println(ioException.getMessage());
+            ioException.printStackTrace();
+        }
+    }
 
-            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/mcq.fxml"));
-            content.getChildren().add(loader.load());
-            loader.<MCQController>getController().initData((Question<MCQ>) question);
+    private void loadSAGUI(Question<?> question){
+        try {
+            controllerLoader = new FXMLLoader(App.class.getResource("views/sa.fxml"));
+            content.getChildren().add(0, controllerLoader.load());
+            controllerLoader.<SAController>getController().initData((Question<SA>) question);
+        }catch (IOException ioException){
+            System.err.println("Error loading question QCM fxml");
+            System.err.println(ioException.getMessage());
+            ioException.printStackTrace();
+        }
+    }
+
+    private void loadTFGUI(Question<?> question){
+        try {
+            controllerLoader = new FXMLLoader(App.class.getResource("views/tf.fxml"));
+            content.getChildren().add(0, controllerLoader.load());
+            controllerLoader.<TFController>getController().initData((Question<TF>) question);
         }catch (IOException ioException){
             System.err.println("Error loading question QCM fxml");
             System.err.println(ioException.getMessage());
@@ -140,7 +230,6 @@ public class GameController implements Initializable, InitController {
     private void clearContent(){
         content.getChildren().clear();
         content.setAlignment(Pos.CENTER);
-        startGameButton.setVisible(false);
     }
 
     private void loadPlayerBoard(){
@@ -175,7 +264,6 @@ public class GameController implements Initializable, InitController {
         Optional<ButtonType> closeResponse = closeConfirmation.showAndWait();
         if (closeResponse.isPresent()) {
             if (ButtonType.OK.equals(closeResponse.get())) {
-                System.out.println("close");
                 try {
                     App.setScene("home");
                     App.window.centerOnScreen();

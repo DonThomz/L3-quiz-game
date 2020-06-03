@@ -36,7 +36,7 @@
                </children></AnchorPane>
          </center>
          <bottom>
-            <JFXButton fx:id="startGameButton" buttonType="RAISED" minHeight="60.0" minWidth="160.0" styleClass="custom_button" text="Start Game" BorderPane.alignment="CENTER">
+            <JFXButton fx:id="submitButton" buttonType="RAISED" minHeight="60.0" minWidth="160.0" styleClass="custom_button" text="Start Game" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                </BorderPane.margin>

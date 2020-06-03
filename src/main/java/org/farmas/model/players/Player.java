@@ -48,8 +48,10 @@ public class Player implements Cloneable {
      *
      * @param score score to be add
      */
-    public void updateScore(int score) {
-        this.score += score;
+    public void updateScore(int score, boolean isCorrect) {
+        if(isCorrect) this.score += score;
+        else this.score -= score;
+
     }
 
     /**
