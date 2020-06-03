@@ -3,14 +3,19 @@ package org.farmas.model.tools;
 import org.farmas.App;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.reflections.Reflections;
+import org.reflections.scanners.ResourcesScanner;
 
 import java.io.*;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 import java.util.function.BiPredicate;
+import java.util.function.Predicate;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -22,8 +27,18 @@ public class RessourcesScanner {
 
     public static BiPredicate<String, String> testFileName = (s, s2) -> s.toUpperCase().contains(s2.toUpperCase());
 
-    public static Set<String> listFilesUsingJavaIO(String dir, String... filters) {
-        return Stream.of(Objects.requireNonNull(new File(App.class.getResource(dir).getPath()).listFiles((dir1, name) -> {
+    /**
+     * Read files in resource folder with Reflection Library from Maven Dependency
+     * @param dir reference path to the folder
+     * @param extension extension of files
+     * @param filters names of files that you want exclude
+     * @return filenames
+     */
+    public static Set<String> listFilesUsingJavaIO(String dir, String extension, String... filters) {
+
+        Reflections reflections = new Reflections(dir, new ResourcesScanner());
+        Set<String> fileNames = reflections.getResources(Pattern.compile(".*\\."+extension));
+        return fileNames.stream().filter(name ->{
             boolean test = false;
             if (filters.length == 0) return true;
             for (String filter : filters
@@ -34,9 +49,7 @@ public class RessourcesScanner {
                 }
             }
             return test;
-        }))).filter(file -> !file.isDirectory())
-                .map(File::getName)
-                .collect(Collectors.toSet());
+        }).collect(Collectors.toSet());
     }
 
     /**
@@ -48,24 +61,31 @@ public class RessourcesScanner {
      */
     public static List<JSONObject> readJSONFilesFromRessources(String dir, String... filters) {
         try {
-            Set<String> files = RessourcesScanner.listFilesUsingJavaIO("json/" + dir, filters);
-            List<JSONObject> jsonObjects = new ArrayList<>();
-            files.forEach(file -> {
-                try {
-                    InputStream inputStreamQuestions = App.class.getResourceAsStream("json/" + dir + "/" + file);
-                    JSONParser parserJSON = new JSONParser();
-                    JSONObject jsonFile = (JSONObject) parserJSON.parse(new InputStreamReader(inputStreamQuestions, StandardCharsets.UTF_8));
-                    jsonObjects.add(jsonFile);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            });
-            return jsonObjects;
+            Set<String> files = RessourcesScanner.listFilesUsingJavaIO("org.farmas.json."+dir, "json", filters);
+
+            if(files != null && files.size() > 0) {
+                JSONParser parserJSON = new JSONParser();
+                List<JSONObject> jsonObjects = new ArrayList<>();
+                files.forEach(file -> {
+                    try {
+                        InputStream is = App.class.getClassLoader().getResourceAsStream(file);
+                        assert is != null;
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                        String fileJSON = reader.lines().collect(Collectors.joining());
+                        JSONObject jsonFile = (JSONObject) parserJSON.parse(fileJSON);
+                        jsonObjects.add(jsonFile);
+                    } catch (Exception ex) {
+                        System.err.println("Error loading JSON file and parse");
+                        System.err.println(ex.getMessage());
+                        ex.printStackTrace();
+                    }
+                });
+                return jsonObjects;
+            }else return null;
         } catch (Exception ex) {
             ex.printStackTrace();
             return null;
         }
     }
-
 
 }

@@ -18,19 +18,12 @@ public class PlayerProfile implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //URL url = getClass().getResource("profile.png");
-        //System.out.println(url);
-        //profilePlayer.setImage(new Image("profile.png"));
+        profilePlayer.setImage(new Image(App.class.getResource("image/profile.png").toExternalForm(), true));
     }
 
     public void setupTitleName(String name){
         titlePlayer.setText(name);
     }
 
-    public static PlayerProfile loadProfile(String name){
-        PlayerProfile playerProfile = new PlayerProfile();
-        playerProfile.setupTitleName(name);
-        return playerProfile;
-    }
 
 }

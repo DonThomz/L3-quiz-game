@@ -2,10 +2,12 @@
     APP CSS FILE
  */
 
+
 .jfx-button{
     -jfx-disable-visual-focus: true;
 }
 .title{
+    -fx-font-family: "Roboto";
     -fx-font-weight: bold;
     -fx-font-size: 24px;
 }
@@ -15,6 +17,7 @@
 }
 
 .custom_button{
+    -fx-font-family: "Roboto";
     -fx-background-color: #212121;
     -fx-text-fill: azure;
 }

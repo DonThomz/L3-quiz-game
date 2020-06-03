@@ -83,6 +83,7 @@ public class HomeGameGUI implements Initializable, InitController {
         game = new Game();
         game.pickPlayers();
         loadPlayerBoard();
+        game.start();
     }
 
     private void loadPlayerBoard(){
@@ -93,7 +94,6 @@ public class HomeGameGUI implements Initializable, InitController {
                 FXMLLoader loader = new FXMLLoader(App.class.getResource("views/playerProfil.fxml"));
                 playersProfiles.add(loader.load()); // add to the list
                 loader.<PlayerProfile>getController().setupTitleName(player.getId() + " " + player.getName()); // setup the name
-
 
             } catch (IOException ioException) {
                 ioException.printStackTrace();
