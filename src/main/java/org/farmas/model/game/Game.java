@@ -54,4 +54,12 @@ public class Game {
     public ArrayList<Player> getPlayers() {
         return players;
     }
+
+    public Phase[] getPhases() {
+        return phases;
+    }
+
+    public Phase1 getPhaseI(){
+        return (Phase1) phases[0];
+    }
 }

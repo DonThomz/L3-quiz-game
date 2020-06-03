@@ -5,19 +5,19 @@
       "category":"General_Knowledge",
       "type":"short_answer",
       "difficulty":"medium",
-      "question":"What is the world&#039;s most expensive spice by weight?",
+      "question":"What is the world's most expensive spice by weight?",
       "correct_answer":"Saffron"
     },
     {
-      "category":"General_Knowledge",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Where is the train station &quot;Llanfair&shy;pwllgwyngyll&shy;gogery&shy;chwyrn&shy;drobwll&shy;llan&shy;tysilio&shy;gogo&shy;goch&quot;?",
-      "correct_answer":"Wales",
-      "incorrect_answers":[
-        "Moldova",
-        "Czech Republic",
-        "Denmark"
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In past times, what would a gentleman keep in his fob pocket?",
+      "correct_answer": "Watch",
+      "incorrect_answers": [
+        "Money",
+        "Keys",
+        "Notebook"
       ]
     },
     {
@@ -29,14 +29,14 @@
       "incorrect_answers":[
         "Transformers",
         "Care Bears",
-        "Rubik&rsquo;s Cube"
+        "Rubik's Cube"
       ]
     },
     {
       "category":"General_Knowledge",
       "type":"boolean",
       "difficulty":"medium",
-      "question":"&quot;Typewriter&quot; is the longest word that can be typed using only the first row on a QWERTY keyboard.",
+      "question":"\"Typewriter\" is the longest word that can be typed using only the first row on a QWERTY keyboard.",
       "correct_answer":"True",
       "incorrect_answers":[
         "False"
@@ -128,7 +128,7 @@
       "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"Before the 19th Century, the &quot;Living Room&quot; was originally called the...",
+      "question":"Before the 19th Century, the \"Living Room\" was originally called the...",
       "correct_answer":"Parlor",
       "incorrect_answers":[
         "Open Room",
@@ -155,7 +155,7 @@
       "question":"What was the nickname given to the Hughes H-4 Hercules, a heavy transport flying boat which achieved flight in 1947?",
       "correct_answer":"Spruce Goose",
       "incorrect_answers":[
-        "Noah&#039;s Ark",
+        "Noah's Ark",
         "Fat Man",
         "Trojan Horse"
       ]
@@ -164,7 +164,7 @@
       "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"What is the romanized Korean word for &quot;heart&quot;?",
+      "question":"What is the romanized Korean word for \"heart\"?",
       "correct_answer":"Simjang",
       "incorrect_answers":[
         "Aejeong",
@@ -176,14 +176,14 @@
       "category":"General_Knowledge",
       "type":"short_answer",
       "difficulty":"medium",
-      "question":"What is the Italian word for &quot;tomato&quot;?",
+      "question":"What is the Italian word for \"tomato\"?",
       "correct_answer":"Pomodoro"
     },
     {
       "category":"General_Knowledge",
       "type":"boolean",
       "difficulty":"easy",
-      "question":"&quot;Ananas&quot; is mostly used as the word for Pineapple in other languages.",
+      "question":"\"Ananas\" is mostly used as the word for Pineapple in other languages.",
       "correct_answer":"True",
       "incorrect_answers":[
         "False"
@@ -205,12 +205,12 @@
       "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"What was Mountain Dew&#039;s original slogan?",
-      "correct_answer":"Yahoo! Mountain Dew... It&#039;ll tickle your innards!",
+      "question":"What was Mountain Dew's original slogan?",
+      "correct_answer":"Yahoo! Mountain Dew... It'll tickle your innards!",
       "incorrect_answers":[
         "Give Me A Dew",
         "Do The Dew",
-        "Get&#039; that barefoot feelin&#039; drinkin&#039; Mountain Dew"
+        "Get' that barefoot feelin' drinkin' Mountain Dew"
       ]
     },
     {
@@ -229,7 +229,7 @@
       "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"When did the website &quot;Facebook&quot; launch?",
+      "question":"When did the website \"Facebook\" launch?",
       "correct_answer":"2004",
       "incorrect_answers":[
         "2005",
@@ -258,7 +258,7 @@
       "category":"General_Knowledge",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which of these words means &quot;idle spectator&quot;?",
+      "question":"Which of these words means \"idle spectator\"?",
       "correct_answer":"Gongoozler",
       "incorrect_answers":[
         "Gossypiboma",
@@ -334,7 +334,7 @@
       "correct_answer":"First Lord of the Treasury",
       "incorrect_answers":[
         "Duke of Cambridge",
-        "Her Majesty&#039;s Loyal Opposition",
+        "Her Majesty's Loyal Opposition",
         "Manager of the Crown Estate"
       ]
     }

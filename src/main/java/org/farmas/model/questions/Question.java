@@ -53,6 +53,11 @@ public class Question<T extends TypeQuestions> {
         return level;
     }
 
+    public T getContent() {
+        return content;
+    }
+
+
     public void print() {
         System.out.println("Niveau: " + this.getLevel() + "\n" + this.content.toString());
     }

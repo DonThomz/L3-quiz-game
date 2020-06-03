@@ -5,7 +5,7 @@
       "category":"Vehicles",
       "type":"short_answer",
       "difficulty":"easy",
-      "question":"Where are the cars of the brand &quot;Ferrari&quot; manufactured?",
+      "question":"Where are the cars of the brand \"Ferrari\" manufactured?",
       "correct_answer":"Italy"
     },
     {
@@ -24,7 +24,7 @@
       "category":"Vehicles",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which Japanese company is the world&#039;s largest manufacturer of motorcycles?",
+      "question":"Which Japanese company is the world's largest manufacturer of motorcycles?",
       "correct_answer":"Honda",
       "incorrect_answers":[
         "Yamaha",
@@ -185,7 +185,7 @@
       "category":"Vehicles",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"What do the 4 Rings in Audi&#039;s Logo represent?",
+      "question":"What do the 4 Rings in Audi's Logo represent?",
       "correct_answer":"Previously independent automobile manufacturers",
       "incorrect_answers":[
         "States in which Audi makes the most sales",
@@ -231,7 +231,7 @@
       "category":"Vehicles",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Which car tire manufacturer is famous for its &quot;P Zero&quot; line?",
+      "question":"Which car tire manufacturer is famous for its \"P Zero\" line?",
       "correct_answer":"Pirelli",
       "incorrect_answers":[
         "Goodyear",
@@ -291,7 +291,7 @@
       "category":"Vehicles",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which car manufacturer created the &quot;Aventador&quot;?",
+      "question":"Which car manufacturer created the \"Aventador\"?",
       "correct_answer":"Lamborghini",
       "incorrect_answers":[
         "Ferrari",

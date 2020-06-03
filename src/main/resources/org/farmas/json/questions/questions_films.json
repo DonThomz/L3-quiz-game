@@ -5,7 +5,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Which of the following was not one of &quot;The Magnificent Seven&quot;?",
+      "question":"Which of the following was not one of \"The Magnificent Seven\"?",
       "correct_answer":"Clint Eastwood",
       "incorrect_answers":[
         "Steve McQueen",
@@ -29,7 +29,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"In the movie &ldquo;The Iron Giant,&rdquo; this character is the protagonist.",
+      "question":"In the movie \"The Iron Giant\" this character is the protagonist.",
       "correct_answer":"Hogarth Hughes",
       "incorrect_answers":[
         "Kent Mansley",
@@ -77,8 +77,8 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Who directed the 2015 movie &quot;The Revenant&quot;?",
-      "correct_answer":"Alejandro G. I&ntilde;&aacute;rritu",
+      "question":"Who directed the 2015 movie \"The Revenant\" ?",
+      "correct_answer":"Alejandro González iñárritu",
       "incorrect_answers":[
         "Christopher Nolan",
         "David Fincher",
@@ -108,7 +108,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"What is the name of the Artificial Intelligence system in the 1983 film, &quot;WarGames&quot;?",
+      "question":"What is the name of the Artificial Intelligence system in the 1983 film, \"WarGames\"?",
       "correct_answer":"War Operation Plan Response",
       "incorrect_answers":[
         "Self Evolving Thought Helix",
@@ -144,7 +144,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which iconic character is featured in movies such as &quot;The Enforcer&quot;, &quot;Sudden Impact&quot;, and &quot;The Dead Pool&quot;?",
+      "question":"Which iconic character is featured in movies such as \"The Enforcer\", \"Sudden Impact\", and \"The Dead Pool\"?",
       "correct_answer":"Dirty Harry",
       "incorrect_answers":[
         "Indiana Jones",
@@ -156,7 +156,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"In the 1971 film &quot;Willy Wonka &amp; the Chocolate Factory&quot;, who played Willy Wonka?",
+      "question":"In the 1971 film \"Willy Wonka & the Chocolate Factory\", who played Willy Wonka?",
       "correct_answer":"Gene Wilder",
       "incorrect_answers":[
         "Shia LeBouf",
@@ -173,7 +173,7 @@
       "incorrect_answers":[
         "Good Will Hunting",
         "Birdman",
-        "Schindler&#039;s List"
+        "Schindler's List"
       ]
     },
     {
@@ -190,14 +190,14 @@
       "category":"Films",
       "type":"short_answer",
       "difficulty":"easy",
-      "question":"In the movie &quot;Cast Away&quot; the main protagonist&#039;s best friend while on the island is named",
+      "question":"In the movie \"Cast Away\" the main protagonist's best friend while on the island is named",
       "correct_answer":"Wilson"
     },
     {
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"What is the correct phrase for the Latin saying &quot;Romanes Eunt Domus&quot; in Monty Python&#039;s Life of Brian?",
+      "question":"What is the correct phrase for the Latin saying \"Romanes Eunt Domus\" in Monty Python's Life of Brian?",
       "correct_answer":"Romani Ite Domum",
       "incorrect_answers":[
         "Romans Go Home",
@@ -209,7 +209,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"In the movie &quot;Scream&quot; who is Ghost Face?",
+      "question":"In the movie \"Scream\" who is Ghost Face?",
       "correct_answer":"Billy Loomis and Stu Macher",
       "incorrect_answers":[
         "Dewey Riley",
@@ -221,7 +221,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?",
+      "question":"Who voices the main character Blu in the 2011 animated film \"Rio\"?",
       "correct_answer":"Jesse Eisenberg",
       "incorrect_answers":[
         "Michael Cera",
@@ -233,14 +233,14 @@
       "category":"Films",
       "type":"short_answer",
       "difficulty":"easy",
-      "question":"The 2002 film &quot;28 Days Later&quot; is mainly set in which European country?",
+      "question":"The 2002 film \"28 Days Later\" is mainly set in which European country?",
       "correct_answer":"United Kingdom"
     },
     {
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"What year did the James Cameron film &quot;Titanic&quot; come out in theaters?",
+      "question":"What year did the James Cameron film \"Titanic\" come out in theaters?",
       "correct_answer":"1997",
       "incorrect_answers":[
         "1996",
@@ -264,7 +264,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"At the end of the 2001 film &quot;Rat Race&quot;, whose concert do the contestants crash?",
+      "question":"At the end of the 2001 film \"Rat Race\", whose concert do the contestants crash?",
       "correct_answer":"Smash Mouth",
       "incorrect_answers":[
         "Bowling for Soup",
@@ -276,7 +276,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which famous singer was portrayed by actor Kevin Spacey in the 2004 biographical film &quot;Beyond the Sea&quot;?",
+      "question":"Which famous singer was portrayed by actor Kevin Spacey in the 2004 biographical film \"Beyond the Sea\"?",
       "correct_answer":"Bobby Darin",
       "incorrect_answers":[
         "Louis Armstrong",
@@ -288,7 +288,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Who is the director of the 1991 film &quot;Silence of the Lambs&quot;?",
+      "question":"Who is the director of the 1991 film \"Silence of the Lambs\"?",
       "correct_answer":"Jonathan Demme",
       "incorrect_answers":[
         "Stanley Kubrick",
@@ -300,7 +300,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"Before &quot;Jurassic Park III&quot; was finalized and the Spinosaurus was chosen, which dinosaur was going to be the star?",
+      "question":"Before \"Jurassic Park III\" was finalized and the Spinosaurus was chosen, which dinosaur was going to be the star?",
       "correct_answer":"Baryonyx",
       "incorrect_answers":[
         "Tyrannosaurus Rex",
@@ -324,7 +324,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Who performed the opening theme song for the James Bond 007 movie &quot;Goldfinger&quot;?",
+      "question":"Who performed the opening theme song for the James Bond 007 movie \"Goldfinger\"?",
       "correct_answer":"Shirley Basey",
       "incorrect_answers":[
         "Tom Jones",
@@ -336,7 +336,7 @@
       "category":"Films",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"What was Humphrey Bogart&#039;s middle name?",
+      "question":"What was Humphrey Bogart's middle name?",
       "correct_answer":"DeForest",
       "incorrect_answers":[
         "DeWinter",

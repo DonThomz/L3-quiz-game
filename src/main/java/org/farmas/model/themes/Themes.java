@@ -43,7 +43,6 @@ public class Themes {
     private void getAllThemesFromJSON() {
         // get file themes.json
         List<JSONObject> jsonFiles = RessourcesScanner.readJSONFilesFromRessources("themes");
-        System.out.println(jsonFiles);
         if (jsonFiles != null) {
             JSONArray themes = (JSONArray) jsonFiles.get(0).get("title_themes");
             for (int i = 0; i < NB_OF_THEMES; i++) {

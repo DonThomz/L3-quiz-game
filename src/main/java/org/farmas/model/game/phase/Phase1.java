@@ -10,6 +10,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -31,8 +32,8 @@ public class Phase1 implements Phase {
 
         // load questions
         loadQuestionsFromJSON();
+        listQuestions.forEach(System.out::println);
 
-        this.listQuestions.forEach(System.out::println);
     }
 
     @Override
@@ -49,7 +50,6 @@ public class Phase1 implements Phase {
     public void selectThemes(Themes themes) {
         for (int i = 0; i < NB_OF_THEMES; i++) {
             this.themes[i] = themes.selectTheme();
-            System.out.println(this.themes[i]);
         }
     }
 
@@ -95,6 +95,10 @@ public class Phase1 implements Phase {
             listQuestions.addQuestion(new Question<>(i, questions.get(randomNb)));
 
         }
+    }
+
+    public LinkedList<Question<?>> getListQuestions() {
+        return listQuestions.getQuestions();
     }
 
 }

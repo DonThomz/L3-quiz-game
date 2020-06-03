@@ -116,7 +116,7 @@
       "category":"Mythology",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which of these Roman gods doesn&#039;t have a counterpart in Greek mythology?",
+      "question":"Which of these Roman gods doesn't have a counterpart in Greek mythology?",
       "correct_answer":"Janus",
       "incorrect_answers":[
         "Vulcan",
@@ -128,7 +128,7 @@
       "category":"Mythology",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Which Greek &amp; Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
+      "question":"Which Greek & Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
       "correct_answer":"Apollo",
       "incorrect_answers":[
         "Aphrodite",
@@ -229,7 +229,7 @@
       "category":"Mythology",
       "type":"boolean",
       "difficulty":"medium",
-      "question":"The Roman god &quot;Jupiter&quot; was first known as &quot;Zeus&quot; to the Greeks.",
+      "question":"The Roman god \"Jupiter\" was first known as \"Zeus\" to the Greeks.",
       "correct_answer":"True",
       "incorrect_answers":[
         "False"
@@ -246,7 +246,7 @@
       "category":"Mythology",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"What mythology did the god &quot;Apollo&quot; come from?",
+      "question":"What mythology did the god \"Apollo\" come from?",
       "correct_answer":"Greek and Roman",
       "incorrect_answers":[
         "Roman and Spanish",
@@ -291,7 +291,7 @@
       "type":"multiple",
       "difficulty":"medium",
       "question":"Who is the god of war in Polynesian mythology?",
-      "correct_answer":"&#039;Oro",
+      "correct_answer":"'Oro",
       "incorrect_answers":[
         "Hina",
         "Kohara",
@@ -302,7 +302,7 @@
       "category":"Mythology",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"The Nike apparel and footwear brand takes it&#039;s name from the Greek goddess of what?",
+      "question":"The Nike apparel and footwear brand takes it's name from the Greek goddess of what?",
       "correct_answer":"Victory",
       "incorrect_answers":[
         "Courage",

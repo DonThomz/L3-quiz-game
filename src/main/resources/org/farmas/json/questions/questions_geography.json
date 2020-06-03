@@ -27,7 +27,7 @@
          "question":"Which city is the capital of Switzerland?",
          "correct_answer":"Bern",
          "incorrect_answers":[
-            "Z&uuml;rich",
+            "Zürich",
             "Frankfurt",
             "Wien"
          ]
@@ -130,8 +130,8 @@
          "question":"What name was historically used for the Turkish city currently known as Istanbul?",
          "correct_answer":"Constaninople",
          "incorrect_answers":[
-            "H&uuml;davendigar",
-            "S&ouml;\u011f&uuml;t",
+            "Hüdavendigar",
+            "Sö\u011füt",
             "Adrianople"
          ]
       },
@@ -143,7 +143,7 @@
          "correct_answer":"The 1936 Olympics",
          "incorrect_answers":[
             "Coronation of Prince Johann I Joseph in 1805",
-            "Charles VI&#039;s decree in 1719",
+            "Charles VI's decree in 1719",
             "Signing of the 1862 Constitution of Liechtenstein"
          ]
       },
@@ -207,7 +207,7 @@
          "category":"Geography",
          "type":"multiple",
          "difficulty":"easy",
-         "question":"What is Canada&#039;s smallest province?",
+         "question":"What is Canada's smallest province?",
          "correct_answer":"Prince Edward Island",
          "incorrect_answers":[
             "New Brunswick",
@@ -310,7 +310,7 @@
          "category":"Geography",
          "type":"boolean",
          "difficulty":"medium",
-         "question":"The title of the 1969 film &quot;Krakatoa, East_of Java&quot; is incorrect, as Krakatoa is in fact west of Java.",
+         "question":"The title of the 1969 film \"Krakatoa, East_of Java\" is incorrect, as Krakatoa is in fact west of Java.",
          "correct_answer":"True",
          "incorrect_answers":[
             "False"

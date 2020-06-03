@@ -5,7 +5,7 @@
       "category":"Science: Computers",
       "type":"boolean",
       "difficulty":"medium",
-      "question":"FLAC stands for &quot;Free Lossless Audio Condenser&quot;&#039;",
+      "question":"FLAC stands for \"Free Lossless Audio Condenser\"",
       "correct_answer":"False",
       "incorrect_answers":[
         "True"
@@ -27,7 +27,7 @@
       "category":"Science: Computers",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...",
+      "question":"Moore's law originally stated that the number of transistors on a microprocessor chip would double every...",
       "correct_answer":"Year",
       "incorrect_answers":[
         "Four Years",
@@ -61,7 +61,7 @@
       "category":"Science: Computers",
       "type":"short_answer",
       "difficulty":"easy",
-      "question":"In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "question":"In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
       "correct_answer":"Final"
     },
     {
@@ -79,10 +79,10 @@
       "type":"multiple",
       "difficulty":"easy",
       "question":"What does the Prt Sc button do?",
-      "correct_answer":"Captures what&#039;s on the screen and copies it to your clipboard",
+      "correct_answer":"Captures what's on the screen and copies it to your clipboard",
       "incorrect_answers":[
         "Nothing",
-        "Saves a .png file of what&#039;s on the screen in your screenshots folder in photos",
+        "Saves a .png file of what's on the screen in your screenshots folder in photos",
         "Closes all windows"
       ]
     },
@@ -166,7 +166,7 @@
       "category":"Science: Computers",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
+      "question":"In CSS, which of these values CANNOT be used with the \"position\" property?",
       "correct_answer":"center",
       "incorrect_answers":[
         "static",
@@ -178,7 +178,7 @@
       "category":"Science: Computers",
       "type":"short_answer",
       "difficulty":"easy",
-      "question":"In &quot;Hexadecimal&quot;, what color would be displayed from the color code? &quot;#00FF00&quot;?",
+      "question":"In \"Hexadecimal\", what color would be displayed from the color code? \"#00FF00\"?",
       "correct_answer":"Green"
     },
     {
@@ -229,7 +229,7 @@
       "category":"Science: Computers",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"When did the online streaming service &quot;Mixer&quot; launch?",
+      "question":"When did the online streaming service \"Mixer\" launch?",
       "correct_answer":"2016",
       "incorrect_answers":[
         "2013",
@@ -311,12 +311,12 @@
       "category":"Science: Computers",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
-      "correct_answer":"A&#039; + B&#039;",
+      "question":"According to DeMorgan's Theorem, the Boolean expression (AB)' is equivalent to:",
+      "correct_answer":"A' + B'",
       "incorrect_answers":[
-        "A&#039;B + B&#039;A",
-        "A&#039;B&#039;",
-        "AB&#039; + AB"
+        "A'B + B'A",
+        "A'B'",
+        "AB' + AB"
       ]
     },
     {

@@ -5,7 +5,7 @@
       "category":"Video Games",
       "type":"boolean",
       "difficulty":"easy",
-      "question":"The song &quot;Megalovania&quot; by Toby Fox made its third appearence in the 2015 RPG &quot;Undertale&quot;.",
+      "question":"The song \"Megalovania\" by Toby Fox made its third appearence in the 2015 RPG \"Undertale\".",
       "correct_answer":"True",
       "incorrect_answers":[
         "False"
@@ -15,7 +15,7 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"How many Star Spirits do you rescue in the Nintendo 64 video game &quot;Paper Mario&quot;?",
+      "question":"How many Star Spirits do you rescue in the Nintendo 64 video game \"Paper Mario\"?",
       "correct_answer":"7",
       "incorrect_answers":[
         "5",
@@ -27,7 +27,7 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"What was the first video game in the Batman &quot;Arkham&quot; series?",
+      "question":"What was the first video game in the Batman \"Arkham\" series?",
       "correct_answer":"Arkham Asylum",
       "incorrect_answers":[
         "Arkham Knight",
@@ -39,7 +39,7 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"What was the first &quot;Team Fortress 2&quot; update to include a war?",
+      "question":"What was the first \"Team Fortress 2\" update to include a war?",
       "correct_answer":"Sniper vs. Spy Update",
       "incorrect_answers":[
         "WAR! Update",
@@ -51,7 +51,7 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which of these weapons is NOT available to the Terrorist team in the game, &quot;Counter-Strike: Global Offensive&quot;?",
+      "question":"Which of these weapons is NOT available to the Terrorist team in the game, \"Counter-Strike: Global Offensive\"?",
       "correct_answer":"SCAR-20",
       "incorrect_answers":[
         "SG 550",
@@ -97,12 +97,12 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Which of the following Pok&eacute;mon games released first?",
-      "correct_answer":"Pok&eacute;mon Crystal",
+      "question":"Which of the following Pokemon games released first?",
+      "correct_answer":"Pokemon Crystal",
       "incorrect_answers":[
-        "Pok&eacute;mon Platinum",
-        "Pok&eacute;mon FireRed",
-        "Pok&eacute;mon Black"
+        "Pokemon Platinum",
+        "Pokemon FireRed",
+        "Pokemon Black"
       ]
     },
     {
@@ -112,7 +112,7 @@
       "question":"Who is the creator of the Super Smash Bros. Series?",
       "correct_answer":"Masahiro Sakurai",
       "incorrect_answers":[
-        "Reggie Fils-Aim&eacute;",
+        "Reggie Fils-Aime",
         "Bill Trinen",
         "Hideo Kojima"
       ]
@@ -134,11 +134,11 @@
       "type":"multiple",
       "difficulty":"medium",
       "question":"In Call of Duty: United Offensive, what two soldiers share a name of a video game character?",
-      "correct_answer":"Gordon &amp; Freeman",
+      "correct_answer":"Gordon & Freeman",
       "incorrect_answers":[
-        "Sam &amp; Fisher",
-        "Nathan &amp; Drake",
-        "Dig &amp; Dug"
+        "Sam & Fisher",
+        "Nathan & Drake",
+        "Dig & Dug"
       ]
     },
     {
@@ -169,14 +169,14 @@
       "category":"Video Games",
       "type":"short_answer",
       "difficulty":"easy",
-      "question":"In what year was Garry&#039;s Mod released as a standalone title on Valve&#039;s Steam distribution service?",
+      "question":"In what year was Garry's Mod released as a standalone title on Valve's Steam distribution service?",
       "correct_answer":"2006"
     },
     {
       "category":"Video Games",
       "type":"short_answer",
       "difficulty":"easy",
-      "question":"In what year was the first &quot;Mass Effect&quot; game released?",
+      "question":"In what year was the first \"Mass Effect\" game released?",
       "correct_answer":"2007"
     },
     {
@@ -217,7 +217,7 @@
       "category":"Video Games",
       "type":"boolean",
       "difficulty":"easy",
-      "question":"Valve&#039;s &quot;Portal&quot; and &quot;Half-Life&quot; franchises exist within the same in-game universe.",
+      "question":"Valve's \"Portal\" and \"Half-Life\" franchises exist within the same in-game universe.",
       "correct_answer":"True",
       "incorrect_answers":[
         "False"
@@ -227,7 +227,7 @@
       "category":"Video Games",
       "type":"boolean",
       "difficulty":"medium",
-      "question":"In Portal, the Companion Cube&#039;s ARE sentient.",
+      "question":"In Portal, the Companion Cube's ARE sentient.",
       "correct_answer":"True",
       "incorrect_answers":[
         "False"
@@ -237,8 +237,8 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"Toby Fox&#039;s &quot;Megalovania&quot; was first used where?",
-      "correct_answer":"Radiation&#039;s Earthbound Halloween Hack",
+      "question":"Toby Fox's \"Megalovania\" was first used where?",
+      "correct_answer":"Radiation's Earthbound Halloween Hack",
       "incorrect_answers":[
         "Homestuck: [S] Wake",
         "Undertale",
@@ -249,7 +249,7 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"In &quot;The Binding of Isaac&quot;, which item instantly kills Mom and Mom&#039;s Heart?",
+      "question":"In \"The Binding of Isaac\", which item instantly kills Mom and Mom's Heart?",
       "correct_answer":"The Bible",
       "incorrect_answers":[
         "The Halo",
@@ -273,7 +273,7 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"In &quot;Call Of Duty: Zombies&quot;, completing which map&#039;s main easter egg will reward you with the achievement, &quot;Little Lost Girl&quot;?",
+      "question":"In \"Call Of Duty: Zombies\", completing which map's main easter egg will reward you with the achievement, \"Little Lost Girl\"?",
       "correct_answer":"Origins",
       "incorrect_answers":[
         "Revelations",
@@ -309,7 +309,7 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"In &quot;Kingdom Hearts&quot;, who abducts Jasmine in the Lamp Chamber?",
+      "question":"In \"Kingdom Hearts\", who abducts Jasmine in the Lamp Chamber?",
       "correct_answer":"Riku",
       "incorrect_answers":[
         "Riku Replica",
@@ -321,12 +321,12 @@
       "category":"Video Games",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"In Overwatch, what is L&uacute;cio&#039;s full name?",
-      "correct_answer":"L&uacute;cio Correia Dos Santos",
+      "question":"In Overwatch, what is Lú cio's full name?",
+      "correct_answer":"Lú cio Correia Dos Santos",
       "incorrect_answers":[
-        "L&uacute;cio Luiz L&oacute;s Guilherme",
-        "L&uacute;cio Jo&atilde;o Lucas",
-        "L&uacute;cio Chupar Prima"
+        "Lú cio Luiz L&oacute;s Guilherme",
+        "Lú cio Jo&atilde;o Lucas",
+        "Lú cio Chupar Prima"
       ]
     },
     {

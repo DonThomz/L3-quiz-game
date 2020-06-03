@@ -1,5 +1,6 @@
 package org.farmas.model.tools;
 
+import org.apache.commons.text.StringEscapeUtils;
 import org.farmas.App;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

@@ -70,12 +70,12 @@
       "category":"History",
       "type":"multiple",
       "difficulty":"medium",
-      "question":"According to scholarly estimates, what percentage of the world population at the time died due to Tamerlane&#039;s conquests?",
+      "question":"According to scholarly estimates, what percentage of the world population at the time died due to Tamerlane's conquests?",
       "correct_answer":"5%",
       "incorrect_answers":[
         "1%",
         "3%",
-        "&lt;1%"
+        "< 1%"
       ]
     },
     {
@@ -247,7 +247,7 @@
       "category":"History",
       "type":"multiple",
       "difficulty":"hard",
-      "question":"When was the &quot;Siege of Leningrad&quot; lifted during World War II?",
+      "question":"When was the \"Siege of Leningrad\" lifted during World War II?",
       "correct_answer":"January 1944",
       "incorrect_answers":[
         "September 1943",
