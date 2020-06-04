@@ -54,10 +54,10 @@ public class GameController implements Initializable, InitController {
     private ArrayList<Long> delaysPerPlayers;
 
     public static Game game;
-    public static ArrayList<VBox> playersProfiles;
     public static int STEP = 0;
+    public static int ROUND = 0;
     public static boolean LOCK = false;
-    public static int ID_PLAYER = 0;
+    public ArrayList<VBox> playersProfiles;
 
 
     @Override
@@ -67,7 +67,7 @@ public class GameController implements Initializable, InitController {
 
         initData();
         setupListeners();
-        setupStep();
+        loadPlayerBoard();
 
     }
 
@@ -75,8 +75,6 @@ public class GameController implements Initializable, InitController {
     public void setupListeners() {
 
         returnButton.addEventHandler(MouseEvent.MOUSE_CLICKED, confirmReturnMenu);
-
-        submitButton.setOnAction(event -> launchPhaseI());
 
     }
 
@@ -90,10 +88,13 @@ public class GameController implements Initializable, InitController {
         titlePlayerInfo.setVisible(false);
         game = new Game();
         game.pickPlayers();
-        loadPlayerBoard();
     }
 
-    private void setupStep() {
+
+    /*===================
+           Game GUI
+    =====================*/
+    private void updateStepLabel() {
         switch (STEP) {
             case 0:
                 titleStep.setText("Players picked");
@@ -107,20 +108,46 @@ public class GameController implements Initializable, InitController {
             case 3:
                 titleStep.setText("Round III");
                 break;
-            case 4:
-                titleStep.setText("End Game");
-                break;
             default:
                 titleStep.setText("Title loading");
                 break;
         }
     }
 
+    private void updateRoundLabel() {
+        switch (ROUND) {
+            case 1:
+                submitButton.setText("Start Round I");
+                submitButton.setOnAction(event -> launchPhaseI());
+                break;
+            case 2:
+                submitButton.setText("Start Round II");
+                submitButton.setOnAction(event -> launchPhaseII());
+                break;
+            case 3:
+                submitButton.setText("Start Round III");
+                submitButton.setOnAction(event -> launchPhaseIII());
+                break;
+            case 4:
+                submitButton.setText("Return Menu");
+                submitButton.setOnAction(event -> exit());
+                break;
+            default:
+                submitButton.setText("Title loading");
+                break;
+        }
+    }
 
-    /*===================
-           Game GUI
-    =====================*/
+
     private void loadPlayerBoard() {
+
+        ROUND++;
+        STEP = 0;
+        this.clearContent();
+        this.updateStepLabel();
+        this.updateRoundLabel();
+        this.titlePlayerInfo.setVisible(false);
+
         playersProfiles = new ArrayList<>();
         game.getPlayers().forEach(player -> {
             try {
@@ -136,22 +163,39 @@ public class GameController implements Initializable, InitController {
         content.getChildren().addAll(playersProfiles);
     }
 
+    private void resetAttributesRound() {
+        // update static attributes
+
+
+        // show player name
+        titlePlayerInfo.setVisible(true);
+
+        // change submit button
+        submitButton.setText("Submit Answer");
+    }
+
+    private void handleScoresAndConflicts() {
+        // remove the worst player
+        boolean conflict = game.removePlayer(delaysPerPlayers);
+        System.out.println(conflict);
+        // if no conflict launch player board
+        if (conflict) this.loadPlayerBoard();
+    }
+
+
     /*===================
             Phase I
     =====================*/
     private void launchPhaseI() {
 
+        this.resetAttributesRound();
 
         STEP = 1;
-        ID_PLAYER = 0;
-        titlePlayerInfo.setVisible(true);
-        setupStep();
-        // change submit button
-        submitButton.setText("Submit Answer");
+        this.updateStepLabel();
 
         // run the first round
         game.runPhaseI();
-        loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+        loadPlayerQuestionPhaseI(game.getPhaseI().selectPlayer());
 
     }
 
@@ -166,48 +210,52 @@ public class GameController implements Initializable, InitController {
 
         // display player info
         this.titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
-        if (ID_PLAYER < 4) {
-            switch (game.getPhaseI().getListQuestions().get(ID_PLAYER).getContent().getClass().getSimpleName()) {
+        if (Phase1.ID_PLAYER < game.getPlayers().size()) {
+            switch (game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER).getContent().getClass().getSimpleName()) {
                 case "MCQ":
-                    this.loadMQCGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    this.loadMQCGUI(game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                     // update submit button action
                     this.submitButton.setOnAction(event -> {
                         if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer);
-                            boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                            boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                             player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
-                            ID_PLAYER++;
-                            if (ID_PLAYER < 4) this.loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
-                            else this.exit();
+                            Phase1.ID_PLAYER++;
+                            if (Phase1.ID_PLAYER < game.getPlayers().size())
+                                this.loadPlayerQuestionPhaseI(game.getPhaseI().selectPlayer());
+                            else this.handleScoresAndConflicts();
+
                         }
                     });
                     break;
                 case "SA":
-                    this.loadSAGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    this.loadSAGUI(game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                     // update submit button action
                     this.submitButton.setOnAction(event -> {
                         if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer);
-                            boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                            boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                             player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
-                            ID_PLAYER++;
-                            if (ID_PLAYER < 4) this.loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
-                            else this.exit();
+                            Phase1.ID_PLAYER++;
+                            if (Phase1.ID_PLAYER < game.getPlayers().size())
+                                this.loadPlayerQuestionPhaseI(game.getPhaseI().selectPlayer());
+                            else this.handleScoresAndConflicts();
+
                         }
                     });
                     break;
                 case "TF":
-                    this.loadTFGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    this.loadTFGUI(game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                     // update submit button action
                     this.submitButton.setOnAction(event -> {
                         if (this.controllerLoader.<TFController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer);
-                            boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
-                            System.out.println(isCorrect);
+                            boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                             player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
-                            ID_PLAYER++;
-                            if (ID_PLAYER < 4) this.loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
-                            else this.exit();
+                            Phase1.ID_PLAYER++;
+                            if (Phase1.ID_PLAYER < game.getPlayers().size())
+                                this.loadPlayerQuestionPhaseI(game.getPhaseI().selectPlayer());
+                            else this.handleScoresAndConflicts();
                         }
                     });
                     break;
@@ -220,11 +268,40 @@ public class GameController implements Initializable, InitController {
     /*===================
            Phase II
     =====================*/
+    private void launchPhaseII() {
+
+        this.resetAttributesRound();
+
+        STEP = 2;
+        this.updateStepLabel();
+
+        // run the second round
+        game.runPhaseII();
+        loadPlayerQuestionPhaseII(game.getPhaseII().selectPlayer());
+
+    }
+
+    private void loadPlayerQuestionPhaseII(Player player) {
+
+        // Run timer in another Thread
+        TimerRound timer = new TimerRound("Thread-" + player.getName());
+        timer.start();
+
+        // clear center content
+        this.clearContent();
+
+        // display player info
+        this.titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
+
+
+    }
+
 
     /*===================
            Phase III
     =====================*/
-
+    private void launchPhaseIII() {
+    }
 
     /*===================
         Question GUI
@@ -287,6 +364,8 @@ public class GameController implements Initializable, InitController {
     private void exit() {
         game.getPlayers().forEach(p -> System.out.println(p.getName() + " " + p.getScore()));
         delaysPerPlayers.forEach(System.out::println);
+        STEP = 0;
+        ROUND = 0;
         try {
             App.setScene("home");
             App.window.centerOnScreen();
@@ -294,10 +373,6 @@ public class GameController implements Initializable, InitController {
             ioException.printStackTrace();
         }
         submitButton.setOnAction(event -> launchPhaseI());
-    }
-
-    private void createTimer() {
-
     }
 
     /*===================
@@ -319,12 +394,7 @@ public class GameController implements Initializable, InitController {
         Optional<ButtonType> closeResponse = closeConfirmation.showAndWait();
         if (closeResponse.isPresent()) {
             if (ButtonType.OK.equals(closeResponse.get())) {
-                try {
-                    App.setScene("home");
-                    App.window.centerOnScreen();
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                }
+                exit();
             }
             event.consume();
         }

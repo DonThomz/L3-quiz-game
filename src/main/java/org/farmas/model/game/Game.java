@@ -3,10 +3,14 @@ package org.farmas.model.game;
 import org.farmas.App;
 import org.farmas.model.game.phase.Phase;
 import org.farmas.model.game.phase.Phase1;
+import org.farmas.model.game.phase.Phase2;
 import org.farmas.model.players.Player;
 import org.farmas.model.themes.Themes;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Game {
 
@@ -38,6 +42,10 @@ public class Game {
         phases[0] = new Phase1(players, themes);
     }
 
+    public void runPhaseII() {
+        phases[1] = new Phase2(players, themes);
+    }
+
     public void pickPlayers() {
         ArrayList<Integer> randomNbPick = new ArrayList<>();
         for (int i = 0; i < MAX_PLAYERS; i++) {
@@ -51,6 +59,29 @@ public class Game {
         }
     }
 
+    public boolean removePlayer(ArrayList<Long> delayPerPlayers) {
+        List<Integer> scores = this.players.stream().map(Player::getScore).collect(Collectors.toList());
+        int minScore = Collections.min(scores);
+        int conflict = (int) scores.stream().filter(score -> score == minScore).count();
+        if (conflict > 1) {
+            // compare timer
+            long minTime = Collections.min(delayPerPlayers);
+            int conflictTimer = (int) delayPerPlayers.stream().filter(delay -> delay == minTime).count();
+            if (conflictTimer > 1) {
+                // return false => need an conflit round
+                return false;
+            } else {
+                this.players.remove(delayPerPlayers.indexOf(minTime));
+                return true;
+            }
+        } else {
+            // remove the player
+            this.players.removeIf(player -> player.getScore() == minScore);
+            return true;
+        }
+    }
+
+
     public ArrayList<Player> getPlayers() {
         return players;
     }
@@ -61,5 +92,9 @@ public class Game {
 
     public Phase1 getPhaseI() {
         return (Phase1) phases[0];
+    }
+
+    public Phase2 getPhaseII() {
+        return (Phase2) phases[1];
     }
 }

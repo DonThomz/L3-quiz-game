@@ -1,11 +1,12 @@
 package org.farmas.model.game.phase;
 
+import org.farmas.model.players.Player;
 import org.farmas.model.themes.Themes;
 
 public class Phase3 implements Phase {
     @Override
-    public void selectPlayer() {
-
+    public Player selectPlayer() {
+        return null;
     }
 
     @Override

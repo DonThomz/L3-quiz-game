@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import org.farmas.controller.InitController;
-import org.farmas.controller.game.GameController;
 import org.farmas.model.questions.Question;
 import org.farmas.model.questions.types.MCQ;
 
@@ -29,8 +28,6 @@ public class MCQController implements Initializable, InitController {
     private JFXButton answer3;
     @FXML
     private JFXButton answer4;
-    @FXML
-    private JFXButton submitButton;
 
     private int answerSelected = -1;
     private List<JFXButton> answersButtons;
@@ -42,7 +39,6 @@ public class MCQController implements Initializable, InitController {
 
     @Override
     public void setupListeners() {
-        submitButton.setOnAction(event -> GameController.ID_PLAYER++);
     }
 
     @Override
