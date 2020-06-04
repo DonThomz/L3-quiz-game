@@ -1,341 +1,341 @@
 {
   "title_category": "Video Games",
-  "results":[
+  "results": [
     {
-      "category":"Video Games",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The song &quot;Megalovania&quot; by Toby Fox made its third appearence in the 2015 RPG &quot;Undertale&quot;.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "The song \"Megalovania\" by Toby Fox made its third appearence in the 2015 RPG \"Undertale\".",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"How many Star Spirits do you rescue in the Nintendo 64 video game &quot;Paper Mario&quot;?",
-      "correct_answer":"7",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "How many Star Spirits do you rescue in the Nintendo 64 video game \"Paper Mario\"?",
+      "correct_answer": "7",
+      "incorrect_answers": [
         "5",
         "10",
         "12"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"What was the first video game in the Batman &quot;Arkham&quot; series?",
-      "correct_answer":"Arkham Asylum",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What was the first video game in the Batman \"Arkham\" series?",
+      "correct_answer": "Arkham Asylum",
+      "incorrect_answers": [
         "Arkham Knight",
         "Arkham City",
         "Arkham Origins"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What was the first &quot;Team Fortress 2&quot; update to include a war?",
-      "correct_answer":"Sniper vs. Spy Update",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What was the first \"Team Fortress 2\" update to include a war?",
+      "correct_answer": "Sniper vs. Spy Update",
+      "incorrect_answers": [
         "WAR! Update",
         "Meet Your Match Update",
         "Spy Vs. Engineer Update"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which of these weapons is NOT available to the Terrorist team in the game, &quot;Counter-Strike: Global Offensive&quot;?",
-      "correct_answer":"SCAR-20",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these weapons is NOT available to the Terrorist team in the game, \"Counter-Strike: Global Offensive\"?",
+      "correct_answer": "SCAR-20",
+      "incorrect_answers": [
         "SG 550",
         "CZ-75",
         "XM1014"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"How long are all the cutscenes from Metal Gear Solid 4 (PS3, 2008) combined?",
-      "correct_answer":"8 hours",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How long are all the cutscenes from Metal Gear Solid 4 (PS3, 2008) combined?",
+      "correct_answer": "8 hours",
+      "incorrect_answers": [
         "4 hours",
         "12 hours",
         "5 hours"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"Metal Gear Solid V: The Phantom Pain runs on the Fox Engine.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "Metal Gear Solid V: The Phantom Pain runs on the Fox Engine.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Who was the first female protagonist in a video game?",
-      "correct_answer":"Samus Aran",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who was the first female protagonist in a video game?",
+      "correct_answer": "Samus Aran",
+      "incorrect_answers": [
         "Lara Croft",
         "Alis Landale",
         "Chell"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which of the following Pok&eacute;mon games released first?",
-      "correct_answer":"Pok&eacute;mon Crystal",
-      "incorrect_answers":[
-        "Pok&eacute;mon Platinum",
-        "Pok&eacute;mon FireRed",
-        "Pok&eacute;mon Black"
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of the following Pokemon games released first?",
+      "correct_answer": "Pokemon Crystal",
+      "incorrect_answers": [
+        "Pokemon Platinum",
+        "Pokemon FireRed",
+        "Pokemon Black"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Who is the creator of the Super Smash Bros. Series?",
-      "correct_answer":"Masahiro Sakurai",
-      "incorrect_answers":[
-        "Reggie Fils-Aim&eacute;",
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who is the creator of the Super Smash Bros. Series?",
+      "correct_answer": "Masahiro Sakurai",
+      "incorrect_answers": [
+        "Reggie Fils-Aime",
         "Bill Trinen",
         "Hideo Kojima"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"In what city in the dystopia alternate future of Half-Life 2 do you first start in?",
-      "correct_answer":"City 17",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In what city in the dystopia alternate future of Half-Life 2 do you first start in?",
+      "correct_answer": "City 17",
+      "incorrect_answers": [
         "City 18",
         "City 6",
         "City 45"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In Call of Duty: United Offensive, what two soldiers share a name of a video game character?",
-      "correct_answer":"Gordon &amp; Freeman",
-      "incorrect_answers":[
-        "Sam &amp; Fisher",
-        "Nathan &amp; Drake",
-        "Dig &amp; Dug"
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In Call of Duty: United Offensive, what two soldiers share a name of a video game character?",
+      "correct_answer": "Gordon & Freeman",
+      "incorrect_answers": [
+        "Sam & Fisher",
+        "Nathan & Drake",
+        "Dig & Dug"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"What company develops the Rock Band series of rhythm games?",
-      "correct_answer":"Harmonix",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What company develops the Rock Band series of rhythm games?",
+      "correct_answer": "Harmonix",
+      "incorrect_answers": [
         "Activision",
         "Konami",
         "Electronic Arts"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"How many total monsters appear in Monster Hunter Generations?",
-      "correct_answer":"105",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How many total monsters appear in Monster Hunter Generations?",
+      "correct_answer": "105",
+      "incorrect_answers": [
         "100",
         "98",
         "73"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"short_answer",
-      "difficulty":"easy",
-      "question":"In what year was Garry&#039;s Mod released as a standalone title on Valve&#039;s Steam distribution service?",
-      "correct_answer":"2006"
+      "category": "Video Games",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "In what year was Garry's Mod released as a standalone title on Valve's Steam distribution service?",
+      "correct_answer": "2006"
     },
     {
-      "category":"Video Games",
-      "type":"short_answer",
-      "difficulty":"easy",
-      "question":"In what year was the first &quot;Mass Effect&quot; game released?",
-      "correct_answer":"2007"
+      "category": "Video Games",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "In what year was the first \"Mass Effect\" game released?",
+      "correct_answer": "2007"
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In Terraria, what does the Wall of Flesh not drop upon defeat?",
-      "correct_answer":"Picksaw",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In Terraria, what does the Wall of Flesh not drop upon defeat?",
+      "correct_answer": "Picksaw",
+      "incorrect_answers": [
         "Pwnhammer",
         "Breaker Blade",
         "Laser Rifle"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"In Monster Hunter Generations, guild style is a type of hunting style.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "In Monster Hunter Generations, guild style is a type of hunting style.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"How many voice channels does the Super Nintendo Entertainment System support?",
-      "correct_answer":"8",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How many voice channels does the Super Nintendo Entertainment System support?",
+      "correct_answer": "8",
+      "incorrect_answers": [
         "6",
         "10",
         "12"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"Valve&#039;s &quot;Portal&quot; and &quot;Half-Life&quot; franchises exist within the same in-game universe.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Valve's \"Portal\" and \"Half-Life\" franchises exist within the same in-game universe.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"In Portal, the Companion Cube&#039;s ARE sentient.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "In Portal, the Companion Cube's ARE sentient.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Toby Fox&#039;s &quot;Megalovania&quot; was first used where?",
-      "correct_answer":"Radiation&#039;s Earthbound Halloween Hack",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Toby Fox's \"Megalovania\" was first used where?",
+      "correct_answer": "Radiation's Earthbound Halloween Hack",
+      "incorrect_answers": [
         "Homestuck: [S] Wake",
         "Undertale",
         "Mother: Cognitive Dissonance"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"In &quot;The Binding of Isaac&quot;, which item instantly kills Mom and Mom&#039;s Heart?",
-      "correct_answer":"The Bible",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In \"The Binding of Isaac\", which item instantly kills Mom and Mom's Heart?",
+      "correct_answer": "The Bible",
+      "incorrect_answers": [
         "The Halo",
         "Brimstone",
         "Book of Shadows"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"When was Club Penguin launched?",
-      "correct_answer":"October 24, 2005",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "When was Club Penguin launched?",
+      "correct_answer": "October 24, 2005",
+      "incorrect_answers": [
         "October 21, 2005",
         "March 29, 2006",
         "November 22, 2004"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In &quot;Call Of Duty: Zombies&quot;, completing which map&#039;s main easter egg will reward you with the achievement, &quot;Little Lost Girl&quot;?",
-      "correct_answer":"Origins",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In \"Call Of Duty: Zombies\", completing which map's main easter egg will reward you with the achievement, \"Little Lost Girl\"?",
+      "correct_answer": "Origins",
+      "incorrect_answers": [
         "Revelations",
         "Moon",
         "Tranzit"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What is the only Generation III Pokemon whose name begins with the letter I?",
-      "correct_answer":"Illumise",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the only Generation III Pokemon whose name begins with the letter I?",
+      "correct_answer": "Illumise",
+      "incorrect_answers": [
         "Infernape",
         "Ivysaur",
         "Igglybuff"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"In CoD: Black Ops III, what is the name of the rogue A.I. antagonist?",
-      "correct_answer":"Corvus",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In CoD: Black Ops III, what is the name of the rogue A.I. antagonist?",
+      "correct_answer": "Corvus",
+      "incorrect_answers": [
         "Cabal",
         "Legion",
         "Icarus"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In &quot;Kingdom Hearts&quot;, who abducts Jasmine in the Lamp Chamber?",
-      "correct_answer":"Riku",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In \"Kingdom Hearts\", who abducts Jasmine in the Lamp Chamber?",
+      "correct_answer": "Riku",
+      "incorrect_answers": [
         "Riku Replica",
         "Xaldin",
         "Captain Hook"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In Overwatch, what is L&uacute;cio&#039;s full name?",
-      "correct_answer":"L&uacute;cio Correia Dos Santos",
-      "incorrect_answers":[
-        "L&uacute;cio Luiz L&oacute;s Guilherme",
-        "L&uacute;cio Jo&atilde;o Lucas",
-        "L&uacute;cio Chupar Prima"
+      "category": "Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In Overwatch, what is Lú cio's full name?",
+      "correct_answer": "Lú cio Correia Dos Santos",
+      "incorrect_answers": [
+        "Lú cio Luiz L&oacute;s Guilherme",
+        "Lú cio Jo&atilde;o Lucas",
+        "Lú cio Chupar Prima"
       ]
     },
     {
-      "category":"Video Games",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"There are 2 player roles in Trouble in Terrorist Town.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "Video Games",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "There are 2 player roles in Trouble in Terrorist Town.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     }

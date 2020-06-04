@@ -24,21 +24,21 @@ public class Game {
         this.themes = new Themes();
 
         // select 4 players
-        pickPlayers();
+        //pickPlayers();
 
-        start();
+        //start();
     }
 
 
-    private void start() {
+    public void start() {
         runPhaseI();
     }
 
-    private void runPhaseI() {
+    public void runPhaseI() {
         phases[0] = new Phase1(players, themes);
     }
 
-    private void pickPlayers() {
+    public void pickPlayers() {
         ArrayList<Integer> randomNbPick = new ArrayList<>();
         for (int i = 0; i < MAX_PLAYERS; i++) {
             Player tmp_p;
@@ -51,4 +51,15 @@ public class Game {
         }
     }
 
+    public ArrayList<Player> getPlayers() {
+        return players;
+    }
+
+    public Phase[] getPhases() {
+        return phases;
+    }
+
+    public Phase1 getPhaseI() {
+        return (Phase1) phases[0];
+    }
 }

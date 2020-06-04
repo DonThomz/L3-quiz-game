@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+            prefWidth="1080.0" stylesheets="@../sheetstyles/app.css" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.farmas.controller.game.GameController">
+    <children>
+        <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton fx:id="returnButton" buttonType="RAISED" styleClass="custom_button"
+                                           text="Return">
+                                    <HBox.margin>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
+                                <Region prefHeight="100.0" prefWidth="79.0" HBox.hgrow="SOMETIMES"/>
+                                <Label fx:id="titleStep" styleClass="title" text="TITLE" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                                    </HBox.margin>
+                                </Label>
+                                <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="SOMETIMES"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="1080.0" styleClass="subTitle">
+                            <children>
+                                <Label fx:id="titlePlayerInfo" styleClass="title" text="TITLE" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <AnchorPane fx:id="body" prefWidth="1080.0" BorderPane.alignment="TOP_CENTER">
+                    <children>
+                        <HBox fx:id="content" alignment="CENTER" prefHeight="264.0" prefWidth="1080.0" spacing="40.0"
+                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                              AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </center>
+            <bottom>
+                <JFXButton fx:id="submitButton" buttonType="RAISED" minHeight="60.0" minWidth="160.0"
+                           styleClass="custom_button" text="Start Game" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+                    </BorderPane.margin>
+                </JFXButton>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

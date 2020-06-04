@@ -1,331 +1,331 @@
 {
   "title_category": "Science computers",
-  "results":[
+  "results": [
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"FLAC stands for &quot;Free Lossless Audio Condenser&quot;&#039;",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "FLAC stands for \"Free Lossless Audio Condenser\"",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Whistler was the codename of this Microsoft Operating System.",
-      "correct_answer":"Windows XP",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Whistler was the codename of this Microsoft Operating System.",
+      "correct_answer": "Windows XP",
+      "incorrect_answers": [
         "Windows 2000",
         "Windows 7",
         "Windows 95"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...",
-      "correct_answer":"Year",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Moore's law originally stated that the number of transistors on a microprocessor chip would double every...",
+      "correct_answer": "Year",
+      "incorrect_answers": [
         "Four Years",
         "Two Years",
         "Eight Years"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"HTML is what type of language?",
-      "correct_answer":"Markup Language",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "HTML is what type of language?",
+      "correct_answer": "Markup Language",
+      "incorrect_answers": [
         "Macro Language",
         "Programming Language",
         "Scripting Language"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"short_answer",
-      "difficulty":"easy",
-      "question":"In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
-      "correct_answer":"Final"
+      "category": "Science: Computers",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
+      "correct_answer": "Final"
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The logo for Snapchat is a Bell.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "The logo for Snapchat is a Bell.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"What does the Prt Sc button do?",
-      "correct_answer":"Captures what&#039;s on the screen and copies it to your clipboard",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What does the Prt Sc button do?",
+      "correct_answer": "Captures what's on the screen and copies it to your clipboard",
+      "incorrect_answers": [
         "Nothing",
-        "Saves a .png file of what&#039;s on the screen in your screenshots folder in photos",
+        "Saves a .png file of what's on the screen in your screenshots folder in photos",
         "Closes all windows"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"Pointers were not used in the original C programming language; they were added later on in C++.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Pointers were not used in the original C programming language; they were added later on in C++.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"To bypass US Munitions Export Laws, the creator of the PGP published all the source code in book form. ",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "To bypass US Munitions Export Laws, the creator of the PGP published all the source code in book form. ",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"While Apple was formed in California, in which western state was Microsoft founded?",
-      "correct_answer":"New Mexico",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "While Apple was formed in California, in which western state was Microsoft founded?",
+      "correct_answer": "New Mexico",
+      "incorrect_answers": [
         "Washington",
         "Colorado",
         "Arizona"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"MacOS is based on Linux.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "MacOS is based on Linux.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Generally, which component of a computer draws the most power?",
-      "correct_answer":"Video Card",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Generally, which component of a computer draws the most power?",
+      "correct_answer": "Video Card",
+      "incorrect_answers": [
         "Hard Drive",
         "Processor",
         "Power Supply"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In the server hosting industry IaaS stands for...",
-      "correct_answer":"Infrastructure as a Service",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the server hosting industry IaaS stands for...",
+      "correct_answer": "Infrastructure as a Service",
+      "incorrect_answers": [
         "Internet as a Service",
         "Internet and a Server",
         "Infrastructure as a Server"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"AMD created the first consumer 64-bit processor.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "AMD created the first consumer 64-bit processor.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
-      "correct_answer":"center",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In CSS, which of these values CANNOT be used with the \"position\" property?",
+      "correct_answer": "center",
+      "incorrect_answers": [
         "static",
         "absolute",
         "relative"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"short_answer",
-      "difficulty":"easy",
-      "question":"In &quot;Hexadecimal&quot;, what color would be displayed from the color code? &quot;#00FF00&quot;?",
-      "correct_answer":"Green"
+      "category": "Science: Computers",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "In \"Hexadecimal\", what color would be displayed from the color code? \"#00FF00\"?",
+      "correct_answer": "Green"
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"Early RAM was directly seated onto the motherboard and could not be easily removed.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "Early RAM was directly seated onto the motherboard and could not be easily removed.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The Windows ME operating system was released in the year 2000.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "The Windows ME operating system was released in the year 2000.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":".at is the top-level domain for what country?",
-      "correct_answer":"Austria",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": ".at is the top-level domain for what country?",
+      "correct_answer": "Austria",
+      "incorrect_answers": [
         "Argentina",
         "Australia",
         "Angola"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"What does the International System of Quantities refer 1024 bytes as?",
-      "correct_answer":"Kibibyte",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What does the International System of Quantities refer 1024 bytes as?",
+      "correct_answer": "Kibibyte",
+      "incorrect_answers": [
         "Kylobyte",
         "Kilobyte",
         "Kelobyte"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"When did the online streaming service &quot;Mixer&quot; launch?",
-      "correct_answer":"2016",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "When did the online streaming service \"Mixer\" launch?",
+      "correct_answer": "2016",
+      "incorrect_answers": [
         "2013",
         "2009",
         "2011"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"Linus Sebastian is the creator of the Linux kernel, which went on to be used in Linux, Android, and Chrome OS.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "Linus Sebastian is the creator of the Linux kernel, which went on to be used in Linux, Android, and Chrome OS.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"The name of technology company HP stands for what?",
-      "correct_answer":"Hewlett-Packard",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "The name of technology company HP stands for what?",
+      "correct_answer": "Hewlett-Packard",
+      "incorrect_answers": [
         "Howard Packmann",
         "Husker-Pollosk",
         "Hellman-Pohl"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
-      "correct_answer":"Transport",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
+      "correct_answer": "Transport",
+      "incorrect_answers": [
         "Session",
         "Data link",
         "Network"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In programming, what do you call functions with the same name but different implementations?",
-      "correct_answer":"Overloading",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In programming, what do you call functions with the same name but different implementations?",
+      "correct_answer": "Overloading",
+      "incorrect_answers": [
         "Overriding",
         "Abstracting",
         "Inheriting"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"In computing, what does MIDI stand for?",
-      "correct_answer":"Musical Instrument Digital Interface",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In computing, what does MIDI stand for?",
+      "correct_answer": "Musical Instrument Digital Interface",
+      "incorrect_answers": [
         "Musical Interface of Digital Instruments",
         "Modular Interface of Digital Instruments",
         "Musical Instrument Data Interface"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"In computing, what does LAN stand for?",
-      "correct_answer":"Local Area Network",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In computing, what does LAN stand for?",
+      "correct_answer": "Local Area Network",
+      "incorrect_answers": [
         "Long Antenna Node",
         "Light Access Node",
         "Land Address Navigation"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
-      "correct_answer":"A&#039; + B&#039;",
-      "incorrect_answers":[
-        "A&#039;B + B&#039;A",
-        "A&#039;B&#039;",
-        "AB&#039; + AB"
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "According to DeMorgan's Theorem, the Boolean expression (AB)' is equivalent to:",
+      "correct_answer": "A' + B'",
+      "incorrect_answers": [
+        "A'B + B'A",
+        "A'B'",
+        "AB' + AB"
       ]
     },
     {
-      "category":"Science: Computers",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What is the number of keys on a standard Windows Keyboard?",
-      "correct_answer":"104",
-      "incorrect_answers":[
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the number of keys on a standard Windows Keyboard?",
+      "correct_answer": "104",
+      "incorrect_answers": [
         "64",
         "94",
         "76"

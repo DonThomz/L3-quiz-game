@@ -32,7 +32,7 @@ public class TF implements TypeQuestions {
 
     @Override
     public String toString() {
-        return "VF{" +
+        return "TF{" +
                 "question='" + question + '\'' +
                 ", correctAnswer=" + correctAnswer +
                 '}';

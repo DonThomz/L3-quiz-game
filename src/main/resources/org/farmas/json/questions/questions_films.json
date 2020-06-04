@@ -1,344 +1,344 @@
 {
   "title_category": "Films",
-  "results":[
+  "results": [
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Which of the following was not one of &quot;The Magnificent Seven&quot;?",
-      "correct_answer":"Clint Eastwood",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of the following was not one of \"The Magnificent Seven\"?",
+      "correct_answer": "Clint Eastwood",
+      "incorrect_answers": [
         "Steve McQueen",
         "Charles Bronson",
         "Robert Vaughn"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Which movie released in 2016 features Superman and Batman fighting?",
-      "correct_answer":"Batman v Superman: Dawn of Justice",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which movie released in 2016 features Superman and Batman fighting?",
+      "correct_answer": "Batman v Superman: Dawn of Justice",
+      "incorrect_answers": [
         "Batman v Superman: Superapocalypse",
         "Batman v Superman: Black of Knight",
         "Batman v Superman: Knightfall"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In the movie &ldquo;The Iron Giant,&rdquo; this character is the protagonist.",
-      "correct_answer":"Hogarth Hughes",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the movie \"The Iron Giant\" this character is the protagonist.",
+      "correct_answer": "Hogarth Hughes",
+      "incorrect_answers": [
         "Kent Mansley",
         "Dean McCoppin",
         "Annie Hughes"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which 1958 movie starred Kirk Douglas and Tony Curtis as half-brothers Einar and Eric?",
-      "correct_answer":"The Vikings ",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which 1958 movie starred Kirk Douglas and Tony Curtis as half-brothers Einar and Eric?",
+      "correct_answer": "The Vikings ",
+      "incorrect_answers": [
         "The Long Ships",
         "Prince Valiant",
         "Spartacus"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Velma Kelly and Roxie Hart are the protagonists of which Oscar winning movie?",
-      "correct_answer":"Chicago",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Velma Kelly and Roxie Hart are the protagonists of which Oscar winning movie?",
+      "correct_answer": "Chicago",
+      "incorrect_answers": [
         "Dreamgirls",
         "Cabaret",
         "All That Jazz"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In which 1973 film does Yul Brynner play a robotic cowboy who malfunctions and goes on a killing\tspree?",
-      "correct_answer":"Westworld",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In which 1973 film does Yul Brynner play a robotic cowboy who malfunctions and goes on a killing\tspree?",
+      "correct_answer": "Westworld",
+      "incorrect_answers": [
         "Runaway",
         "Android",
         "The Terminators"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Who directed the 2015 movie &quot;The Revenant&quot;?",
-      "correct_answer":"Alejandro G. I&ntilde;&aacute;rritu",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who directed the 2015 movie \"The Revenant\" ?",
+      "correct_answer": "Alejandro González iñárritu",
+      "incorrect_answers": [
         "Christopher Nolan",
         "David Fincher",
         "Wes Anderson"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In which 1955 film does Frank Sinatra play Nathan Detroit?",
-      "correct_answer":"Guys and Dolls",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In which 1955 film does Frank Sinatra play Nathan Detroit?",
+      "correct_answer": "Guys and Dolls",
+      "incorrect_answers": [
         "Anchors Aweigh",
         "From Here to Eternity",
         "High Society"
       ]
     },
     {
-      "category":"Films",
-      "type":"short_answer",
-      "difficulty":"medium",
-      "question":"In what year was the first Transformers movie released?",
-      "correct_answer":"1986"
+      "category": "Films",
+      "type": "short_answer",
+      "difficulty": "medium",
+      "question": "In what year was the first Transformers movie released?",
+      "correct_answer": "1986"
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What is the name of the Artificial Intelligence system in the 1983 film, &quot;WarGames&quot;?",
-      "correct_answer":"War Operation Plan Response",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of the Artificial Intelligence system in the 1983 film, \"WarGames\"?",
+      "correct_answer": "War Operation Plan Response",
+      "incorrect_answers": [
         "Self Evolving Thought Helix",
         "Master Control Program",
         "West Campus Analog Computer"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"What did the first moving picture depict?",
-      "correct_answer":"A galloping horse",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What did the first moving picture depict?",
+      "correct_answer": "A galloping horse",
+      "incorrect_answers": [
         "A woman in a dress",
         "A man walking",
         "A crackling fire"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Which movie includes a giant bunny-like spirit who has magic powers including growing trees?",
-      "correct_answer":"My Neighbor Totoro",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which movie includes a giant bunny-like spirit who has magic powers including growing trees?",
+      "correct_answer": "My Neighbor Totoro",
+      "incorrect_answers": [
         "Hop",
         "Rise of the Guardians",
         "Alice in Wonderland"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which iconic character is featured in movies such as &quot;The Enforcer&quot;, &quot;Sudden Impact&quot;, and &quot;The Dead Pool&quot;?",
-      "correct_answer":"Dirty Harry",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which iconic character is featured in movies such as \"The Enforcer\", \"Sudden Impact\", and \"The Dead Pool\"?",
+      "correct_answer": "Dirty Harry",
+      "incorrect_answers": [
         "Indiana Jones",
         "James Bond",
         "Harry Potter"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"In the 1971 film &quot;Willy Wonka &amp; the Chocolate Factory&quot;, who played Willy Wonka?",
-      "correct_answer":"Gene Wilder",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the 1971 film \"Willy Wonka & the Chocolate Factory\", who played Willy Wonka?",
+      "correct_answer": "Gene Wilder",
+      "incorrect_answers": [
         "Shia LeBouf",
         "Peter Ostrum",
         "Johnny Depp"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which one of these films are shot entirely in one-take?",
-      "correct_answer":"Russian Ark",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which one of these films are shot entirely in one-take?",
+      "correct_answer": "Russian Ark",
+      "incorrect_answers": [
         "Good Will Hunting",
         "Birdman",
-        "Schindler&#039;s List"
+        "Schindler's List"
       ]
     },
     {
-      "category":"Films",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"Ewan McGregor did not know the name of the second prequel film of Star Wars during and after filming.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Ewan McGregor did not know the name of the second prequel film of Star Wars during and after filming.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"Films",
-      "type":"short_answer",
-      "difficulty":"easy",
-      "question":"In the movie &quot;Cast Away&quot; the main protagonist&#039;s best friend while on the island is named",
-      "correct_answer":"Wilson"
+      "category": "Films",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "In the movie \"Cast Away\" the main protagonist's best friend while on the island is named",
+      "correct_answer": "Wilson"
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What is the correct phrase for the Latin saying &quot;Romanes Eunt Domus&quot; in Monty Python&#039;s Life of Brian?",
-      "correct_answer":"Romani Ite Domum",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the correct phrase for the Latin saying \"Romanes Eunt Domus\" in Monty Python's Life of Brian?",
+      "correct_answer": "Romani Ite Domum",
+      "incorrect_answers": [
         "Romans Go Home",
         "Roxani Ite Domum",
         "Tomate Ite Domum"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"In the movie &quot;Scream&quot; who is Ghost Face?",
-      "correct_answer":"Billy Loomis and Stu Macher",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In the movie \"Scream\" who is Ghost Face?",
+      "correct_answer": "Billy Loomis and Stu Macher",
+      "incorrect_answers": [
         "Dewey Riley",
         "Sidney Prescott",
         "Archie Prescott and Philip Marv"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Who voices the main character Blu in the 2011 animated film &quot;Rio&quot;?",
-      "correct_answer":"Jesse Eisenberg",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who voices the main character Blu in the 2011 animated film \"Rio\"?",
+      "correct_answer": "Jesse Eisenberg",
+      "incorrect_answers": [
         "Michael Cera",
         "Jonah Hill",
         "Zach Galifianakis"
       ]
     },
     {
-      "category":"Films",
-      "type":"short_answer",
-      "difficulty":"easy",
-      "question":"The 2002 film &quot;28 Days Later&quot; is mainly set in which European country?",
-      "correct_answer":"United Kingdom"
+      "category": "Films",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "The 2002 film \"28 Days Later\" is mainly set in which European country?",
+      "correct_answer": "United Kingdom"
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What year did the James Cameron film &quot;Titanic&quot; come out in theaters?",
-      "correct_answer":"1997",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What year did the James Cameron film \"Titanic\" come out in theaters?",
+      "correct_answer": "1997",
+      "incorrect_answers": [
         "1996",
         "1998",
         "1999"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What is the correct spelling of the protagonist of the book in The NeverEnding Story (1984)?",
-      "correct_answer":"Atreyu",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the correct spelling of the protagonist of the book in The NeverEnding Story (1984)?",
+      "correct_answer": "Atreyu",
+      "incorrect_answers": [
         "Atrayu",
         "Atraiyu",
         "Atraeyu"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"At the end of the 2001 film &quot;Rat Race&quot;, whose concert do the contestants crash?",
-      "correct_answer":"Smash Mouth",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "At the end of the 2001 film \"Rat Race\", whose concert do the contestants crash?",
+      "correct_answer": "Smash Mouth",
+      "incorrect_answers": [
         "Bowling for Soup",
         "Sum 41",
         "Linkin Park"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which famous singer was portrayed by actor Kevin Spacey in the 2004 biographical film &quot;Beyond the Sea&quot;?",
-      "correct_answer":"Bobby Darin",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which famous singer was portrayed by actor Kevin Spacey in the 2004 biographical film \"Beyond the Sea\"?",
+      "correct_answer": "Bobby Darin",
+      "incorrect_answers": [
         "Louis Armstrong",
         "Frank Sinatra",
         "Dean Martin"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Who is the director of the 1991 film &quot;Silence of the Lambs&quot;?",
-      "correct_answer":"Jonathan Demme",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who is the director of the 1991 film \"Silence of the Lambs\"?",
+      "correct_answer": "Jonathan Demme",
+      "incorrect_answers": [
         "Stanley Kubrick",
         "Frank Darabont",
         "Michael Bay"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"Before &quot;Jurassic Park III&quot; was finalized and the Spinosaurus was chosen, which dinosaur was going to be the star?",
-      "correct_answer":"Baryonyx",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Before \"Jurassic Park III\" was finalized and the Spinosaurus was chosen, which dinosaur was going to be the star?",
+      "correct_answer": "Baryonyx",
+      "incorrect_answers": [
         "Tyrannosaurus Rex",
         "Velociraptor",
         "Suchomimus"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Ed Koch, the Mayor of New York in 1984, played himself in which Muppets movie?",
-      "correct_answer":"The Muppets Take Manhattan",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Ed Koch, the Mayor of New York in 1984, played himself in which Muppets movie?",
+      "correct_answer": "The Muppets Take Manhattan",
+      "incorrect_answers": [
         "The Great Muppet Caper",
         "The Muppet Christmas Carol",
         "The Muppet Movie"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Who performed the opening theme song for the James Bond 007 movie &quot;Goldfinger&quot;?",
-      "correct_answer":"Shirley Basey",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who performed the opening theme song for the James Bond 007 movie \"Goldfinger\"?",
+      "correct_answer": "Shirley Basey",
+      "incorrect_answers": [
         "Tom Jones",
         "John Barry",
         "Sheena Easton"
       ]
     },
     {
-      "category":"Films",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"What was Humphrey Bogart&#039;s middle name?",
-      "correct_answer":"DeForest",
-      "incorrect_answers":[
+      "category": "Films",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What was Humphrey Bogart's middle name?",
+      "correct_answer": "DeForest",
+      "incorrect_answers": [
         "DeWinter",
         "Steven",
         "Bryce"

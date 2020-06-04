@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox fx:id="playerProfileBox" alignment="BASELINE_CENTER" fillWidth="false" maxHeight="256.0" maxWidth="200.0"
+      minHeight="256.0" minWidth="200.0" prefHeight="256.0" prefWidth="200.0" styleClass="profileBox"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.farmas.controller.game.PlayerProfile">
+    <children>
+        <AnchorPane>
+            <children>
+                <ImageView fx:id="profilePlayer" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0"
+                           AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0"/>
+            </children>
+        </AnchorPane>
+        <Label fx:id="titlePlayer" styleClass="title" text="Label">
+            <VBox.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </VBox.margin>
+        </Label>
+    </children>
+    <stylesheets>
+        <URL value="@../sheetstyles/app.css"/>
+        <URL value="@../sheetstyles/profilePlayer.css"/>
+    </stylesheets>
+</VBox>

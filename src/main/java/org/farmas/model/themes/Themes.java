@@ -4,7 +4,9 @@ import org.farmas.model.tools.RessourcesScanner;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 
 public class Themes {
@@ -43,7 +45,6 @@ public class Themes {
     private void getAllThemesFromJSON() {
         // get file themes.json
         List<JSONObject> jsonFiles = RessourcesScanner.readJSONFilesFromRessources("themes");
-        System.out.println(jsonFiles);
         if (jsonFiles != null) {
             JSONArray themes = (JSONArray) jsonFiles.get(0).get("title_themes");
             for (int i = 0; i < NB_OF_THEMES; i++) {

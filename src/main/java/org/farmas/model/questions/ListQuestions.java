@@ -29,4 +29,9 @@ public class ListQuestions implements Iterable<Question<?>> {
     public Iterator<Question<?>> iterator() {
         return questions.iterator();
     }
+
+    public LinkedList<Question<?>> getQuestions() {
+        return questions;
+    }
+
 }

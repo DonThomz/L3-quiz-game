@@ -1,6 +1,5 @@
 package org.farmas.model.players;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Vector;
