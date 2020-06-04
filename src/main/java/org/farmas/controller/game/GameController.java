@@ -27,6 +27,7 @@ import org.farmas.model.questions.Question;
 import org.farmas.model.questions.types.MCQ;
 import org.farmas.model.questions.types.SA;
 import org.farmas.model.questions.types.TF;
+import org.farmas.model.tools.TimerRound;
 
 import java.io.IOException;
 import java.net.URL;
@@ -49,18 +50,20 @@ public class GameController implements Initializable, InitController {
     @FXML
     private JFXButton submitButton;
 
+    private FXMLLoader controllerLoader;
+    private ArrayList<Long> delaysPerPlayers;
+
     public static Game game;
     public static ArrayList<VBox> playersProfiles;
-    private FXMLLoader controllerLoader;
-
     public static int STEP = 0;
     public static boolean LOCK = false;
     public static int ID_PLAYER = 0;
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         App.window.sizeToScene();
-        titlePlayerInfo.setVisible(false);
 
         initData();
         setupListeners();
@@ -83,11 +86,11 @@ public class GameController implements Initializable, InitController {
     }
 
     public void initData() {
-
+        delaysPerPlayers = new ArrayList<>();
+        titlePlayerInfo.setVisible(false);
         game = new Game();
         game.pickPlayers();
         loadPlayerBoard();
-
     }
 
     private void setupStep() {
@@ -138,9 +141,9 @@ public class GameController implements Initializable, InitController {
     =====================*/
     private void launchPhaseI() {
 
+
         STEP = 1;
         ID_PLAYER = 0;
-
         titlePlayerInfo.setVisible(true);
         setupStep();
         // change submit button
@@ -154,57 +157,62 @@ public class GameController implements Initializable, InitController {
 
     private void loadPlayerQuestionPhaseI(Player player) {
 
-        // TODO add timer
+        // Run timer in another Thread
+        TimerRound timer = new TimerRound("Thread-" + player.getName());
+        timer.start();
 
         // clear center content
-        clearContent();
+        this.clearContent();
 
         // display player info
-        titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
+        this.titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
         if (ID_PLAYER < 4) {
             switch (game.getPhaseI().getListQuestions().get(ID_PLAYER).getContent().getClass().getSimpleName()) {
                 case "MCQ":
-                    loadMQCGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    this.loadMQCGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
                     // update submit button action
-                    submitButton.setOnAction(event -> {
-                        if (controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer);
                             boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
                             player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
                             ID_PLAYER++;
-                            if (ID_PLAYER < 4) loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
-                            else exit();
+                            if (ID_PLAYER < 4) this.loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+                            else this.exit();
                         }
                     });
                     break;
                 case "SA":
-                    loadSAGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    this.loadSAGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
                     // update submit button action
-                    submitButton.setOnAction(event -> {
-                        if (controllerLoader.<SAController>getController().checkIfButtonSelected()) {
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer);
                             boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
                             player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
                             ID_PLAYER++;
-                            if (ID_PLAYER < 4) loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
-                            else exit();
+                            if (ID_PLAYER < 4) this.loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+                            else this.exit();
                         }
                     });
                     break;
                 case "TF":
-                    loadTFGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    this.loadTFGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
                     // update submit button action
-                    submitButton.setOnAction(event -> {
-                        if (controllerLoader.<TFController>getController().checkIfButtonSelected()) {
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<TFController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer);
                             boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
                             System.out.println(isCorrect);
                             player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
                             ID_PLAYER++;
-                            if (ID_PLAYER < 4) loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
-                            else exit();
+                            if (ID_PLAYER < 4) this.loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+                            else this.exit();
                         }
                     });
                     break;
             }
-        } else exit();
+        } else this.exit();
 
     }
 
@@ -260,6 +268,17 @@ public class GameController implements Initializable, InitController {
     /*===================
         extra methods
     =====================*/
+    private void getTimerScore(TimerRound timerRound) {
+        System.out.println(timerRound.getName());
+        timerRound.stopTimer();
+        delaysPerPlayers.add(timerRound.getTime());
+        timerRound.interrupt();
+    }
+
+    private void clearTimerScore() {
+        delaysPerPlayers.clear();
+    }
+
     private void clearContent() {
         content.getChildren().clear();
         content.setAlignment(Pos.CENTER);
@@ -267,6 +286,7 @@ public class GameController implements Initializable, InitController {
 
     private void exit() {
         game.getPlayers().forEach(p -> System.out.println(p.getName() + " " + p.getScore()));
+        delaysPerPlayers.forEach(System.out::println);
         try {
             App.setScene("home");
             App.window.centerOnScreen();
@@ -274,6 +294,10 @@ public class GameController implements Initializable, InitController {
             ioException.printStackTrace();
         }
         submitButton.setOnAction(event -> launchPhaseI());
+    }
+
+    private void createTimer() {
+
     }
 
     /*===================
