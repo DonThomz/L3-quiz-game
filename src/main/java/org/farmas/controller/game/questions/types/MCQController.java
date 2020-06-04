@@ -10,19 +10,29 @@ import org.farmas.model.questions.Question;
 import org.farmas.model.questions.types.MCQ;
 
 import java.net.URL;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.ResourceBundle;
 
 public class MCQController implements Initializable, InitController {
 
-    @FXML private Label questionLabel;
-    @FXML private Label themeLabel;
-    @FXML private JFXButton answer1;
-    @FXML private JFXButton answer2;
-    @FXML private JFXButton answer3;
-    @FXML private JFXButton answer4;
-    @FXML private JFXButton submitButton;
+    @FXML
+    private Label questionLabel;
+    @FXML
+    private Label themeLabel;
+    @FXML
+    private JFXButton answer1;
+    @FXML
+    private JFXButton answer2;
+    @FXML
+    private JFXButton answer3;
+    @FXML
+    private JFXButton answer4;
+    @FXML
+    private JFXButton submitButton;
 
-    private int answerSelected;
+    private int answerSelected = -1;
     private List<JFXButton> answersButtons;
 
     @Override
@@ -40,7 +50,7 @@ public class MCQController implements Initializable, InitController {
 
     }
 
-    public void initData(Question<MCQ> question){
+    public void initData(Question<MCQ> question) {
         questionLabel.setText(question.getContent().getQuestion());
         themeLabel.setText(question.getTheme());
 
@@ -61,14 +71,17 @@ public class MCQController implements Initializable, InitController {
         }
     }
 
-    public boolean checkAnswer(Question<MCQ> question){
-        return ( answersButtons != null && answersButtons.get(answerSelected).getText().equals(question.getContent().getCorrectAnswer()));
+    public boolean checkAnswer(Question<MCQ> question) {
+        return (answersButtons != null && answersButtons.get(answerSelected).getText().equals(question.getContent().getCorrectAnswer()));
     }
 
-    public void updateBackgroundColorButton(List<JFXButton> answersButtons, JFXButton selectedButton){
+    public void updateBackgroundColorButton(List<JFXButton> answersButtons, JFXButton selectedButton) {
         answersButtons.forEach(button -> button.setStyle(button.equals(selectedButton) ? "-fx-background-color: #ffb300;" : "-fx-background-color: #212121;"));
     }
 
+    public boolean checkIfButtonSelected() {
+        return answerSelected != -1;
+    }
 
 
 }

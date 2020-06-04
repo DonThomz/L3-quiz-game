@@ -59,7 +59,7 @@ public class Game {
         return phases;
     }
 
-    public Phase1 getPhaseI(){
+    public Phase1 getPhaseI() {
         return (Phase1) phases[0];
     }
 }

@@ -1,24 +1,20 @@
 package org.farmas.model.tools;
 
-import org.apache.commons.text.StringEscapeUtils;
 import org.farmas.App;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.reflections.Reflections;
 import org.reflections.scanners.ResourcesScanner;
 
-import java.io.*;
-import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.function.BiPredicate;
-import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class RessourcesScanner {
 
@@ -30,16 +26,17 @@ public class RessourcesScanner {
 
     /**
      * Read files in resource folder with Reflection Library from Maven Dependency
-     * @param dir reference path to the folder
+     *
+     * @param dir       reference path to the folder
      * @param extension extension of files
-     * @param filters names of files that you want exclude
+     * @param filters   names of files that you want exclude
      * @return filenames
      */
     public static Set<String> listFilesUsingJavaIO(String dir, String extension, String... filters) {
 
         Reflections reflections = new Reflections(dir, new ResourcesScanner());
-        Set<String> fileNames = reflections.getResources(Pattern.compile(".*\\."+extension));
-        return fileNames.stream().filter(name ->{
+        Set<String> fileNames = reflections.getResources(Pattern.compile(".*\\." + extension));
+        return fileNames.stream().filter(name -> {
             boolean test = false;
             if (filters.length == 0) return true;
             for (String filter : filters
@@ -62,9 +59,9 @@ public class RessourcesScanner {
      */
     public static List<JSONObject> readJSONFilesFromRessources(String dir, String... filters) {
         try {
-            Set<String> files = RessourcesScanner.listFilesUsingJavaIO("org.farmas.json."+dir, "json", filters);
+            Set<String> files = RessourcesScanner.listFilesUsingJavaIO("org.farmas.json." + dir, "json", filters);
 
-            if(files != null && files.size() > 0) {
+            if (files != null && files.size() > 0) {
                 JSONParser parserJSON = new JSONParser();
                 List<JSONObject> jsonObjects = new ArrayList<>();
                 files.forEach(file -> {
@@ -82,7 +79,7 @@ public class RessourcesScanner {
                     }
                 });
                 return jsonObjects;
-            }else return null;
+            } else return null;
         } catch (Exception ex) {
             ex.printStackTrace();
             return null;

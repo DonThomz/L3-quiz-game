@@ -30,16 +30,24 @@ import org.farmas.model.questions.types.TF;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.Optional;
+import java.util.ResourceBundle;
 
 public class GameController implements Initializable, InitController {
 
-    @FXML private JFXButton returnButton;
-    @FXML private AnchorPane body;
-    @FXML private HBox content;
-    @FXML private Label titleStep;
-    @FXML private JFXButton submitButton;
+    @FXML
+    private JFXButton returnButton;
+    @FXML
+    private AnchorPane body;
+    @FXML
+    private HBox content;
+    @FXML
+    private Label titleStep;
+    @FXML
+    private Label titlePlayerInfo;
+    @FXML
+    private JFXButton submitButton;
 
     public static Game game;
     public static ArrayList<VBox> playersProfiles;
@@ -52,7 +60,9 @@ public class GameController implements Initializable, InitController {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         App.window.sizeToScene();
-        initGameData();
+        titlePlayerInfo.setVisible(false);
+
+        initData();
         setupListeners();
         setupStep();
 
@@ -72,8 +82,16 @@ public class GameController implements Initializable, InitController {
 
     }
 
-    private void setupStep(){
-        switch (STEP){
+    public void initData() {
+
+        game = new Game();
+        game.pickPlayers();
+        loadPlayerBoard();
+
+    }
+
+    private void setupStep() {
+        switch (STEP) {
             case 0:
                 titleStep.setText("Players picked");
                 break;
@@ -95,144 +113,11 @@ public class GameController implements Initializable, InitController {
         }
     }
 
-    private void initGameData(){
 
-        game = new Game();
-        game.pickPlayers();
-        loadPlayerBoard();
-
-    }
-
-    private void launchPhaseI() {
-
-        STEP++;
-        setupStep();
-        game.runPhaseI();
-
-
-
-        // change submit button
-        submitButton.setText("Submit Answer");
-
-
-        // run the first round
-        loadPlayerQuestionPhaseI(game.getPlayers().get(0), 0);
-
-    }
-
-    private void loadPlayerQuestionPhaseI(Player player, int ID) {
-
-        // TODO add timer
-        System.out.println(ID);
-        // clear center content
-        clearContent();
-        System.out.println(ID);
-        if(ID < 4) {
-            AtomicInteger IDatomic = new AtomicInteger(ID);
-            switch (game.getPhaseI().getListQuestions().get(ID).getContent().getClass().getSimpleName()) {
-                case "MCQ":
-                    loadMQCGUI(game.getPhaseI().getListQuestions().get(ID));
-                    // update submit button action
-                    submitButton.setOnAction(event -> {
-                        boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) game.getPhaseI().getListQuestions().get(IDatomic.get()));
-                        player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
-                        IDatomic.getAndIncrement();
-                        if(IDatomic.get() < 4 ) loadPlayerQuestionPhaseI(game.getPlayers().get(IDatomic.get()), IDatomic.get());
-                        else exit();
-                    });
-                    break;
-                case "SA":
-                    loadSAGUI(game.getPhaseI().getListQuestions().get(ID));
-                    // update submit button action
-                    submitButton.setOnAction(event -> {
-                        boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) game.getPhaseI().getListQuestions().get(IDatomic.get()));
-                        player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
-                        IDatomic.getAndIncrement();
-                        if(IDatomic.get() < 4 ) loadPlayerQuestionPhaseI(game.getPlayers().get(IDatomic.get()), IDatomic.get());
-                        else exit();
-                    });
-                    break;
-                case "TF":
-                    loadTFGUI(game.getPhaseI().getListQuestions().get(ID));
-                    // update submit button action
-                    submitButton.setOnAction(event -> {
-                        boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) game.getPhaseI().getListQuestions().get(IDatomic.get()));
-                        System.out.println(isCorrect);
-                        player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
-                        IDatomic.getAndIncrement();
-                        if(IDatomic.get() < 4 ) loadPlayerQuestionPhaseI(game.getPlayers().get(IDatomic.get()), IDatomic.get());
-                        else exit();
-                    });
-                    break;
-            }
-        } else { // next to second round
-            // TODO check score
-            submitButton.setOnAction(event -> {
-                try {
-                    App.setScene("home");
-                    App.window.centerOnScreen();
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                }
-            });
-        }
-
-    }
-
-    private void exit(){
-        submitButton.setOnAction(event -> {
-            try {
-                App.setScene("home");
-                App.window.centerOnScreen();
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
-        });
-    }
-
-    private void loadMQCGUI(Question<?> question){
-        try {
-            controllerLoader = new FXMLLoader(App.class.getResource("views/mcq.fxml"));
-            content.getChildren().add(0, controllerLoader.load());
-            controllerLoader.<MCQController>getController().initData((Question<MCQ>) question);
-        }catch (IOException ioException){
-            System.err.println("Error loading question QCM fxml");
-            System.err.println(ioException.getMessage());
-            ioException.printStackTrace();
-        }
-    }
-
-    private void loadSAGUI(Question<?> question){
-        try {
-            controllerLoader = new FXMLLoader(App.class.getResource("views/sa.fxml"));
-            content.getChildren().add(0, controllerLoader.load());
-            controllerLoader.<SAController>getController().initData((Question<SA>) question);
-        }catch (IOException ioException){
-            System.err.println("Error loading question QCM fxml");
-            System.err.println(ioException.getMessage());
-            ioException.printStackTrace();
-        }
-    }
-
-    private void loadTFGUI(Question<?> question){
-        try {
-            controllerLoader = new FXMLLoader(App.class.getResource("views/tf.fxml"));
-            content.getChildren().add(0, controllerLoader.load());
-            controllerLoader.<TFController>getController().initData((Question<TF>) question);
-        }catch (IOException ioException){
-            System.err.println("Error loading question QCM fxml");
-            System.err.println(ioException.getMessage());
-            ioException.printStackTrace();
-        }
-    }
-
-
-    private void clearContent(){
-        content.getChildren().clear();
-        content.setAlignment(Pos.CENTER);
-    }
-
-    private void loadPlayerBoard(){
+    /*===================
+           Game GUI
+    =====================*/
+    private void loadPlayerBoard() {
         playersProfiles = new ArrayList<>();
         game.getPlayers().forEach(player -> {
             try {
@@ -248,6 +133,152 @@ public class GameController implements Initializable, InitController {
         content.getChildren().addAll(playersProfiles);
     }
 
+    /*===================
+            Phase I
+    =====================*/
+    private void launchPhaseI() {
+
+        STEP = 1;
+        ID_PLAYER = 0;
+
+        titlePlayerInfo.setVisible(true);
+        setupStep();
+        // change submit button
+        submitButton.setText("Submit Answer");
+
+        // run the first round
+        game.runPhaseI();
+        loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+
+    }
+
+    private void loadPlayerQuestionPhaseI(Player player) {
+
+        // TODO add timer
+
+        // clear center content
+        clearContent();
+
+        // display player info
+        titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
+        if (ID_PLAYER < 4) {
+            switch (game.getPhaseI().getListQuestions().get(ID_PLAYER).getContent().getClass().getSimpleName()) {
+                case "MCQ":
+                    loadMQCGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    // update submit button action
+                    submitButton.setOnAction(event -> {
+                        if (controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
+                            boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                            player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                            ID_PLAYER++;
+                            if (ID_PLAYER < 4) loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+                            else exit();
+                        }
+                    });
+                    break;
+                case "SA":
+                    loadSAGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    // update submit button action
+                    submitButton.setOnAction(event -> {
+                        if (controllerLoader.<SAController>getController().checkIfButtonSelected()) {
+                            boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                            player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                            ID_PLAYER++;
+                            if (ID_PLAYER < 4) loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+                            else exit();
+                        }
+                    });
+                    break;
+                case "TF":
+                    loadTFGUI(game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                    // update submit button action
+                    submitButton.setOnAction(event -> {
+                        if (controllerLoader.<TFController>getController().checkIfButtonSelected()) {
+                            boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) game.getPhaseI().getListQuestions().get(ID_PLAYER));
+                            System.out.println(isCorrect);
+                            player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                            ID_PLAYER++;
+                            if (ID_PLAYER < 4) loadPlayerQuestionPhaseI(game.getPlayers().get(ID_PLAYER));
+                            else exit();
+                        }
+                    });
+                    break;
+            }
+        } else exit();
+
+    }
+
+
+    /*===================
+           Phase II
+    =====================*/
+
+    /*===================
+           Phase III
+    =====================*/
+
+
+    /*===================
+        Question GUI
+    =====================*/
+    private void loadMQCGUI(Question<?> question) {
+        try {
+            controllerLoader = new FXMLLoader(App.class.getResource("views/mcq.fxml"));
+            content.getChildren().add(0, controllerLoader.load());
+            controllerLoader.<MCQController>getController().initData((Question<MCQ>) question);
+        } catch (IOException ioException) {
+            System.err.println("Error loading question QCM fxml");
+            System.err.println(ioException.getMessage());
+            ioException.printStackTrace();
+        }
+    }
+
+    private void loadSAGUI(Question<?> question) {
+        try {
+            controllerLoader = new FXMLLoader(App.class.getResource("views/sa.fxml"));
+            content.getChildren().add(0, controllerLoader.load());
+            controllerLoader.<SAController>getController().initData((Question<SA>) question);
+        } catch (IOException ioException) {
+            System.err.println("Error loading question QCM fxml");
+            System.err.println(ioException.getMessage());
+            ioException.printStackTrace();
+        }
+    }
+
+    private void loadTFGUI(Question<?> question) {
+        try {
+            controllerLoader = new FXMLLoader(App.class.getResource("views/tf.fxml"));
+            content.getChildren().add(0, controllerLoader.load());
+            controllerLoader.<TFController>getController().initData((Question<TF>) question);
+        } catch (IOException ioException) {
+            System.err.println("Error loading question QCM fxml");
+            System.err.println(ioException.getMessage());
+            ioException.printStackTrace();
+        }
+    }
+
+    /*===================
+        extra methods
+    =====================*/
+    private void clearContent() {
+        content.getChildren().clear();
+        content.setAlignment(Pos.CENTER);
+    }
+
+    private void exit() {
+        game.getPlayers().forEach(p -> System.out.println(p.getName() + " " + p.getScore()));
+        try {
+            App.setScene("home");
+            App.window.centerOnScreen();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        submitButton.setOnAction(event -> launchPhaseI());
+    }
+
+    /*===================
+        Event methods
+    =====================*/
     private final EventHandler<MouseEvent> confirmReturnMenu = event -> {
         Alert closeConfirmation = new Alert(
                 Alert.AlertType.CONFIRMATION,

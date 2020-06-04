@@ -15,14 +15,18 @@ import java.util.ResourceBundle;
 
 public class TFController implements Initializable, InitController {
 
-    @FXML private Label questionLabel;
-    @FXML private Label themeLabel;
-    @FXML private JFXButton trueButton;
-    @FXML private JFXButton falseButton;
+    @FXML
+    private Label questionLabel;
+    @FXML
+    private Label themeLabel;
+    @FXML
+    private JFXButton trueButton;
+    @FXML
+    private JFXButton falseButton;
 
 
     private List<JFXButton> answersButtons;
-    private int answerSelected;
+    private int answerSelected = -1;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,12 +44,12 @@ public class TFController implements Initializable, InitController {
 
     }
 
-    public void initData(Question<TF> question){
+    public void initData(Question<TF> question) {
         questionLabel.setText(question.getContent().getQuestion());
         themeLabel.setText(question.getTheme());
         for (int i = 0; i < 2; i++) {
             int finalI = i;
-            answersButtons.get(i).setOnAction(event ->{
+            answersButtons.get(i).setOnAction(event -> {
                 answerSelected = finalI;
                 updateBackgroundColorButton(answersButtons, answersButtons.get(finalI));
             });
@@ -54,12 +58,15 @@ public class TFController implements Initializable, InitController {
 
 
     public boolean checkAnswer(Question<TF> tfQuestion) {
-        if(answersButtons.get(answerSelected).getText().equals("true") && tfQuestion.getContent().isCorrectAnswer()) return true;
-        else if(answersButtons.get(answerSelected).getText().equals("false") && !tfQuestion.getContent().isCorrectAnswer()) return true;
-        else return false;
+        String rep = String.valueOf(tfQuestion.getContent().isCorrectAnswer());
+        return rep.equals(answersButtons.get(answerSelected).getText().toLowerCase());
     }
 
-    public void updateBackgroundColorButton(List<JFXButton> answersButtons, JFXButton selectedButton){
+    public void updateBackgroundColorButton(List<JFXButton> answersButtons, JFXButton selectedButton) {
         answersButtons.forEach(button -> button.setStyle(button.equals(selectedButton) ? "-fx-background-color: #ffb300;" : "-fx-background-color: #212121;"));
+    }
+
+    public boolean checkIfButtonSelected() {
+        return answerSelected != -1;
     }
 }

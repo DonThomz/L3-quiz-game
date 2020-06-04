@@ -49,8 +49,11 @@ public class Player implements Cloneable {
      * @param score score to be add
      */
     public void updateScore(int score, boolean isCorrect) {
-        if(isCorrect) this.score += score;
-        else this.score -= score;
+        if (isCorrect) {
+            this.score += score;
+        } else {
+            this.score -= score;
+        }
 
     }
 
@@ -63,6 +66,7 @@ public class Player implements Cloneable {
         this.state = state;
     }
 
+    @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }

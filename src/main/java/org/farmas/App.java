@@ -11,7 +11,6 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import org.farmas.model.game.Game;
 import org.farmas.model.players.PlayerSet;
 
 import java.io.IOException;
@@ -51,7 +50,7 @@ public class App extends Application {
     }
 
     public static Parent loadFXML(String fxml) throws IOException {
-        return FXMLLoader.load(App.class.getResource("views/" +fxml+".fxml"));
+        return FXMLLoader.load(App.class.getResource("views/" + fxml + ".fxml"));
     }
 
     public static void setScene(String fxml) throws IOException {
@@ -79,7 +78,6 @@ public class App extends Application {
             }
         }
     };
-
 
 
 }

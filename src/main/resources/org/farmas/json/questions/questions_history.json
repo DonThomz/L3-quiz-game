@@ -1,330 +1,330 @@
 {
   "title_category": "History",
-  "results":[
+  "results": [
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"King Henry VIII was the second monarch of which European royal house?",
-      "correct_answer":"Tudor",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "King Henry VIII was the second monarch of which European royal house?",
+      "correct_answer": "Tudor",
+      "incorrect_answers": [
         "York",
         "Stuart",
         "Lancaster"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"During the Mongolian invasions of Japan, what were the Mongol boats mostly stopped by?",
-      "correct_answer":"Typhoons",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "During the Mongolian invasions of Japan, what were the Mongol boats mostly stopped by?",
+      "correct_answer": "Typhoons",
+      "incorrect_answers": [
         "Tornados",
         "Economic depression",
         "Samurai"
       ]
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"hard",
-      "question":"Japan was part of the Allied Powers during World War I.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "Japan was part of the Allied Powers during World War I.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Joseph Smith was the founder of what religion?",
-      "correct_answer":"Mormonism",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Joseph Smith was the founder of what religion?",
+      "correct_answer": "Mormonism",
+      "incorrect_answers": [
         "Buddhism",
         "Christianity",
         "Hinduism"
       ]
     },
     {
-      "category":"History",
-      "type":"short answer",
-      "difficulty":"easy",
-      "question":"In what year did the Wall Street Crash take place?",
-      "correct_answer":"1929"
+      "category": "History",
+      "type": "short answer",
+      "difficulty": "easy",
+      "question": "In what year did the Wall Street Crash take place?",
+      "correct_answer": "1929"
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What was the capital of South Vietnam before the Vietnam War?",
-      "correct_answer":"Saigon",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What was the capital of South Vietnam before the Vietnam War?",
+      "correct_answer": "Saigon",
+      "incorrect_answers": [
         "Ho Chi Minh City",
         "Hanoi",
         "Hue"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"According to scholarly estimates, what percentage of the world population at the time died due to Tamerlane's conquests?",
-      "correct_answer":"5%",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "According to scholarly estimates, what percentage of the world population at the time died due to Tamerlane's conquests?",
+      "correct_answer": "5%",
+      "incorrect_answers": [
         "1%",
         "3%",
         "< 1%"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which of the following Assyrian kings did NOT rule during the Neo-Assyrian Empire?",
-      "correct_answer":"Shamshi-Adad III",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of the following Assyrian kings did NOT rule during the Neo-Assyrian Empire?",
+      "correct_answer": "Shamshi-Adad III",
+      "incorrect_answers": [
         "Shalmaneser V",
         "Esharhaddon",
         "Ashur-nasir-pal II"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"What year did the Battle of Agincourt take place?",
-      "correct_answer":"1415",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What year did the Battle of Agincourt take place?",
+      "correct_answer": "1415",
+      "incorrect_answers": [
         "1463",
         "1401",
         "1422"
       ]
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"Theodore Roosevelt Jr. was the only General involved in the initial assault on D-Day.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "Theodore Roosevelt Jr. was the only General involved in the initial assault on D-Day.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"Bohdan Khmelnytsky was which of the following?",
-      "correct_answer":"Leader of the Ukrainian Cossacks",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Bohdan Khmelnytsky was which of the following?",
+      "correct_answer": "Leader of the Ukrainian Cossacks",
+      "incorrect_answers": [
         "General Secretary of the Communist Party of the USSR",
         "Prince of Wallachia",
         "Grand Prince of Novgorod"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"How many sonatas did Ludwig van Beethoven write?",
-      "correct_answer":"32",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How many sonatas did Ludwig van Beethoven write?",
+      "correct_answer": "32",
+      "incorrect_answers": [
         "50",
         "31",
         "21"
       ]
     },
     {
-      "category":"History",
-      "type":"short_answer",
-      "difficulty":"hard",
-      "question":"The Second Boer War in 1899 was fought where?",
-      "correct_answer":"South Africa"
+      "category": "History",
+      "type": "short_answer",
+      "difficulty": "hard",
+      "question": "The Second Boer War in 1899 was fought where?",
+      "correct_answer": "South Africa"
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Who tutored Alexander the Great?",
-      "correct_answer":"Aristotle",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who tutored Alexander the Great?",
+      "correct_answer": "Aristotle",
+      "incorrect_answers": [
         "Socrates",
         "Plato",
         "King Philip"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Joseph Stalin had a criminal past doing what?",
-      "correct_answer":"Robbing trains",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Joseph Stalin had a criminal past doing what?",
+      "correct_answer": "Robbing trains",
+      "incorrect_answers": [
         "Pedophilia",
         "Tax evation",
         "Identity Fraud"
       ]
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The United States of America declared their independence from the British Empire on July 4th, 1776.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "The United States of America declared their independence from the British Empire on July 4th, 1776.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"In which year did the Tokyo Subway Sarin Attack occur?",
-      "correct_answer":"1995",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In which year did the Tokyo Subway Sarin Attack occur?",
+      "correct_answer": "1995",
+      "incorrect_answers": [
         "2001",
         "2011",
         "1991"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which U.S. president took part in the Potsdam Conference, where the Allies reached a peace settlement with Germany?",
-      "correct_answer":"Harry S. Truman",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which U.S. president took part in the Potsdam Conference, where the Allies reached a peace settlement with Germany?",
+      "correct_answer": "Harry S. Truman",
+      "incorrect_answers": [
         "Dwight D. Eisenhower",
         "Franklin D. Roosevelt",
         "Herbert Hoover"
       ]
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"Adolf Hitler was tried at the Nuremberg trials.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Adolf Hitler was tried at the Nuremberg trials.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"Adolf Hitler was accepted into the Vienna Academy of Fine Arts.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "Adolf Hitler was accepted into the Vienna Academy of Fine Arts.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"hard",
-      "question":"The USS Missouri (BB-63) last served in the Korean War.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The USS Missouri (BB-63) last served in the Korean War.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"When did the British hand-over sovereignty of Hong Kong back to China?",
-      "correct_answer":"1997",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "When did the British hand-over sovereignty of Hong Kong back to China?",
+      "correct_answer": "1997",
+      "incorrect_answers": [
         "1999",
         "1841",
         "1900"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"When was the \"Siege of Leningrad\" lifted during World War II?",
-      "correct_answer":"January 1944",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "When was the \"Siege of Leningrad\" lifted during World War II?",
+      "correct_answer": "January 1944",
+      "incorrect_answers": [
         "September 1943",
         "November 1943",
         "March 1944"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"When was the Grand Patriotic War in the USSR concluded?",
-      "correct_answer":"May 9th, 1945",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "When was the Grand Patriotic War in the USSR concluded?",
+      "correct_answer": "May 9th, 1945",
+      "incorrect_answers": [
         "September 2nd, 1945",
         "August 9th, 1945",
         "December 11th, 1945"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"Toussaint Louverture led a successful slave revolt in which country?",
-      "correct_answer":"Haiti",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Toussaint Louverture led a successful slave revolt in which country?",
+      "correct_answer": "Haiti",
+      "incorrect_answers": [
         "France",
         "Cuba",
         "United States"
       ]
     },
     {
-      "category":"History",
-      "type":"short_answer",
-      "difficulty":"medium",
-      "question":"The Korean War started in what year?",
-      "correct_answer":"1950"
+      "category": "History",
+      "type": "short_answer",
+      "difficulty": "medium",
+      "question": "The Korean War started in what year?",
+      "correct_answer": "1950"
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"medium",
-      "question":"The Korean War ended in 1953 without any ceasefire.",
-      "correct_answer":"False",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "The Korean War ended in 1953 without any ceasefire.",
+      "correct_answer": "False",
+      "incorrect_answers": [
         "True"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"medium",
-      "question":"Which of these 1900s tanks were designed and built BEFORE the others?",
-      "correct_answer":"Renault FT",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these 1900s tanks were designed and built BEFORE the others?",
+      "correct_answer": "Renault FT",
+      "incorrect_answers": [
         "M4 Sherman",
         " Panzer IV",
         "Cromwell "
       ]
     },
     {
-      "category":"History",
-      "type":"boolean",
-      "difficulty":"hard",
-      "question":"The man that shot Alexander Hamilton was named Aaron Burr.",
-      "correct_answer":"True",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The man that shot Alexander Hamilton was named Aaron Burr.",
+      "correct_answer": "True",
+      "incorrect_answers": [
         "False"
       ]
     },
     {
-      "category":"History",
-      "type":"multiple",
-      "difficulty":"hard",
-      "question":"Who assassinated President James A. Garfield?",
-      "correct_answer":"Charles Guiteau",
-      "incorrect_answers":[
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Who assassinated President James A. Garfield?",
+      "correct_answer": "Charles Guiteau",
+      "incorrect_answers": [
         "Sirhan Sirhan",
         "Leon Czolgosz",
         "John Wilkes Booth"

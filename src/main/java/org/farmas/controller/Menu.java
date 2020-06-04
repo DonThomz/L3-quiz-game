@@ -11,9 +11,12 @@ import java.util.ResourceBundle;
 
 public class Menu implements Initializable, InitController {
 
-    @FXML private JFXButton playButton;
-    @FXML private JFXButton rulesButton;
-    @FXML private JFXButton quitButton;
+    @FXML
+    private JFXButton playButton;
+    @FXML
+    private JFXButton rulesButton;
+    @FXML
+    private JFXButton quitButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -37,6 +40,10 @@ public class Menu implements Initializable, InitController {
 
     @Override
     public void setupServices() {
+
+    }
+
+    public void initData() {
 
     }
 }
