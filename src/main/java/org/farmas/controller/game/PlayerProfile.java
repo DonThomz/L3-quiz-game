@@ -13,17 +13,18 @@ import java.util.ResourceBundle;
 public class PlayerProfile implements Initializable {
 
     @FXML
-    private Label titlePlayer;
+    private Label title;
     @FXML
-    private ImageView profilePlayer;
+    private ImageView image;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        profilePlayer.setImage(new Image(App.class.getResource("image/profile.png").toExternalForm(), true));
+        image.setImage(new Image(App.class.getResource("image/profile.png").toExternalForm(), true));
+
     }
 
     public void setupTitleName(String name) {
-        titlePlayer.setText(name);
+        title.setText(name);
     }
 
 

@@ -5,11 +5,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
 
-public class Themes {
+public class Themes implements Iterable<String> {
 
     private static final int NB_OF_THEMES = 10;
     private final ArrayList<String> titles;
@@ -25,6 +26,10 @@ public class Themes {
 
     }
 
+    @Override
+    public Iterator<String> iterator() {
+        return titles.iterator();
+    }
 
     // Getters
 
@@ -39,6 +44,7 @@ public class Themes {
     public String getCurrentTheme() {
         return this.getTitles().get(this.getIndicator());
     }
+
 
     // Methods
 
@@ -75,6 +81,29 @@ public class Themes {
         } while (true);
     }
 
+    public String[] selectNRandomTheme(int nbOfThemes) {
+        if (nbOfThemes > NB_OF_THEMES) {
+            System.err.println("Error nb of theme is greater that the number of themes available = " + NB_OF_THEMES);
+            return null;
+        } else {
+            String[] themes = new String[nbOfThemes];
+            ArrayList<Integer> nbSelected = new ArrayList<>();
+            int randomIndex;
+            for (int i = 0; i < nbOfThemes; i++) {
+                do {
+                    randomIndex = new Random().nextInt(NB_OF_THEMES);
+                } while (nbSelected.contains(randomIndex));
+                indicator = randomIndex;
+                nbSelected.add(randomIndex);
+                themes[i] = this.titles.get(randomIndex);
+            }
+            return themes;
+        }
+
+
+    }
+
+
     public String selectTheme() {
         if (indicator > 9) indicator = 0; // reset
         indicator++;
@@ -95,4 +124,6 @@ public class Themes {
         }
         return themes;
     }
+
+
 }

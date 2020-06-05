@@ -16,6 +16,7 @@ import java.util.Random;
 
 public class Phase1 implements Phase {
 
+    public static int ID_PLAYER = 0;
     public static final int POINT_BY_QUESTION = 1;
     private static final int NB_OF_THEMES = 4;
     private static final int NB_OF_QUESTIONS = 4;
@@ -25,26 +26,28 @@ public class Phase1 implements Phase {
     String[] themes;
 
     public Phase1(ArrayList<Player> players, Themes themes) {
+        ID_PLAYER = 0;
         this.players = players; // shallow copy
         this.listQuestions = new ListQuestions();
         this.themes = new String[NB_OF_THEMES];
         // pick themes
         selectThemes(themes);
 
-        // load questions
-        loadQuestionsFromJSON();
+        phaseDeJeu();
+
         listQuestions.forEach(System.out::println);
 
     }
 
     @Override
-    public void selectPlayer() {
-
+    public Player selectPlayer() {
+        return this.players.get(ID_PLAYER);
     }
 
     @Override
     public void phaseDeJeu() {
         // load questions
+        loadQuestionsFromJSON();
     }
 
     @Override

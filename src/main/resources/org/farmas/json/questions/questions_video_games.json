@@ -1,8 +1,8 @@
 {
-  "title_category": "Video Games",
+  "title_category": "Video_Games",
   "results": [
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "boolean",
       "difficulty": "easy",
       "question": "The song \"Megalovania\" by Toby Fox made its third appearence in the 2015 RPG \"Undertale\".",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "How many Star Spirits do you rescue in the Nintendo 64 video game \"Paper Mario\"?",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "easy",
       "question": "What was the first video game in the Batman \"Arkham\" series?",
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "What was the first \"Team Fortress 2\" update to include a war?",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "Which of these weapons is NOT available to the Terrorist team in the game, \"Counter-Strike: Global Offensive\"?",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "hard",
       "question": "How long are all the cutscenes from Metal Gear Solid 4 (PS3, 2008) combined?",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "boolean",
       "difficulty": "medium",
       "question": "Metal Gear Solid V: The Phantom Pain runs on the Fox Engine.",
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "Who was the first female protagonist in a video game?",
@@ -94,7 +94,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "Which of the following Pokemon games released first?",
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "easy",
       "question": "Who is the creator of the Super Smash Bros. Series?",
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "easy",
       "question": "In what city in the dystopia alternate future of Half-Life 2 do you first start in?",
@@ -130,7 +130,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "In Call of Duty: United Offensive, what two soldiers share a name of a video game character?",
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "easy",
       "question": "What company develops the Rock Band series of rhythm games?",
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "hard",
       "question": "How many total monsters appear in Monster Hunter Generations?",
@@ -166,21 +166,21 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "short_answer",
       "difficulty": "easy",
       "question": "In what year was Garry's Mod released as a standalone title on Valve's Steam distribution service?",
       "correct_answer": "2006"
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "short_answer",
       "difficulty": "easy",
       "question": "In what year was the first \"Mass Effect\" game released?",
       "correct_answer": "2007"
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "In Terraria, what does the Wall of Flesh not drop upon defeat?",
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "boolean",
       "difficulty": "medium",
       "question": "In Monster Hunter Generations, guild style is a type of hunting style.",
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "hard",
       "question": "How many voice channels does the Super Nintendo Entertainment System support?",
@@ -214,7 +214,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "boolean",
       "difficulty": "easy",
       "question": "Valve's \"Portal\" and \"Half-Life\" franchises exist within the same in-game universe.",
@@ -224,7 +224,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "boolean",
       "difficulty": "medium",
       "question": "In Portal, the Companion Cube's ARE sentient.",
@@ -234,7 +234,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "Toby Fox's \"Megalovania\" was first used where?",
@@ -246,7 +246,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "hard",
       "question": "In \"The Binding of Isaac\", which item instantly kills Mom and Mom's Heart?",
@@ -258,7 +258,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "When was Club Penguin launched?",
@@ -270,7 +270,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "In \"Call Of Duty: Zombies\", completing which map's main easter egg will reward you with the achievement, \"Little Lost Girl\"?",
@@ -282,7 +282,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "What is the only Generation III Pokemon whose name begins with the letter I?",
@@ -294,7 +294,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "easy",
       "question": "In CoD: Black Ops III, what is the name of the rogue A.I. antagonist?",
@@ -306,7 +306,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "In \"Kingdom Hearts\", who abducts Jasmine in the Lamp Chamber?",
@@ -318,7 +318,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "multiple",
       "difficulty": "medium",
       "question": "In Overwatch, what is Lú cio's full name?",
@@ -330,7 +330,7 @@
       ]
     },
     {
-      "category": "Video Games",
+      "category": "Video_Games",
       "type": "boolean",
       "difficulty": "easy",
       "question": "There are 2 player roles in Trouble in Terrorist Town.",

@@ -1,6 +1,7 @@
 package org.farmas.model.game.phase;
 
 
+import org.farmas.model.players.Player;
 import org.farmas.model.themes.Themes;
 
 /**
@@ -11,10 +12,13 @@ import org.farmas.model.themes.Themes;
  * - PhasedeJeu
  */
 public interface Phase {
-    public void selectPlayer();
+
+
+    public Player selectPlayer();
 
     public void phaseDeJeu();
 
     public void selectThemes(Themes themes);
+
 
 }
