@@ -37,6 +37,15 @@ import java.util.*;
 
 public class GameController implements Initializable, InitController {
 
+    /*
+        TODO temps mort entre les questions
+        ajouter un temps mort pour afficher les bonnes et mauvaises réponses avant de passer
+        à une autre question
+        TODO ajouter la phase 3
+        TODO ajouter un message précisant le joueur éliminé
+        TODO afficher les scores à la fin d'un round
+     */
+
     @FXML
     private JFXButton returnButton;
     @FXML
