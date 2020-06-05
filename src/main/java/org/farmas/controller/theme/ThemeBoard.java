@@ -22,7 +22,6 @@ public class ThemeBoard implements Initializable, InitController {
     public ThemeBoard(int themeSize) {
         NB_COLUMNS = themeSize / 2;
         NB_ROWS = themeSize / 3;
-        System.out.println(NB_COLUMNS + " " + NB_ROWS);
         gridPane = new GridPane();
         for (int i = 0; i < NB_COLUMNS; i++) {
             ColumnConstraints columnConstraints = new ColumnConstraints();

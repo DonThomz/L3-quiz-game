@@ -18,12 +18,14 @@ public class Phase2 implements Phase {
     public static final int POINT_BY_QUESTION = 3;
     public static final int NB_OF_THEMES = 6;
     public static final int NB_OF_QUESTIONS = 6;
+    public int TURN;
     private static final String LEVEL = Level.MEDIUM.toLowerCase();
     ArrayList<Player> players;
     ListQuestions listQuestions;
     String[] themes;
 
     public Phase2(ArrayList<Player> players, Themes themes) {
+        this.TURN = 1;
         ID_PLAYER = 0;
         this.players = players; // shallow copy
         this.listQuestions = new ListQuestions();
@@ -51,9 +53,6 @@ public class Phase2 implements Phase {
     @Override
     public void selectThemes(Themes themes) {
         this.themes = themes.selectNRandomTheme(NB_OF_THEMES);
-        for (String theme : this.themes) {
-            System.out.println(theme);
-        }
     }
 
     private void loadQuestionsFromJSON() {
@@ -89,7 +88,6 @@ public class Phase2 implements Phase {
     }
 
     private void setupListQuestions(Map<JSONObject, String> questionsByTheme) {
-        //questionsByTheme.forEach((j, q) -> System.out.println(q));
         for (int i = 0; i < themes.length; i++) {
             int finalI = i;
             List<Map.Entry<JSONObject, String>> question = questionsByTheme.entrySet().stream().filter(q -> q.getValue().equals(themes[finalI])).collect(Collectors.toList());

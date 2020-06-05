@@ -10,6 +10,7 @@ public class TimerRound extends Thread {
     private final AtomicBoolean running = new AtomicBoolean(false);
     StopWatch stopWatch;
 
+
     public TimerRound(String threadName) {
         this.setName(threadName);
     }

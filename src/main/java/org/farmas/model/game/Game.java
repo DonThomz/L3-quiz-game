@@ -7,9 +7,7 @@ import org.farmas.model.game.phase.Phase2;
 import org.farmas.model.players.Player;
 import org.farmas.model.themes.Themes;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Game {
@@ -59,19 +57,23 @@ public class Game {
         }
     }
 
-    public boolean removePlayer(ArrayList<Long> delayPerPlayers) {
+    public boolean removePlayer(Map<Player, Long> mapTimer) {
         List<Integer> scores = this.players.stream().map(Player::getScore).collect(Collectors.toList());
         int minScore = Collections.min(scores);
         int conflict = (int) scores.stream().filter(score -> score == minScore).count();
         if (conflict > 1) {
             // compare timer
-            long minTime = Collections.min(delayPerPlayers);
-            int conflictTimer = (int) delayPerPlayers.stream().filter(delay -> delay == minTime).count();
+            long minTime = Collections.min(mapTimer.values());
+            int conflictTimer = (int) mapTimer.values().stream().filter(delay -> delay == minTime).count();
             if (conflictTimer > 1) {
                 // return false => need an conflit round
                 return false;
             } else {
-                this.players.remove(delayPerPlayers.indexOf(minTime));
+                for (Map.Entry<Player, Long> entry : mapTimer.entrySet()) {
+                    if (Objects.equals(minTime, entry.getValue())) {
+                        this.players.remove(entry.getKey());
+                    }
+                }
                 return true;
             }
         } else {
@@ -100,4 +102,5 @@ public class Game {
     public Phase2 getPhaseII() {
         return (Phase2) phases[1];
     }
+
 }

@@ -82,7 +82,6 @@ public class Themes implements Iterable<String> {
     }
 
     public String[] selectNRandomTheme(int nbOfThemes) {
-        System.out.println("title" + titles);
         if (nbOfThemes > NB_OF_THEMES) {
             System.err.println("Error nb of theme is greater that the number of themes available = " + NB_OF_THEMES);
             return null;
