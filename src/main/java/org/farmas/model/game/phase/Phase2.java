@@ -3,15 +3,13 @@ package org.farmas.model.game.phase;
 import org.farmas.model.players.Player;
 import org.farmas.model.questions.Level;
 import org.farmas.model.questions.ListQuestions;
+import org.farmas.model.questions.Question;
 import org.farmas.model.themes.Themes;
 import org.farmas.model.tools.RessourcesScanner;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Phase2 implements Phase {
@@ -95,13 +93,30 @@ public class Phase2 implements Phase {
         for (int i = 0; i < themes.length; i++) {
             int finalI = i;
             List<Map.Entry<JSONObject, String>> question = questionsByTheme.entrySet().stream().filter(q -> q.getValue().equals(themes[finalI])).collect(Collectors.toList());
-            System.out.println(question.size());
-            //int randomID = new Random().nextInt(question.size());
-            //listQuestions.addQuestion(new Question<>(1, question.get(randomID).getKey()));
+            int randomID = new Random().nextInt(question.size());
+            listQuestions.addQuestion(new Question<>(1, question.get(randomID).getKey()));
         }
+    }
+
+    public Question<?> getQuestionByTheme(String theme) {
+        for (Question<?> question : listQuestions) {
+            if (question.getTheme().equals(theme)) {
+                try {
+                    return question;
+                } finally {
+                    listQuestions.getQuestions().remove(question);
+                }
+            }
+        }
+        return null;
     }
 
     public String[] getThemes() {
         return themes;
     }
+
+    public LinkedList<Question<?>> getListQuestions() {
+        return listQuestions.getQuestions();
+    }
+
 }

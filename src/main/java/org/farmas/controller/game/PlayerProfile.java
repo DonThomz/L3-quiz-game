@@ -20,6 +20,7 @@ public class PlayerProfile implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         image.setImage(new Image(App.class.getResource("image/profile.png").toExternalForm(), true));
+
     }
 
     public void setupTitleName(String name) {

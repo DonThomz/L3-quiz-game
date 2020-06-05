@@ -1,4 +1,4 @@
-package org.farmas.controller.game;
+package org.farmas.controller.theme;
 
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -7,6 +7,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import org.farmas.App;
 import org.farmas.controller.InitController;
+import org.farmas.controller.game.GameController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,7 +19,7 @@ public class ThemeBoard implements Initializable, InitController {
     private final int NB_COLUMNS;
     private final int NB_ROWS;
 
-    ThemeBoard(int themeSize) {
+    public ThemeBoard(int themeSize) {
         NB_COLUMNS = themeSize / 2;
         NB_ROWS = themeSize / 3;
         System.out.println(NB_COLUMNS + " " + NB_ROWS);
@@ -32,8 +33,8 @@ public class ThemeBoard implements Initializable, InitController {
             gridPane.getRowConstraints().add(rowConstraints);
         }
 
-        gridPane.setHgap(20);
-        gridPane.setVgap(20);
+        gridPane.setHgap(40);
+        gridPane.setVgap(40);
     }
 
     @Override
@@ -51,13 +52,13 @@ public class ThemeBoard implements Initializable, InitController {
 
     }
 
-    public void initData(String[] themes) {
+    public void initData(String[] themes, GameController gameController) {
         for (int i = 0; i < NB_ROWS; i++) {
             for (int j = 0; j < NB_COLUMNS; j++) {
                 try {
-                    FXMLLoader loader = new FXMLLoader(App.class.getResource("views/profile.fxml"));
+                    FXMLLoader loader = new FXMLLoader(App.class.getResource("views/themeProfile.fxml"));
                     gridPane.add(loader.load(), j, i);
-                    loader.<PlayerProfile>getController().setupTitleName(themes[j + i * NB_COLUMNS]); // setup the name
+                    loader.<ThemeProfile>getController().initData(themes[j + i * NB_COLUMNS], gameController); // init data
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
@@ -65,7 +66,12 @@ public class ThemeBoard implements Initializable, InitController {
         }
     }
 
+    public void removeString(String name) {
+        GameController.game.getPhaseII();
+    }
+
     public GridPane getGridPane() {
         return gridPane;
     }
+
 }
