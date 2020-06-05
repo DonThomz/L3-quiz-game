@@ -267,7 +267,7 @@ public class GameController implements Initializable, InitController {
 
     }
 
-    private void updateScorePhase1(Player player, boolean isCorrect){
+    private void updateScorePhase1(Player player, boolean isCorrect) {
         player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
         Phase1.ID_PLAYER++;
         if (Phase1.ID_PLAYER < game.getPlayers().size())
