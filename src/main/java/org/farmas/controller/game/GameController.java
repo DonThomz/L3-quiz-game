@@ -57,7 +57,6 @@ public class GameController implements Initializable, InitController {
     public static Game game;
     public static int STEP = 0;
     public static int ROUND = 0;
-    public static boolean LOCK = false;
     public ArrayList<VBox> playersProfiles;
 
 
@@ -319,7 +318,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) question);
-                            player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                            player.updateScore(Phase2.POINT_BY_QUESTION, isCorrect);
                             Phase2.ID_PLAYER++;
                             if (Phase2.ID_PLAYER < game.getPlayers().size()) {
                                 this.loadThemeBoard(game.getPhaseII().selectPlayer());
@@ -340,7 +339,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) question);
-                            player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+                            player.updateScore(Phase2.POINT_BY_QUESTION, isCorrect);
                             Phase2.ID_PLAYER++;
                             if (Phase2.ID_PLAYER < game.getPlayers().size()) {
                                 // remove theme
