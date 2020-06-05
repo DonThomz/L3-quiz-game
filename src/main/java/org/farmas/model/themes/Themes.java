@@ -5,11 +5,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
 
-public class Themes {
+public class Themes implements Iterable<String> {
 
     private static final int NB_OF_THEMES = 10;
     private final ArrayList<String> titles;
@@ -25,6 +26,10 @@ public class Themes {
 
     }
 
+    @Override
+    public Iterator<String> iterator() {
+        return titles.iterator();
+    }
 
     // Getters
 
@@ -39,6 +44,7 @@ public class Themes {
     public String getCurrentTheme() {
         return this.getTitles().get(this.getIndicator());
     }
+
 
     // Methods
 
@@ -119,4 +125,6 @@ public class Themes {
         }
         return themes;
     }
+
+
 }

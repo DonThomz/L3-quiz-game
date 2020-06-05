@@ -18,8 +18,8 @@ public class Phase2 implements Phase {
 
     public static int ID_PLAYER = 0;
     public static final int POINT_BY_QUESTION = 3;
-    private static final int NB_OF_THEMES = 6;
-    private static final int NB_OF_QUESTIONS = 6;
+    public static final int NB_OF_THEMES = 6;
+    public static final int NB_OF_QUESTIONS = 6;
     private static final String LEVEL = Level.MEDIUM.toLowerCase();
     ArrayList<Player> players;
     ListQuestions listQuestions;
@@ -49,7 +49,6 @@ public class Phase2 implements Phase {
         // load questions
         loadQuestionsFromJSON();
     }
-
 
     @Override
     public void selectThemes(Themes themes) {
@@ -100,5 +99,9 @@ public class Phase2 implements Phase {
             //int randomID = new Random().nextInt(question.size());
             //listQuestions.addQuestion(new Question<>(1, question.get(randomID).getKey()));
         }
+    }
+
+    public String[] getThemes() {
+        return themes;
     }
 }

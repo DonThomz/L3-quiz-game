@@ -22,6 +22,7 @@ import org.farmas.controller.game.questions.types.SAController;
 import org.farmas.controller.game.questions.types.TFController;
 import org.farmas.model.game.Game;
 import org.farmas.model.game.phase.Phase1;
+import org.farmas.model.game.phase.Phase2;
 import org.farmas.model.players.Player;
 import org.farmas.model.questions.Question;
 import org.farmas.model.questions.types.MCQ;
@@ -151,11 +152,9 @@ public class GameController implements Initializable, InitController {
         playersProfiles = new ArrayList<>();
         game.getPlayers().forEach(player -> {
             try {
-
-                FXMLLoader loader = new FXMLLoader(App.class.getResource("views/playerProfil.fxml"));
+                FXMLLoader loader = new FXMLLoader(App.class.getResource("views/profile.fxml"));
                 playersProfiles.add(loader.load()); // add to the list
                 loader.<PlayerProfile>getController().setupTitleName(player.getId() + " " + player.getName()); // setup the name
-
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
@@ -293,7 +292,9 @@ public class GameController implements Initializable, InitController {
         // display player info
         this.titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
 
-
+        ThemeBoard themeProfile = new ThemeBoard(Phase2.NB_OF_THEMES);
+        themeProfile.initData(game.getPhaseII().getThemes());
+        this.content.getChildren().add(themeProfile.getGridPane());
     }
 
 

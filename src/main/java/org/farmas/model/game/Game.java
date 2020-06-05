@@ -81,6 +81,9 @@ public class Game {
         }
     }
 
+    public Themes getThemes() {
+        return themes;
+    }
 
     public ArrayList<Player> getPlayers() {
         return players;
