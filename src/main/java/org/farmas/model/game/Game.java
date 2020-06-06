@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class Game {
 
-    private static final int MAX_PLAYERS = 4;
+    public static final int MAX_PLAYERS = 4;
 
     Phase[] phases;
     Themes themes;
@@ -103,11 +103,15 @@ public class Game {
     }
 
     public Phase1 getPhaseI() {
-        return (Phase1) phases[0];
+        return phases[0] != null ? (Phase1) phases[0] : null;
     }
 
     public Phase2 getPhaseII() {
-        return (Phase2) phases[1];
+        return phases[1] != null ? (Phase2) phases[1] : null;
+    }
+
+    public Phase3 getPhaseIII() {
+        return phases[2] != null ? (Phase3) phases[2] : null;
     }
 
 }

@@ -24,6 +24,7 @@ import org.farmas.controller.theme.ThemeBoard;
 import org.farmas.model.game.Game;
 import org.farmas.model.game.phase.Phase1;
 import org.farmas.model.game.phase.Phase2;
+import org.farmas.model.game.phase.Phase3;
 import org.farmas.model.players.Player;
 import org.farmas.model.questions.Question;
 import org.farmas.model.questions.types.MCQ;
@@ -106,7 +107,11 @@ public class GameController implements Initializable, InitController {
     public void updateStepLabel() {
         switch (STEP) {
             case 0:
-                titleStep.setText("Players picked");
+                if (ROUND != 4) {
+                    titleStep.setText("Players picked");
+                } else {
+                    titleStep.setText("End Game !");
+                }
                 break;
             case 1:
                 titleStep.setText("Round I");
@@ -382,9 +387,79 @@ public class GameController implements Initializable, InitController {
 
         // run the second round
         game.runPhaseIII();
-        //this.setupThemeBoard();
-        //this.loadThemeBoard(game.getPhaseII().selectPlayer());
+        //System.out.println(game.getPhaseIII().selectPlayer().getName());
+        this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
+    }
 
+    public void loadPlayerQuestionPhaseIII(Player player, String theme) {
+
+        // Run timer in another Thread
+        TimerRound timer = new TimerRound("Thread-" + player.getName());
+        timer.start();
+
+        // clear center content
+        this.clearContent();
+
+        // show submit button
+        this.submitButton.setVisible(true);
+
+        // display player info
+        this.titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
+        if (Phase3.ID_PLAYER < game.getPlayers().size()) {
+            // get question MEDIUM from theme
+            Question<?> question = game.getPhaseIII().getQuestionByTheme(theme);
+            switch (question.getContent().getClass().getSimpleName()) {
+                case "MCQ":
+                    this.loadMQCGUI(question);
+                    // update submit button action
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer, player); // add the time
+                            boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) question);
+                            updateScorePhase3(player, isCorrect);
+                        }
+                    });
+                    break;
+                case "SA":
+                    this.loadSAGUI(question);
+                    // update submit button action
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer, player); // add the time
+                            boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) question);
+                            updateScorePhase3(player, isCorrect);
+                        }
+                    });
+                    break;
+                case "TF":
+                    this.loadTFGUI(question);
+                    // update submit button action
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<TFController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer, player); // add the time
+                            boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) question);
+                            updateScorePhase3(player, isCorrect);
+                        }
+                    });
+                    break;
+            }
+        } else this.exit();
+    }
+
+    private void updateScorePhase3(Player player, boolean isCorrect) {
+        player.updateScore(Phase3.POINT_BY_QUESTION, isCorrect);
+        Phase3.ID_PLAYER++;
+        if (Phase3.ID_PLAYER < game.getPlayers().size()) {
+            this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
+        } else if (game.getPhaseIII().TURN < Phase3.NB_OF_QUESTIONS / game.getPlayers().size()) {
+            // increment TURN
+            game.getPhaseIII().TURN++;
+            // increment THEME ID
+            game.getPhaseIII().CURRENT_ID_THEME++;
+            // reset player ID
+            Phase3.ID_PLAYER = 0;
+            this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
+        } else this.handleScoresAndConflicts();
     }
 
     /*===================

@@ -90,6 +90,7 @@ public class Phase2 implements Phase {
     private void setupListQuestions(Map<JSONObject, String> questionsByTheme) {
         for (int i = 0; i < themes.length; i++) {
             int finalI = i;
+            // get a random question in a specific theme
             List<Map.Entry<JSONObject, String>> question = questionsByTheme.entrySet().stream().filter(q -> q.getValue().equals(themes[finalI])).collect(Collectors.toList());
             int randomID = new Random().nextInt(question.size());
             listQuestions.addQuestion(new Question<>(1, question.get(randomID).getKey()));

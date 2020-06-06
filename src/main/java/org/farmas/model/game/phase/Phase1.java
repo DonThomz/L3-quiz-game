@@ -1,5 +1,6 @@
 package org.farmas.model.game.phase;
 
+import org.farmas.model.game.Game;
 import org.farmas.model.players.Player;
 import org.farmas.model.questions.Level;
 import org.farmas.model.questions.ListQuestions;
@@ -18,8 +19,8 @@ public class Phase1 implements Phase {
 
     public static int ID_PLAYER = 0;
     public static final int POINT_BY_QUESTION = 2;
-    private static final int NB_OF_THEMES = 4;
-    private static final int NB_OF_QUESTIONS = 4;
+    private static final int NB_OF_THEMES = Game.MAX_PLAYERS;
+    private static final int NB_OF_QUESTIONS = Game.MAX_PLAYERS;
     private static String LEVEL = Level.EASY.toLowerCase();
     ArrayList<Player> players;
     ListQuestions listQuestions;
