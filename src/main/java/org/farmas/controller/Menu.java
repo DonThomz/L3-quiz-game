@@ -36,6 +36,15 @@ public class Menu implements Initializable, InitController {
             }
         });
         quitButton.setOnAction(event -> App.window.close());
+        rulesButton.setOnAction(event -> {
+            try {
+                App.setScene("rules");
+                App.window.centerOnScreen();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        });
+
     }
 
     @Override
