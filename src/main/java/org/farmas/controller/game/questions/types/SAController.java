@@ -38,7 +38,7 @@ public class SAController implements Initializable, InitController {
 
     public void initData(Question<SA> question) {
         questionLabel.setText(question.getContent().getQuestion());
-        themeLabel.setText(question.getTheme());
+        themeLabel.setText(question.getTheme().contains("_") ? question.getTheme().replace("_", " ") : question.getTheme());
         shortAnswerField.setPromptText("Enter a short answer");
     }
 
@@ -51,4 +51,11 @@ public class SAController implements Initializable, InitController {
     }
 
 
+    public void displayCorrection(Question<SA> question) {
+        if (shortAnswerField.getText().contains(question.getContent().getCorrectAnswer())) {
+            shortAnswerField.setStyle("-fx-background-color: #4caf50;");
+        } else {
+            shortAnswerField.setStyle("-fx-background-color: #d32f2f;");
+        }
+    }
 }

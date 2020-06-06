@@ -48,7 +48,7 @@ public class MCQController implements Initializable, InitController {
 
     public void initData(Question<MCQ> question) {
         questionLabel.setText(question.getContent().getQuestion());
-        themeLabel.setText(question.getTheme());
+        themeLabel.setText(question.getTheme().contains("_") ? question.getTheme().replace("_", " ") : question.getTheme());
 
         // init answers
         List<String> answers = Arrays.asList(question.getContent().getCorrectAnswer(),
@@ -79,5 +79,15 @@ public class MCQController implements Initializable, InitController {
         return answerSelected != -1;
     }
 
+    public void displayCorrection(Question<MCQ> question) {
+        if (!answersButtons.get(answerSelected).getText().equals(question.getContent().getCorrectAnswer())) {
+            answersButtons.get(answerSelected).setStyle("-fx-background-color: #d32f2f;");
+        }
+        answersButtons.forEach(button -> {
+            if (button.getText().equals(question.getContent().getCorrectAnswer())) {
+                button.setStyle("-fx-background-color: #4caf50;");
+            }
+        });
+    }
 
 }

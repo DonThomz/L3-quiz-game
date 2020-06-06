@@ -1,6 +1,7 @@
 package org.farmas.controller.game;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.animation.PauseTransition;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
+import javafx.util.Duration;
 import org.farmas.App;
 import org.farmas.controller.InitController;
 import org.farmas.controller.game.questions.types.MCQController;
@@ -39,10 +41,6 @@ import java.util.*;
 public class GameController implements Initializable, InitController {
 
     /*
-        TODO temps mort entre les questions
-        ajouter un temps mort pour afficher les bonnes et mauvaises réponses avant de passer
-        à une autre question
-        TODO ajouter la phase 3
         TODO ajouter un message précisant le joueur éliminé
         TODO afficher les scores à la fin d'un round
      */
@@ -67,6 +65,7 @@ public class GameController implements Initializable, InitController {
     public static Game game;
     public static int STEP = 0;
     public static int ROUND = 0;
+    public static int TIME_CORRECTION = 1;
     public ArrayList<VBox> playersProfiles;
 
 
@@ -250,6 +249,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player);
                             boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
+                            displayCorrectionMCQ((Question<MCQ>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                             updateScorePhase1(player, isCorrect);
                         }
                     });
@@ -261,6 +261,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player);
                             boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
+                            displayCorrectionSA((Question<SA>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                             updateScorePhase1(player, isCorrect);
                         }
                     });
@@ -272,6 +273,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<TFController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player);
                             boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
+                            displayCorrectionTF((Question<TF>) game.getPhaseI().getListQuestions().get(Phase1.ID_PLAYER));
                             updateScorePhase1(player, isCorrect);
                         }
                     });
@@ -282,11 +284,18 @@ public class GameController implements Initializable, InitController {
     }
 
     private void updateScorePhase1(Player player, boolean isCorrect) {
-        player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
-        Phase1.ID_PLAYER++;
-        if (Phase1.ID_PLAYER < game.getPlayers().size())
-            this.loadPlayerQuestionPhaseI(game.getPhaseI().selectPlayer());
-        else this.handleScoresAndConflicts();
+        this.submitButton.setDisable(true);
+        PauseTransition pause = new PauseTransition(Duration.seconds(TIME_CORRECTION));
+        pause.setOnFinished(action -> {
+            this.submitButton.setDisable(false);
+            player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
+            Phase1.ID_PLAYER++;
+            if (Phase1.ID_PLAYER < game.getPlayers().size()) {
+                // display correction
+                this.loadPlayerQuestionPhaseI(game.getPhaseI().selectPlayer());
+            } else this.handleScoresAndConflicts();
+        });
+        pause.play();
     }
 
     /*===================
@@ -330,6 +339,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) question);
+                            displayCorrectionMCQ((Question<MCQ>) question);
                             updateScorePhase2(player, isCorrect);
                         }
                     });
@@ -341,6 +351,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) question);
+                            displayCorrectionSA((Question<SA>) question);
                             updateScorePhase2(player, isCorrect);
                         }
                     });
@@ -352,6 +363,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<TFController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) question);
+                            displayCorrectionTF((Question<TF>) question);
                             updateScorePhase2(player, isCorrect);
                         }
                     });
@@ -362,17 +374,23 @@ public class GameController implements Initializable, InitController {
     }
 
     private void updateScorePhase2(Player player, boolean isCorrect) {
-        player.updateScore(Phase2.POINT_BY_QUESTION, isCorrect);
-        Phase2.ID_PLAYER++;
-        if (Phase2.ID_PLAYER < game.getPlayers().size()) {
-            this.loadThemeBoard(game.getPhaseII().selectPlayer());
-        } else if (game.getPhaseII().TURN < Phase2.NB_OF_QUESTIONS / game.getPlayers().size()) {
-            // increment TURN
-            game.getPhaseII().TURN++;
-            // reset player ID
-            Phase2.ID_PLAYER = 0;
-            this.loadThemeBoard(game.getPhaseII().selectPlayer());
-        } else this.handleScoresAndConflicts();
+        this.submitButton.setDisable(true);
+        PauseTransition pause = new PauseTransition(Duration.seconds(TIME_CORRECTION));
+        pause.setOnFinished(action -> {
+            this.submitButton.setDisable(false);
+            player.updateScore(Phase2.POINT_BY_QUESTION, isCorrect);
+            Phase2.ID_PLAYER++;
+            if (Phase2.ID_PLAYER < game.getPlayers().size()) {
+                this.loadThemeBoard(game.getPhaseII().selectPlayer());
+            } else if (game.getPhaseII().TURN < Phase2.NB_OF_QUESTIONS / game.getPlayers().size()) {
+                // increment TURN
+                game.getPhaseII().TURN++;
+                // reset player ID
+                Phase2.ID_PLAYER = 0;
+                this.loadThemeBoard(game.getPhaseII().selectPlayer());
+            } else this.handleScoresAndConflicts();
+        });
+        pause.play();
     }
 
 
@@ -416,6 +434,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) question);
+                            displayCorrectionMCQ((Question<MCQ>) question);
                             updateScorePhase3(player, isCorrect);
                         }
                     });
@@ -427,6 +446,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) question);
+                            displayCorrectionSA((Question<SA>) question);
                             updateScorePhase3(player, isCorrect);
                         }
                     });
@@ -438,6 +458,7 @@ public class GameController implements Initializable, InitController {
                         if (this.controllerLoader.<TFController>getController().checkIfButtonSelected()) {
                             this.getTimerScore(timer, player); // add the time
                             boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) question);
+                            displayCorrectionTF((Question<TF>) question);
                             updateScorePhase3(player, isCorrect);
                         }
                     });
@@ -447,19 +468,25 @@ public class GameController implements Initializable, InitController {
     }
 
     private void updateScorePhase3(Player player, boolean isCorrect) {
-        player.updateScore(Phase3.POINT_BY_QUESTION, isCorrect);
-        Phase3.ID_PLAYER++;
-        if (Phase3.ID_PLAYER < game.getPlayers().size()) {
-            this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
-        } else if (game.getPhaseIII().TURN < Phase3.NB_OF_QUESTIONS / game.getPlayers().size()) {
-            // increment TURN
-            game.getPhaseIII().TURN++;
-            // increment THEME ID
-            game.getPhaseIII().CURRENT_ID_THEME++;
-            // reset player ID
-            Phase3.ID_PLAYER = 0;
-            this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
-        } else this.handleScoresAndConflicts();
+        this.submitButton.setDisable(true);
+        PauseTransition pause = new PauseTransition(Duration.seconds(TIME_CORRECTION));
+        pause.setOnFinished(action -> {
+            this.submitButton.setDisable(false);
+            player.updateScore(Phase3.POINT_BY_QUESTION, isCorrect);
+            Phase3.ID_PLAYER++;
+            if (Phase3.ID_PLAYER < game.getPlayers().size()) {
+                this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
+            } else if (game.getPhaseIII().TURN < Phase3.NB_OF_QUESTIONS / game.getPlayers().size()) {
+                // increment TURN
+                game.getPhaseIII().TURN++;
+                // increment THEME ID
+                game.getPhaseIII().CURRENT_ID_THEME++;
+                // reset player ID
+                Phase3.ID_PLAYER = 0;
+                this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
+            } else this.handleScoresAndConflicts();
+        });
+        pause.play();
     }
 
     /*===================
@@ -501,6 +528,18 @@ public class GameController implements Initializable, InitController {
         }
     }
 
+    public void displayCorrectionMCQ(Question<MCQ> question) {
+        controllerLoader.<MCQController>getController().displayCorrection(question);
+    }
+
+    public void displayCorrectionSA(Question<SA> question) {
+        controllerLoader.<SAController>getController().displayCorrection(question);
+    }
+
+    public void displayCorrectionTF(Question<TF> question) {
+        controllerLoader.<TFController>getController().displayCorrection(question);
+    }
+
     /*===================
         extra methods
     =====================*/
@@ -519,6 +558,7 @@ public class GameController implements Initializable, InitController {
     public void exit() {
         STEP = 0;
         ROUND = 0;
+
         try {
             App.setScene("home");
             App.window.centerOnScreen();

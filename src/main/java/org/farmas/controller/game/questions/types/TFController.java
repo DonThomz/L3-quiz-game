@@ -46,7 +46,7 @@ public class TFController implements Initializable, InitController {
 
     public void initData(Question<TF> question) {
         questionLabel.setText(question.getContent().getQuestion());
-        themeLabel.setText(question.getTheme());
+        themeLabel.setText(question.getTheme().contains("_") ? question.getTheme().replace("_", " ") : question.getTheme());
         for (int i = 0; i < 2; i++) {
             int finalI = i;
             answersButtons.get(i).setOnAction(event -> {
@@ -68,5 +68,14 @@ public class TFController implements Initializable, InitController {
 
     public boolean checkIfButtonSelected() {
         return answerSelected != -1;
+    }
+
+    public void displayCorrection(Question<TF> question) {
+        String rep = String.valueOf(question.getContent().isCorrectAnswer());
+        if (answersButtons.get(answerSelected).getText().toLowerCase().equals(rep)) {
+            answersButtons.get(answerSelected).setStyle("-fx-background-color: #4caf50;");
+        } else {
+            answersButtons.get(answerSelected).setStyle("-fx-background-color: #d32f2f;");
+        }
     }
 }
