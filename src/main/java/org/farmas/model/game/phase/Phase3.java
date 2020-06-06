@@ -19,6 +19,7 @@ public class Phase3 implements Phase {
     public static final int NB_OF_THEMES = 3;
     public static final int NB_OF_QUESTIONS = 6;
     public int TURN;
+    public int CURRENT_ID_THEME;
     private static final String LEVEL = Level.HARD.toLowerCase();
     ArrayList<Player> players;
     ListQuestions listQuestions;
@@ -26,6 +27,7 @@ public class Phase3 implements Phase {
 
     public Phase3(ArrayList<Player> players, Themes themes) {
         this.TURN = 1;
+        this.CURRENT_ID_THEME = 0;
         ID_PLAYER = 0;
         this.players = players; // shallow copy
         this.listQuestions = new ListQuestions();
@@ -41,12 +43,12 @@ public class Phase3 implements Phase {
 
     @Override
     public Player selectPlayer() {
-        return null;
+        return this.players.get(ID_PLAYER);
     }
 
     @Override
     public void phaseDeJeu() {
-        loadQuestionsFromJSON();
+        this.loadQuestionsFromJSON();
     }
 
     @Override
@@ -93,12 +95,32 @@ public class Phase3 implements Phase {
             // get a random question in a specific theme
             List<Map.Entry<JSONObject, String>> question = questionsByTheme.entrySet().stream().filter(q -> q.getValue().equals(themes[finalI])).collect(Collectors.toList());
             int randomID;
-            do{
+            do {
                 randomID = new Random().nextInt(question.size());
-            }while(randomNbPicked.containsKey(themes[i%3]) && randomNbPicked.get(themes[i%3]) == randomID);
-            randomNbPicked.put(themes[i%3], randomID);
+            } while (randomNbPicked.containsKey(themes[i % 3]) && randomNbPicked.get(themes[i % 3]) == randomID);
+            randomNbPicked.put(themes[i % 3], randomID);
             listQuestions.addQuestion(new Question<>(1, question.get(randomID).getKey()));
         }
     }
 
+    public Question<?> getQuestionByTheme(String theme) {
+        for (Question<?> question : listQuestions) {
+            if (question.getTheme().equals(theme)) {
+                try {
+                    return question;
+                } finally {
+                    listQuestions.getQuestions().remove(question);
+                }
+            }
+        }
+        return null;
+    }
+
+    public String[] getThemes() {
+        return themes;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return players;
+    }
 }
