@@ -298,7 +298,6 @@ public class GameController implements Initializable, InitController {
         game.runPhaseII();
         this.setupThemeBoard();
         this.loadThemeBoard(game.getPhaseII().selectPlayer());
-
     }
 
     public void loadPlayerQuestionPhaseII(Player player, String theme) {
@@ -376,6 +375,16 @@ public class GameController implements Initializable, InitController {
            Phase III
     =====================*/
     public void launchPhaseIII() {
+        this.resetAttributesRound();
+
+        STEP = 3;
+        this.updateStepLabel();
+
+        // run the second round
+        game.runPhaseIII();
+        //this.setupThemeBoard();
+        //this.loadThemeBoard(game.getPhaseII().selectPlayer());
+
     }
 
     /*===================

@@ -4,6 +4,7 @@ import org.farmas.App;
 import org.farmas.model.game.phase.Phase;
 import org.farmas.model.game.phase.Phase1;
 import org.farmas.model.game.phase.Phase2;
+import org.farmas.model.game.phase.Phase3;
 import org.farmas.model.players.Player;
 import org.farmas.model.themes.Themes;
 
@@ -17,11 +18,12 @@ public class Game {
     Phase[] phases;
     Themes themes;
     ArrayList<Player> players;
+    ArrayList<Player> playersEliminated;
 
     public Game() {
         phases = new Phase[3];
         players = new ArrayList<>();
-
+        playersEliminated = new ArrayList<>();
         // init themes
         this.themes = new Themes();
 
@@ -42,6 +44,10 @@ public class Game {
 
     public void runPhaseII() {
         phases[1] = new Phase2(players, themes);
+    }
+
+    public void runPhaseIII() {
+        phases[2] = new Phase3(players, themes);
     }
 
     public void pickPlayers() {
@@ -71,6 +77,7 @@ public class Game {
             } else {
                 for (Map.Entry<Player, Long> entry : mapTimer.entrySet()) {
                     if (Objects.equals(minTime, entry.getValue())) {
+                        this.playersEliminated.add(entry.getKey());
                         this.players.remove(entry.getKey());
                     }
                 }
