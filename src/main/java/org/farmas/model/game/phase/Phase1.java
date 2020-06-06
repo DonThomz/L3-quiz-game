@@ -17,7 +17,7 @@ import java.util.Random;
 public class Phase1 implements Phase {
 
     public static int ID_PLAYER = 0;
-    public static final int POINT_BY_QUESTION = 1;
+    public static final int POINT_BY_QUESTION = 2;
     private static final int NB_OF_THEMES = 4;
     private static final int NB_OF_QUESTIONS = 4;
     private static String LEVEL = Level.EASY.toLowerCase();
