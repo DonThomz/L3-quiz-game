@@ -51,10 +51,7 @@ public class Player implements Cloneable {
     public void updateScore(int score, boolean isCorrect) {
         if (isCorrect) {
             this.score += score;
-        } else {
-            this.score -= score;
         }
-
     }
 
     /**

@@ -164,7 +164,7 @@ public class GameController implements Initializable, InitController {
             try {
                 FXMLLoader loader = new FXMLLoader(App.class.getResource("views/profile.fxml"));
                 playersProfiles.add(loader.load()); // add to the list
-                loader.<PlayerProfile>getController().setupTitleName(player.getId() + " " + player.getName()); // setup the name
+                loader.<PlayerProfile>getController().initData(player); // setup the name
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }

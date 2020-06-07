@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.farmas.App;
+import org.farmas.model.players.Player;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,8 @@ public class PlayerProfile implements Initializable {
     private Label title;
     @FXML
     private ImageView image;
+    @FXML
+    private Label titleScore;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -27,5 +30,13 @@ public class PlayerProfile implements Initializable {
         title.setText(name);
     }
 
+    public void setupScore(int score){
+        titleScore.setText("Score : " + score);
+    }
+
+    public void initData(Player player){
+        setupTitleName(player.getId()  + " " + player.getName());
+        setupScore(player.getScore());
+    }
 
 }

@@ -4,3 +4,9 @@
     -fx-background-radius: 5%;
     -fx-background-color: #ffb300;
 }
+
+.titleScore {
+    -fx-font-family: "Roboto";
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+}
