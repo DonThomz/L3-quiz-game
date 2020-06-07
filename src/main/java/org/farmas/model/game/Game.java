@@ -98,6 +98,10 @@ public class Game {
         return players;
     }
 
+    public ArrayList<Player> getPlayersEliminated() {
+        return playersEliminated;
+    }
+
     public Phase[] getPhases() {
         return phases;
     }

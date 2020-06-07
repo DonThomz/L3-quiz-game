@@ -41,7 +41,6 @@ import java.util.*;
 public class GameController implements Initializable, InitController {
 
     /*
-        TODO ajouter un message précisant le joueur éliminé
         TODO afficher les scores à la fin d'un round
      */
 
@@ -159,7 +158,6 @@ public class GameController implements Initializable, InitController {
         this.clearContent();
         this.updateStepLabel();
         this.updateRoundLabel();
-        this.titlePlayerInfo.setVisible(false);
 
         playersProfiles = new ArrayList<>();
         game.getPlayers().forEach(player -> {
@@ -189,6 +187,7 @@ public class GameController implements Initializable, InitController {
     public void handleScoresAndConflicts() {
         // remove the worst player
         boolean conflict = game.removePlayer(mapTimer);
+        this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size()-1).getName() + " has been eliminated");
         System.out.println(conflict);
         // if no conflict launch player board
         if (conflict) this.loadPlayerBoard();
