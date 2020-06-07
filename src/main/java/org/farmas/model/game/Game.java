@@ -73,7 +73,7 @@ public class Game {
             int conflictTimer = (int) mapTimer.values().stream().filter(delay -> delay == minTime).count();
             if (conflictTimer > 1) {
                 // return false => need an conflit round
-                return false;
+                return true;
             } else {
                 for (Map.Entry<Player, Long> entry : mapTimer.entrySet()) {
                     if (Objects.equals(minTime, entry.getValue())) {
@@ -81,12 +81,12 @@ public class Game {
                         this.players.remove(entry.getKey());
                     }
                 }
-                return true;
+                return false;
             }
         } else {
             // remove the player
             this.players.removeIf(player -> player.getScore() == minScore);
-            return true;
+            return false;
         }
     }
 

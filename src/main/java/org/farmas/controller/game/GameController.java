@@ -40,9 +40,7 @@ import java.util.*;
 
 public class GameController implements Initializable, InitController {
 
-    /*
-        TODO afficher les scores à la fin d'un round
-     */
+
 
     @FXML
     private JFXButton returnButton;
@@ -190,7 +188,10 @@ public class GameController implements Initializable, InitController {
         this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size()-1).getName() + " has been eliminated");
         System.out.println(conflict);
         // if no conflict launch player board
-        if (conflict) this.loadPlayerBoard();
+        if (!conflict) this.loadPlayerBoard();
+        /*
+        TODO handle conflict score with an extra round
+        */
     }
 
     public void setupThemeBoard() {
