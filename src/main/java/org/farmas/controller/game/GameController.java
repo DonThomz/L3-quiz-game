@@ -617,7 +617,7 @@ public class GameController implements Initializable, InitController {
                 game.getPlayersEliminated().add(p);
                 game.getPlayers().remove(p);
                 // reset old score
-                game.getExtraPhase().replaceOldScore(game);
+                game.getExtraPhase().replaceOldScore(game.getPlayers());
                 this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
                 ROUND = SAVE_ROUND;
                 STEP = 0;

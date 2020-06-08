@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.farmas.model.questions</OriginalElement>
+  <nodes>
+    <node x="95.78125" y="0.0">org.farmas.model.questions.types.TypeQuestions</node>
+    <node x="82.0" y="79.0">org.farmas.model.questions.types.TF</node>
+    <node x="151.5" y="247.0">org.farmas.model.questions.ListQuestions</node>
+    <node x="0.0" y="79.0">org.farmas.model.questions.types.SA</node>
+    <node x="164.0" y="79.0">org.farmas.model.questions.types.MCQ</node>
+    <node x="169.0" y="168.0">org.farmas.model.questions.Question</node>
+    <node x="254.0" y="79.0">org.farmas.model.questions.Level</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.farmas.model.questions.types.SA" target="org.farmas.model.questions.types.TypeQuestions">
+      <point x="0.0" y="-14.5" />
+      <point x="31.0" y="49.0" />
+      <point x="113.15625" y="49.0" />
+      <point x="-52.125" y="14.5" />
+    </edge>
+    <edge source="org.farmas.model.questions.types.MCQ" target="org.farmas.model.questions.types.TypeQuestions">
+      <point x="0.0" y="-14.5" />
+      <point x="198.5" y="59.0" />
+      <point x="182.65625" y="59.0" />
+      <point x="17.375" y="14.5" />
+    </edge>
+    <edge source="org.farmas.model.questions.Question" target="org.farmas.model.questions.types.TypeQuestions">
+      <point x="8.666666666666657" y="-14.5" />
+      <point x="229.66666666666666" y="128.0" />
+      <point x="243.5" y="128.0" />
+      <point x="243.5" y="59.0" />
+      <point x="217.40625" y="59.0" />
+      <point x="52.125" y="14.5" />
+    </edge>
+    <edge source="org.farmas.model.questions.types.TF" target="org.farmas.model.questions.types.TypeQuestions">
+      <point x="0.0" y="-14.5" />
+      <point x="113.0" y="59.0" />
+      <point x="147.90625" y="59.0" />
+      <point x="-17.375" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="168.5" y="138.0" />
+  <SelectedNodes>
+    <node>org.farmas.model.questions.types.TypeQuestions</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.farmas.model.game</OriginalElement>
+  <nodes>
+    <node x="220.0" y="89.0">org.farmas.model.game.phase.Phase3</node>
+    <node x="110.0" y="89.0">org.farmas.model.game.phase.Phase2</node>
+    <node x="0.0" y="89.0">org.farmas.model.game.phase.Phase1</node>
+    <node x="283.755291005291" y="253.0">org.farmas.model.game.Game</node>
+    <node x="345.0978835978836" y="0.0">org.farmas.model.game.phase.Phase</node>
+    <node x="330.0" y="89.0">org.farmas.model.game.phase.ExtraPhase</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.farmas.model.game.phase.Phase3" target="org.farmas.model.game.phase.Phase">
+      <point x="0.0" y="-14.5" />
+      <point x="265.0" y="69.0" />
+      <point x="374.7407407407407" y="69.0" />
+      <point x="-11.85714285714289" y="14.5" />
+    </edge>
+    <edge source="org.farmas.model.game.phase.Phase1" target="org.farmas.model.game.phase.Phase">
+      <point x="0.0" y="-14.5" />
+      <point x="45.0" y="49.0" />
+      <point x="351.02645502645504" y="49.0" />
+      <point x="-35.571428571428555" y="14.5" />
+    </edge>
+    <edge source="org.farmas.model.game.phase.ExtraPhase" target="org.farmas.model.game.phase.Phase">
+      <point x="0.0" y="-14.5" />
+      <point x="389.0" y="69.0" />
+      <point x="386.5978835978836" y="69.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.farmas.model.game.phase.Phase2" target="org.farmas.model.game.phase.Phase">
+      <point x="0.0" y="-14.5" />
+      <point x="155.0" y="59.0" />
+      <point x="362.8835978835979" y="59.0" />
+      <point x="-23.714285714285722" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="224.0" y="141.0" />
+  <SelectedNodes>
+    <node>org.farmas.model.game.phase.Phase3</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.farmas.controller</OriginalElement>
+  <nodes>
+    <node x="761.0" y="109.0">org.farmas.controller.Menu</node>
+    <node x="501.25000000000006" y="208.0">org.farmas.controller.game.GameController</node>
+    <node x="569.5714285714287" y="0.0">org.farmas.controller.InitController</node>
+    <node x="159.00000000000006" y="109.0">org.farmas.controller.game.questions.types.MCQController</node>
+    <node x="0.0" y="109.0">org.farmas.controller.game.PlayerProfile</node>
+    <node x="470.00000000000006" y="109.0">org.farmas.controller.game.questions.types.TFController</node>
+    <node x="318.00000000000006" y="109.0">org.farmas.controller.game.questions.types.SAController</node>
+    <node x="857.0" y="109.0">org.farmas.controller.rules.Rules</node>
+    <node x="623.0000000000001" y="109.0">org.farmas.controller.theme.ThemeBoard</node>
+    <node x="660.2500000000001" y="287.0">org.farmas.controller.theme.ThemeProfile</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.farmas.controller.theme.ThemeProfile" target="org.farmas.controller.InitController">
+      <point x="43.999999999999986" y="-14.5" />
+      <point x="770.25" y="262.0" />
+      <point x="950.5" y="262.0" />
+      <point x="950.5" y="59.0" />
+      <point x="707.4603174603176" y="59.0" />
+      <point x="64.88888888888891" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.rules.Rules" target="org.farmas.controller.InitController">
+      <point x="0.0" y="-14.5" />
+      <point x="898.5" y="69.0" />
+      <point x="691.2380952380954" y="69.0" />
+      <point x="48.66666666666674" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.theme.ThemeBoard" target="org.farmas.controller.InitController">
+      <point x="0.0" y="-14.5" />
+      <point x="682.0000000000001" y="89.0" />
+      <point x="658.7936507936508" y="89.0" />
+      <point x="16.22222222222217" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.game.questions.types.SAController" target="org.farmas.controller.InitController">
+      <point x="0.0" y="-14.5" />
+      <point x="384.00000000000006" y="69.0" />
+      <point x="610.1269841269842" y="69.0" />
+      <point x="-32.44444444444446" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.Menu" target="org.farmas.controller.InitController">
+      <point x="0.0" y="-14.5" />
+      <point x="799.0" y="79.0" />
+      <point x="675.0158730158731" y="79.0" />
+      <point x="32.44444444444446" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.game.GameController" target="org.farmas.controller.InitController">
+      <point x="9.125" y="-14.5" />
+      <point x="583.3750000000001" y="158.0" />
+      <point x="612.5000000000001" y="158.0" />
+      <point x="612.5000000000001" y="89.0" />
+      <point x="642.5714285714287" y="89.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.game.questions.types.MCQController" target="org.farmas.controller.InitController">
+      <point x="0.0" y="-14.5" />
+      <point x="228.50000000000006" y="59.0" />
+      <point x="593.904761904762" y="59.0" />
+      <point x="-48.66666666666663" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.game.PlayerProfile" target="org.farmas.controller.InitController">
+      <point x="0.0" y="-14.5" />
+      <point x="69.5" y="49.0" />
+      <point x="577.6825396825398" y="49.0" />
+      <point x="-64.88888888888891" y="14.5" />
+    </edge>
+    <edge source="org.farmas.controller.game.questions.types.TFController" target="org.farmas.controller.InitController">
+      <point x="0.0" y="-14.5" />
+      <point x="536.0" y="79.0" />
+      <point x="626.3492063492065" y="79.0" />
+      <point x="-16.22222222222217" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="475.5" y="158.0" />
+  <SelectedNodes>
+    <node>org.farmas.controller.Menu</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -133,8 +133,8 @@ public class ExtraPhase implements Phase {
         }
     }
 
-    public void replaceOldScore(Game game) {
-        game.getPlayers().forEach(player -> {
+    public void replaceOldScore(ArrayList<Player> players) {
+        players.forEach(player -> {
             if (oldScores.containsKey(player)) {
                 player.setScore(oldScores.get(player));
             }
