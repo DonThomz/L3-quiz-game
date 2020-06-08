@@ -62,6 +62,7 @@ public class GameController implements Initializable, InitController {
     public static Game game;
     public static int STEP = 0;
     public static int ROUND = 0;
+    public static int SAVE_ROUND = 0;
     public static int TIME_CORRECTION = 1;
     public ArrayList<VBox> playersProfiles;
 
@@ -145,6 +146,10 @@ public class GameController implements Initializable, InitController {
                 submitButton.setText("Return Menu");
                 submitButton.setOnAction(event -> exit());
                 break;
+            case 5:
+                submitButton.setText("Start Extra Round");
+                submitButton.setOnAction(event -> this.loadPlayerQuestionExtraPhase(game.getExtraPhase().selectPlayer()));
+                break;
             default:
                 submitButton.setText("Title loading");
                 break;
@@ -153,24 +158,37 @@ public class GameController implements Initializable, InitController {
 
 
     public void loadPlayerBoard() {
-
-        STEP = 0;
-        ROUND++;
+        playersProfiles = new ArrayList<>();
         this.clearContent();
+        if (ROUND == 5) {
+            STEP = 4;
+            game.getExtraPhase().getPlayers().forEach(player -> {
+                try {
+                    FXMLLoader loader = new FXMLLoader(App.class.getResource("views/profile.fxml"));
+                    playersProfiles.add(loader.load()); // add to the list
+                    loader.<PlayerProfile>getController().initData(player); // setup the name
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+            });
+        } else {
+            STEP = 0;
+            ROUND++;
+            game.getPlayers().forEach(player -> {
+                try {
+                    FXMLLoader loader = new FXMLLoader(App.class.getResource("views/profile.fxml"));
+                    playersProfiles.add(loader.load()); // add to the list
+                    loader.<PlayerProfile>getController().initData(player); // setup the name
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+            });
+        }
+        content.getChildren().addAll(playersProfiles);
+
         this.updateStepLabel();
         this.updateRoundLabel();
 
-        playersProfiles = new ArrayList<>();
-        game.getPlayers().forEach(player -> {
-            try {
-                FXMLLoader loader = new FXMLLoader(App.class.getResource("views/profile.fxml"));
-                playersProfiles.add(loader.load()); // add to the list
-                loader.<PlayerProfile>getController().initData(player); // setup the name
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
-        });
-        content.getChildren().addAll(playersProfiles);
     }
 
     public void resetAttributesRound() {
@@ -197,11 +215,10 @@ public class GameController implements Initializable, InitController {
         if (!conflict) {
             this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
             this.loadPlayerBoard();
-        } else this.launchExtraPhase();
+        } else { // conflict => launch extra round
+            this.launchExtraPhase();
+        }
 
-        /*
-        TODO handle conflict score with an extra round
-        */
 
     }
 
@@ -505,6 +522,7 @@ public class GameController implements Initializable, InitController {
     =====================*/
     public void launchExtraPhase() {
 
+
         // get conflicted players
         ArrayList<Player> conflictPlayers = game.getConflictPlayers(mapTimer);
         // remove randomly if all players have equal scores;
@@ -515,12 +533,13 @@ public class GameController implements Initializable, InitController {
             conflictPlayers.forEach(System.out::println);
             this.resetAttributesRound();
 
-            STEP = 4; // extra round
-            this.updateStepLabel();
-
             // run the second round
             game.runExtraPhase(conflictPlayers, ROUND);
-            this.loadPlayerQuestionExtraPhase(game.getExtraPhase().selectPlayer());
+
+            SAVE_ROUND = ROUND; // save previous round
+            ROUND = 5; // extra round
+            this.loadPlayerBoard();
+
         }
     }
 
@@ -600,6 +619,8 @@ public class GameController implements Initializable, InitController {
                 // reset old score
                 game.getExtraPhase().replaceOldScore(game);
                 this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
+                ROUND = SAVE_ROUND;
+                STEP = 0;
                 this.loadPlayerBoard();
             }
         });
