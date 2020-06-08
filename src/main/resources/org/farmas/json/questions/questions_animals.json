@@ -1,332 +1,332 @@
 {
-   "title_category": "Animals",
-   "results":[
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"easy",
-         "question":"The Axolotl is an amphibian that can spend its whole life in a larval state.",
-         "correct_answer":"True",
-         "incorrect_answers":[
-            "False"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"What does \"hippopotamus\" mean and in what langauge?",
-         "correct_answer":"River Horse (Greek)",
-         "incorrect_answers":[
-            "River Horse (Latin)",
-            "Fat Pig (Greek)",
-            "Fat Pig (Latin)"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"A carnivorous animal eats flesh, what does a nucivorous animal eat?",
-         "correct_answer":"Nuts",
-         "incorrect_answers":[
-            "Nothing",
-            "Fruit",
-            "Seaweed"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"short_answer",
-         "difficulty":"medium",
-         "question":"What type of animal is a natterjack?",
-         "correct_answer":"Toad"
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"easy",
-         "question":"What is the fastest  land animal?",
-         "correct_answer":"Cheetah",
-         "incorrect_answers":[
-            "Lion",
-            "Thomson's Gazelle",
-            "Pronghorn Antelope"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"medium",
-         "question":"An octopus can fit through any hole larger than its beak.",
-         "correct_answer":"True",
-         "incorrect_answers":[
-            "False"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"easy",
-         "question":"What is the scientific name for modern day humans?",
-         "correct_answer":"Homo Sapiens",
-         "incorrect_answers":[
-            "Homo Ergaster",
-            "Homo Erectus",
-            "Homo Neanderthalensis"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"hard",
-         "question":"Which species of Brown Bear is not extinct?",
-         "correct_answer":"Syrian Brown Bear",
-         "incorrect_answers":[
-            "California Grizzly Bear",
-            "Atlas Bear",
-            "Mexican Grizzly Bear"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"short_answer",
-         "difficulty":"easy",
-         "question":"Hippocampus is the Latin name for which marine creature?",
-         "correct_answer":"Seahorse",
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"easy",
-         "question":"Kangaroos keep food in their pouches next to their children.",
-         "correct_answer":"False",
-         "incorrect_answers":[
-            "True"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"easy",
-         "question":"A bear does NOT defecate during hibernation. ",
-         "correct_answer":"True",
-         "incorrect_answers":[
-            "False"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"For what reason would a spotted hyena \"laugh\"?",
-         "correct_answer":"Nervousness",
-         "incorrect_answers":[
-            "Excitement",
-            "Aggression",
-            "Exhaustion"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"medium",
-         "question":"The average lifespan of a wildcat is only around 5-6 years. ",
-         "correct_answer":"False",
-         "incorrect_answers":[
-            "True"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"hard",
-         "question":"Which of these animals is NOT a lizard?",
-         "correct_answer":"Tuatara",
-         "incorrect_answers":[
-            "Komodo Dragon",
-            "Gila Monster",
-            "Green Iguana"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"easy",
-         "question":"What is Grumpy Cat's real name?",
-         "correct_answer":"Tardar Sauce",
-         "incorrect_answers":[
-            "Sauce",
-            "Minnie",
-            "Broccoli"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"easy",
-         "question":"Which class of animals are newts members of?",
-         "correct_answer":"Amphibian",
-         "incorrect_answers":[
-            "Fish",
-            "Reptiles",
-            "Mammals"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"short_answer",
-         "difficulty":"hard",
-         "question":"Unlike on most salamanders, this part of a newt is flat?",
-         "correct_answer":"Tail",
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"What is the name of the family that the domestic cat is a member of?",
-         "correct_answer":"Felidae",
-         "incorrect_answers":[
-            "Felinae",
-            "Felis",
-            "Cat"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"easy",
-         "question":"A caterpillar has more muscles than humans do.",
-         "correct_answer":"True",
-         "incorrect_answers":[
-            "False"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"easy",
-         "question":"Cats have whiskers under their legs.",
-         "correct_answer":"True",
-         "incorrect_answers":[
-            "False"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"What is the fastest animal?",
-         "correct_answer":"Peregrine Falcon",
-         "incorrect_answers":[
-            "Golden Eagle",
-            "Cheetah",
-            "Horsefly"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"The dish Fugu, is made from what family of fish?",
-         "correct_answer":"Pufferfish",
-         "incorrect_answers":[
-            "Bass",
-            "Salmon",
-            "Mackerel"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"easy",
-         "question":"What is the collective noun for a group of crows?",
-         "correct_answer":"Murder",
-         "incorrect_answers":[
-            "Pack",
-            "Gaggle",
-            "Herd"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"easy",
-         "question":"What colour is the female blackbird?",
-         "correct_answer":"Brown",
-         "incorrect_answers":[
-            "Black",
-            "White",
-            "Yellow"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"easy",
-         "question":"How many teeth does an adult rabbit have?",
-         "correct_answer":"28",
-         "incorrect_answers":[
-            "30",
-            "26",
-            "24"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"What is the collective noun for bears?",
-         "correct_answer":"Sloth",
-         "incorrect_answers":[
-            "Drove",
-            "Tribe",
-            "Husk"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"hard",
-         "question":"What is the collective noun for vultures?",
-         "correct_answer":"Wake",
-         "incorrect_answers":[
-            "Ambush",
-            "Building",
-            "Gaze"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"easy",
-         "question":"Rabbits are carnivores.",
-         "correct_answer":"False",
-         "incorrect_answers":[
-            "True"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"boolean",
-         "difficulty":"easy",
-         "question":"The internet browser Firefox is named after the Red Panda.",
-         "correct_answer":"True",
-         "incorrect_answers":[
-            "False"
-         ]
-      },
-      {
-         "category":"Animals",
-         "type":"multiple",
-         "difficulty":"medium",
-         "question":"\"Decapods\"; are an order of ten-footed crustaceans.  Which of these are NOT decapods?",
-         "correct_answer":"Krill",
-         "incorrect_answers":[
-            "Lobsters",
-            "Shrimp",
-            "Crabs"
-         ]
-      }
-   ]
+  "title_category": "Animals",
+  "results": [
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "The Axolotl is an amphibian that can spend its whole life in a larval state.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What does \"hippopotamus\" mean and in what langauge?",
+      "correct_answer": "River Horse (Greek)",
+      "incorrect_answers": [
+        "River Horse (Latin)",
+        "Fat Pig (Greek)",
+        "Fat Pig (Latin)"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "A carnivorous animal eats flesh, what does a nucivorous animal eat?",
+      "correct_answer": "Nuts",
+      "incorrect_answers": [
+        "Nothing",
+        "Fruit",
+        "Seaweed"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "short_answer",
+      "difficulty": "medium",
+      "question": "What type of animal is a natterjack?",
+      "correct_answer": "Toad"
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the fastest  land animal?",
+      "correct_answer": "Cheetah",
+      "incorrect_answers": [
+        "Lion",
+        "Thomson's Gazelle",
+        "Pronghorn Antelope"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "An octopus can fit through any hole larger than its beak.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the scientific name for modern day humans?",
+      "correct_answer": "Homo Sapiens",
+      "incorrect_answers": [
+        "Homo Ergaster",
+        "Homo Erectus",
+        "Homo Neanderthalensis"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which species of Brown Bear is not extinct?",
+      "correct_answer": "Syrian Brown Bear",
+      "incorrect_answers": [
+        "California Grizzly Bear",
+        "Atlas Bear",
+        "Mexican Grizzly Bear"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "Hippocampus is the Latin name for which marine creature?",
+      "correct_answer": "Seahorse"
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Kangaroos keep food in their pouches next to their children.",
+      "correct_answer": "False",
+      "incorrect_answers": [
+        "True"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "A bear does NOT defecate during hibernation. ",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "For what reason would a spotted hyena \"laugh\"?",
+      "correct_answer": "Nervousness",
+      "incorrect_answers": [
+        "Excitement",
+        "Aggression",
+        "Exhaustion"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "The average lifespan of a wildcat is only around 5-6 years. ",
+      "correct_answer": "False",
+      "incorrect_answers": [
+        "True"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of these animals is NOT a lizard?",
+      "correct_answer": "Tuatara",
+      "incorrect_answers": [
+        "Komodo Dragon",
+        "Gila Monster",
+        "Green Iguana"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is Grumpy Cat's real name?",
+      "correct_answer": "Tardar Sauce",
+      "incorrect_answers": [
+        "Sauce",
+        "Minnie",
+        "Broccoli"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which class of animals are newts members of?",
+      "correct_answer": "Amphibian",
+      "incorrect_answers": [
+        "Fish",
+        "Reptiles",
+        "Mammals"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "short_answer",
+      "difficulty": "hard",
+      "question": "Unlike on most salamanders, this part of a newt is flat?",
+      "correct_answer": "Tail"
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of the family that the domestic cat is a member of?",
+      "correct_answer": "Felidae",
+      "incorrect_answers": [
+        "Felinae",
+        "Felis",
+        "Cat"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "A caterpillar has more muscles than humans do.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Cats have whiskers under their legs.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the fastest animal?",
+      "correct_answer": "Peregrine Falcon",
+      "incorrect_answers": [
+        "Golden Eagle",
+        "Cheetah",
+        "Horsefly"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "The dish Fugu, is made from what family of fish?",
+      "correct_answer": "Pufferfish",
+      "incorrect_answers": [
+        "Bass",
+        "Salmon",
+        "Mackerel"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the collective noun for a group of crows?",
+      "correct_answer": "Murder",
+      "incorrect_answers": [
+        "Pack",
+        "Gaggle",
+        "Herd"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What colour is the female blackbird?",
+      "correct_answer": "Brown",
+      "incorrect_answers": [
+        "Black",
+        "White",
+        "Yellow"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How many teeth does an adult rabbit have?",
+      "correct_answer": "28",
+      "incorrect_answers": [
+        "30",
+        "26",
+        "24"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the collective noun for bears?",
+      "correct_answer": "Sloth",
+      "incorrect_answers": [
+        "Drove",
+        "Tribe",
+        "Husk"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What is the collective noun for vultures?",
+      "correct_answer": "Wake",
+      "incorrect_answers": [
+        "Ambush",
+        "Building",
+        "Gaze"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Rabbits are carnivores.",
+      "correct_answer": "False",
+      "incorrect_answers": [
+        "True"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "The internet browser Firefox is named after the Red Panda.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "\"Decapods\"; are an order of ten-footed crustaceans.  Which of these are NOT decapods?",
+      "correct_answer": "Krill",
+      "incorrect_answers": [
+        "Lobsters",
+        "Shrimp",
+        "Crabs"
+      ]
+    }
+  ]
 }

@@ -64,4 +64,8 @@ public class PlayerSet implements Iterable<Player> {
         return this.getPlayers().get(randomId);
     }
 
+    public void resetScores() {
+        this.players.forEach(player -> player.setScore(0));
+    }
+
 }

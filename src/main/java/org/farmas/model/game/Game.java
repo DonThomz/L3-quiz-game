@@ -1,10 +1,7 @@
 package org.farmas.model.game;
 
 import org.farmas.App;
-import org.farmas.model.game.phase.Phase;
-import org.farmas.model.game.phase.Phase1;
-import org.farmas.model.game.phase.Phase2;
-import org.farmas.model.game.phase.Phase3;
+import org.farmas.model.game.phase.*;
 import org.farmas.model.players.Player;
 import org.farmas.model.themes.Themes;
 
@@ -16,6 +13,7 @@ public class Game {
     public static final int MAX_PLAYERS = 4;
 
     Phase[] phases;
+    ExtraPhase extraPhase;
     Themes themes;
     ArrayList<Player> players;
     ArrayList<Player> playersEliminated;
@@ -50,6 +48,10 @@ public class Game {
         phases[2] = new Phase3(players, themes);
     }
 
+    public void runExtraPhase(ArrayList<Player> conflictPlayers, int ROUND) {
+        extraPhase = new ExtraPhase(conflictPlayers, ROUND, themes);
+    }
+
     public void pickPlayers() {
         ArrayList<Integer> randomNbPick = new ArrayList<>();
         for (int i = 0; i < MAX_PLAYERS; i++) {
@@ -73,7 +75,7 @@ public class Game {
             int conflictTimer = (int) mapTimer.values().stream().filter(delay -> delay == minTime).count();
             if (conflictTimer > 1) {
                 // return false => need an conflit round
-                return false;
+                return true;
             } else {
                 for (Map.Entry<Player, Long> entry : mapTimer.entrySet()) {
                     if (Objects.equals(minTime, entry.getValue())) {
@@ -81,13 +83,25 @@ public class Game {
                         this.players.remove(entry.getKey());
                     }
                 }
-                return true;
+                return false;
             }
         } else {
             // remove the player
+            this.playersEliminated.add(players.stream().filter(player -> player.getScore() == minScore).collect(Collectors.toList()).get(0));
             this.players.removeIf(player -> player.getScore() == minScore);
-            return true;
+            return false;
         }
+    }
+
+    public ArrayList<Player> getConflictPlayers(Map<Player, Long> mapTimer) {
+        int minScore = Collections.min(mapTimer.keySet().stream().map(Player::getScore).collect(Collectors.toList()));
+        long minTime = Collections.min(mapTimer.values());
+        ArrayList<Player> conflictPlayers = (ArrayList<Player>) mapTimer.entrySet().stream()
+                .filter((player) -> player.getValue() == minTime && player.getKey().getScore() == minScore)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        if (conflictPlayers.size() > 0) return conflictPlayers;
+        else return null;
     }
 
     public Themes getThemes() {
@@ -118,4 +132,7 @@ public class Game {
         return phases[2] != null ? (Phase3) phases[2] : null;
     }
 
+    public ExtraPhase getExtraPhase() {
+        return extraPhase;
+    }
 }

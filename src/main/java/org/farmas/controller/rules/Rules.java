@@ -44,7 +44,7 @@ public class Rules implements Initializable, InitController {
                 ioException.printStackTrace();
             }
         });
-        quitButton.setOnAction(event ->{
+        quitButton.setOnAction(event -> {
             try {
                 App.setScene("home");
                 App.window.centerOnScreen();
@@ -79,9 +79,9 @@ public class Rules implements Initializable, InitController {
         });
     }
 
-    public void hyperlinkVisited(int x){
-        switch (x){
-            case 1 :
+    public void hyperlinkVisited(int x) {
+        switch (x) {
+            case 1:
                 phase1link.setVisited(true);
                 phase2link.setVisited(false);
                 phase3link.setVisited(false);
@@ -91,7 +91,7 @@ public class Rules implements Initializable, InitController {
                 phase2link.setVisited(true);
                 phase3link.setVisited(false);
                 break;
-            case 3 :
+            case 3:
                 phase1link.setVisited(false);
                 phase2link.setVisited(false);
                 phase3link.setVisited(true);
