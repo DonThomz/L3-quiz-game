@@ -35,7 +35,7 @@ public class TimerRound extends Thread {
     }
 
     public long getTime() {
-        return stopWatch.getTime(TimeUnit.MICROSECONDS);
+        return stopWatch.getTime(TimeUnit.SECONDS);
     }
 
 

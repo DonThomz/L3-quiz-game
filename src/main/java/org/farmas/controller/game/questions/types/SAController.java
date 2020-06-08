@@ -52,7 +52,7 @@ public class SAController implements Initializable, InitController {
 
 
     public void displayCorrection(Question<SA> question) {
-        if (shortAnswerField.getText().contains(question.getContent().getCorrectAnswer())) {
+        if (checkAnswer(question)) {
             shortAnswerField.setStyle("-fx-background-color: #4caf50;");
         } else {
             shortAnswerField.setStyle("-fx-background-color: #d32f2f;");

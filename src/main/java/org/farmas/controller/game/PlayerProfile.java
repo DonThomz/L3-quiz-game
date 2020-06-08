@@ -30,12 +30,12 @@ public class PlayerProfile implements Initializable {
         title.setText(name);
     }
 
-    public void setupScore(int score){
+    public void setupScore(int score) {
         titleScore.setText("Score : " + score);
     }
 
-    public void initData(Player player){
-        setupTitleName(player.getId()  + " " + player.getName());
+    public void initData(Player player) {
+        setupTitleName(player.getId() + " " + player.getName());
         setupScore(player.getScore());
     }
 

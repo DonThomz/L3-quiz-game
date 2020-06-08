@@ -49,7 +49,7 @@
     },
     {
       "category": "History",
-      "type": "short answer",
+      "type": "short_answer",
       "difficulty": "easy",
       "question": "In what year did the Wall Street Crash take place?",
       "correct_answer": "1929"

@@ -68,4 +68,13 @@ public class Player implements Cloneable {
         return super.clone();
     }
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", score=" + score +
+                ", state=" + state +
+                '}';
+    }
 }

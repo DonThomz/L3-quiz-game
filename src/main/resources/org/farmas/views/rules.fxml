@@ -1,128 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main_content" stylesheets="@../sheetstyles/app.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.farmas.controller.rules.Rules">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" styleClass="main_content" stylesheets="@../sheetstyles/app.css"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.farmas.controller.rules.Rules">
     <children>
-        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <HBox alignment="CENTER" prefHeight="72.0" prefWidth="600.0">
                     <children>
                         <Label styleClass="title" text="Rules">
                             <font>
-                                <Font name="System Bold" size="24.0" />
+                                <Font name="System Bold" size="24.0"/>
                             </font>
                         </Label>
                     </children>
                 </HBox>
                 <VBox alignment="CENTER" prefHeight="276.0" prefWidth="600.0">
-               <children>
-                  <HBox prefHeight="32.0" prefWidth="600.0">
-                     <children>
-                        <Hyperlink fx:id="phase1link" contentDisplay="CENTER" pickOnBounds="false" style="-fx-border-color: transparent;" text="Phase 1" textOverrun="CENTER_ELLIPSIS">
-                           <HBox.margin>
-                              <Insets left="93.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                           <textFill>
-                              <LinearGradient endX="1.0" endY="1.0" startX="0.9904761904761905" startY="1.0">
-                                 <stops>
-                                    <Stop>
-                                       <color>
-                                          <Color />
-                                       </color>
-                                    </Stop>
-                                    <Stop offset="1.0">
-                                       <color>
-                                          <Color red="1.0" green="1.0" blue="1.0" />
-                                       </color>
-                                    </Stop>
-                                 </stops>
-                              </LinearGradient>
-                           </textFill></Hyperlink>
-                        <Hyperlink fx:id="phase2link" contentDisplay="CENTER" pickOnBounds="false" style="-fx-border-color: transparent;" text="Phase 2" textOverrun="CENTER_ELLIPSIS">
-                           <HBox.margin>
-                              <Insets left="93.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                           <textFill>
-                              <LinearGradient endX="1.0" endY="1.0" startX="0.9904761904761905" startY="1.0">
-                                 <stops>
-                                    <Stop>
-                                       <color>
-                                          <Color />
-                                       </color>
-                                    </Stop>
-                                    <Stop offset="1.0">
-                                       <color>
-                                          <Color red="1.0" green="1.0" blue="1.0" />
-                                       </color>
-                                    </Stop>
-                                 </stops>
-                              </LinearGradient>
-                           </textFill></Hyperlink>
-                        <Hyperlink fx:id="phase3link" contentDisplay="CENTER" layoutX="59.0" layoutY="10.0" pickOnBounds="false" style="-fx-border-color: transparent;" text="Phase 3" textOverrun="CENTER_ELLIPSIS">
-                           <HBox.margin>
-                              <Insets left="93.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                           <textFill>
-                              <LinearGradient endX="1.0" endY="1.0" startX="0.9904761904761905" startY="1.0">
-                                 <stops>
-                                    <Stop>
-                                       <color>
-                                          <Color />
-                                       </color>
-                                    </Stop>
-                                    <Stop offset="1.0">
-                                       <color>
-                                          <Color red="1.0" green="1.0" blue="1.0" />
-                                       </color>
-                                    </Stop>
-                                 </stops>
-                              </LinearGradient>
-                           </textFill></Hyperlink>
-                     </children>
-                  </HBox>
-                  <Pane fx:id="textpane" prefHeight="252.0" prefWidth="600.0">
-                     <children>
-                        <Label fx:id="titlerules" layoutX="14.0" layoutY="14.0" pickOnBounds="false" prefHeight="35.0" prefWidth="572.0" text="Label">
-                           <font>
-                              <Font size="18.0" />
-                           </font></Label>
-                        <Label fx:id="textrules" alignment="TOP_LEFT" layoutX="14.0" layoutY="46.0" prefHeight="183.0" prefWidth="572.0" text="Label">
-                           <font>
-                              <Font size="18.0" />
-                           </font></Label>
-                     </children>
-                  </Pane>
-               </children></VBox>
-            <HBox prefHeight="59.0" prefWidth="600.0">
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                              <JFXButton fx:id="quitButton" buttonType="RAISED" minHeight="52.0" minWidth="160.0" styleClass="custom_button" text="Menu">
-                           <VBox.margin>
-                              <Insets left="100.0" />
-                           </VBox.margin>
-                        </JFXButton>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="45.0" prefWidth="99.0" />
-                        <JFXButton fx:id="playButton" buttonType="RAISED" minHeight="52.0" minWidth="160.0" styleClass="custom_button" text="Play" />
-               </children>
-            </HBox>
+                    <children>
+                        <HBox prefHeight="32.0" prefWidth="600.0">
+                            <children>
+                                <Hyperlink fx:id="phase1link" contentDisplay="CENTER" pickOnBounds="false"
+                                           style="-fx-border-color: transparent;" text="Phase 1"
+                                           textOverrun="CENTER_ELLIPSIS">
+                                    <HBox.margin>
+                                        <Insets left="93.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                    <textFill>
+                                        <LinearGradient endX="1.0" endY="1.0" startX="0.9904761904761905" startY="1.0">
+                                            <stops>
+                                                <Stop>
+                                                    <color>
+                                                        <Color/>
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                    <color>
+                                                        <Color red="1.0" green="1.0" blue="1.0"/>
+                                                    </color>
+                                                </Stop>
+                                            </stops>
+                                        </LinearGradient>
+                                    </textFill>
+                                </Hyperlink>
+                                <Hyperlink fx:id="phase2link" contentDisplay="CENTER" pickOnBounds="false"
+                                           style="-fx-border-color: transparent;" text="Phase 2"
+                                           textOverrun="CENTER_ELLIPSIS">
+                                    <HBox.margin>
+                                        <Insets left="93.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                    <textFill>
+                                        <LinearGradient endX="1.0" endY="1.0" startX="0.9904761904761905" startY="1.0">
+                                            <stops>
+                                                <Stop>
+                                                    <color>
+                                                        <Color/>
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                    <color>
+                                                        <Color red="1.0" green="1.0" blue="1.0"/>
+                                                    </color>
+                                                </Stop>
+                                            </stops>
+                                        </LinearGradient>
+                                    </textFill>
+                                </Hyperlink>
+                                <Hyperlink fx:id="phase3link" contentDisplay="CENTER" layoutX="59.0" layoutY="10.0"
+                                           pickOnBounds="false" style="-fx-border-color: transparent;" text="Phase 3"
+                                           textOverrun="CENTER_ELLIPSIS">
+                                    <HBox.margin>
+                                        <Insets left="93.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                    <textFill>
+                                        <LinearGradient endX="1.0" endY="1.0" startX="0.9904761904761905" startY="1.0">
+                                            <stops>
+                                                <Stop>
+                                                    <color>
+                                                        <Color/>
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                    <color>
+                                                        <Color red="1.0" green="1.0" blue="1.0"/>
+                                                    </color>
+                                                </Stop>
+                                            </stops>
+                                        </LinearGradient>
+                                    </textFill>
+                                </Hyperlink>
+                            </children>
+                        </HBox>
+                        <Pane fx:id="textpane" prefHeight="252.0" prefWidth="600.0">
+                            <children>
+                                <Label fx:id="titlerules" layoutX="14.0" layoutY="14.0" pickOnBounds="false"
+                                       prefHeight="35.0" prefWidth="572.0" text="Label">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="textrules" alignment="TOP_LEFT" layoutX="14.0" layoutY="46.0"
+                                       prefHeight="183.0" prefWidth="572.0" text="Label">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+                <HBox prefHeight="59.0" prefWidth="600.0">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <JFXButton fx:id="quitButton" buttonType="RAISED" minHeight="52.0" minWidth="160.0"
+                                           styleClass="custom_button" text="Menu">
+                                    <VBox.margin>
+                                        <Insets left="100.0"/>
+                                    </VBox.margin>
+                                </JFXButton>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="45.0" prefWidth="99.0"/>
+                        <JFXButton fx:id="playButton" buttonType="RAISED" minHeight="52.0" minWidth="160.0"
+                                   styleClass="custom_button" text="Play"/>
+                    </children>
+                </HBox>
             </children>
         </VBox>
     </children>

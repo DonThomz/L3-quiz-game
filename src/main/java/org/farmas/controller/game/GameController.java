@@ -24,6 +24,7 @@ import org.farmas.controller.game.questions.types.SAController;
 import org.farmas.controller.game.questions.types.TFController;
 import org.farmas.controller.theme.ThemeBoard;
 import org.farmas.model.game.Game;
+import org.farmas.model.game.phase.ExtraPhase;
 import org.farmas.model.game.phase.Phase1;
 import org.farmas.model.game.phase.Phase2;
 import org.farmas.model.game.phase.Phase3;
@@ -39,7 +40,6 @@ import java.net.URL;
 import java.util.*;
 
 public class GameController implements Initializable, InitController {
-
 
 
     @FXML
@@ -118,6 +118,9 @@ public class GameController implements Initializable, InitController {
             case 3:
                 titleStep.setText("Round III");
                 break;
+            case 4:
+                titleStep.setText("Extra Round");
+                break;
             default:
                 titleStep.setText("Title loading");
                 break;
@@ -151,8 +154,8 @@ public class GameController implements Initializable, InitController {
 
     public void loadPlayerBoard() {
 
-        ROUND++;
         STEP = 0;
+        ROUND++;
         this.clearContent();
         this.updateStepLabel();
         this.updateRoundLabel();
@@ -173,7 +176,10 @@ public class GameController implements Initializable, InitController {
     public void resetAttributesRound() {
 
         // reset timer map
-        mapTimer.clear();
+        this.mapTimer.clear();
+
+        // clear content
+        this.clearContent();
 
         // show player name
         titlePlayerInfo.setVisible(true);
@@ -185,13 +191,18 @@ public class GameController implements Initializable, InitController {
     public void handleScoresAndConflicts() {
         // remove the worst player
         boolean conflict = game.removePlayer(mapTimer);
-        this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size()-1).getName() + " has been eliminated");
+
         System.out.println(conflict);
         // if no conflict launch player board
-        if (!conflict) this.loadPlayerBoard();
+        if (!conflict) {
+            this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
+            this.loadPlayerBoard();
+        } else this.launchExtraPhase();
+
         /*
         TODO handle conflict score with an extra round
         */
+
     }
 
     public void setupThemeBoard() {
@@ -490,6 +501,113 @@ public class GameController implements Initializable, InitController {
     }
 
     /*===================
+          Extra Phase
+    =====================*/
+    public void launchExtraPhase() {
+
+        // get conflicted players
+        ArrayList<Player> conflictPlayers = game.getConflictPlayers(mapTimer);
+        // remove randomly if all players have equal scores;
+        if (conflictPlayers.size() == game.getPlayers().size()) {
+            game.getPlayers().remove(new Random().nextInt(game.getPlayers().size()));
+            this.loadPlayerBoard();
+        } else {
+            conflictPlayers.forEach(System.out::println);
+            this.resetAttributesRound();
+
+            STEP = 4; // extra round
+            this.updateStepLabel();
+
+            // run the second round
+            game.runExtraPhase(conflictPlayers, ROUND);
+            this.loadPlayerQuestionExtraPhase(game.getExtraPhase().selectPlayer());
+        }
+    }
+
+    public void loadPlayerQuestionExtraPhase(Player player) {
+
+        // Run timer in another Thread
+        TimerRound timer = new TimerRound("Thread-" + player.getName());
+        timer.start();
+
+        // clear center content
+        this.clearContent();
+
+        // display player info
+        this.titlePlayerInfo.setText("The player " + player.getId() + " " + player.getName() + " plays :");
+        if (ExtraPhase.ID_PLAYER < game.getExtraPhase().getPlayers().size()) {
+            // ExtraPhase.ID_PLAYER + (game.getExtraPhase().TURN - 1) * game.getExtraPhase().getPlayers().size()
+            Question<?> question = game.getExtraPhase().getListQuestions().get(game.getExtraPhase().TURN - 1);
+            switch (question.getContent().getClass().getSimpleName()) {
+                case "MCQ":
+                    this.loadMQCGUI(question);
+                    // update submit button action
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<MCQController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer, player);
+                            boolean isCorrect = controllerLoader.<MCQController>getController().checkAnswer((Question<MCQ>) question);
+                            displayCorrectionMCQ((Question<MCQ>) question);
+                            updateScoreExtraPhase(player, isCorrect);
+                        }
+                    });
+                    break;
+                case "SA":
+                    this.loadSAGUI(question);
+                    // update submit button action
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<SAController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer, player);
+                            boolean isCorrect = controllerLoader.<SAController>getController().checkAnswer((Question<SA>) question);
+                            displayCorrectionSA((Question<SA>) question);
+                            updateScoreExtraPhase(player, isCorrect);
+                        }
+                    });
+                    break;
+                case "TF":
+                    this.loadTFGUI(question);
+                    // update submit button action
+                    this.submitButton.setOnAction(event -> {
+                        if (this.controllerLoader.<TFController>getController().checkIfButtonSelected()) {
+                            this.getTimerScore(timer, player);
+                            boolean isCorrect = controllerLoader.<TFController>getController().checkAnswer((Question<TF>) question);
+                            displayCorrectionTF((Question<TF>) question);
+                            updateScoreExtraPhase(player, isCorrect);
+                        }
+                    });
+                    break;
+            }
+        } else this.exit();
+    }
+
+    public void updateScoreExtraPhase(Player player, boolean isCorrect) {
+        this.submitButton.setDisable(true);
+        PauseTransition pause = new PauseTransition(Duration.seconds(TIME_CORRECTION));
+        pause.setOnFinished(action -> {
+            this.submitButton.setDisable(false);
+            player.updateScore(ExtraPhase.POINT_BY_QUESTION, isCorrect);
+            ExtraPhase.ID_PLAYER++;
+            if (ExtraPhase.ID_PLAYER < game.getExtraPhase().getPlayers().size()) {
+                // display correction
+                this.loadPlayerQuestionExtraPhase(game.getExtraPhase().selectPlayer());
+            } else if (game.getExtraPhase().TURN < ExtraPhase.NB_OF_QUESTIONS) {
+                game.getExtraPhase().TURN++;
+                ExtraPhase.ID_PLAYER = 0;
+                this.loadPlayerQuestionExtraPhase(game.getExtraPhase().selectPlayer());
+            } else {
+                Player p = game.getExtraPhase().getPlayerToBeRemove(mapTimer);
+                game.getPlayersEliminated().add(p);
+                game.getPlayers().remove(p);
+                // reset old score
+                game.getExtraPhase().replaceOldScore(game);
+                this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
+                this.loadPlayerBoard();
+            }
+        });
+        pause.play();
+    }
+
+
+    /*===================
         Question GUI
     =====================*/
     public void loadMQCGUI(Question<?> question) {
@@ -558,6 +676,8 @@ public class GameController implements Initializable, InitController {
     public void exit() {
         STEP = 0;
         ROUND = 0;
+        // reset score
+        App.playerSet.resetScores();
 
         try {
             App.setScene("home");
