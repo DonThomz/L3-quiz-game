@@ -75,7 +75,7 @@ public class Game {
             long minTime = Collections.min(mapTimer.values());
             int conflictTimer = (int) mapTimer.values().stream().filter(delay -> delay == minTime).count();
             if (conflictTimer > 1) {
-                // return false => need an conflit round
+                // return true => need an conflict round
                 return true;
             } else {
                 for (Map.Entry<Player, Long> entry : mapTimer.entrySet()) {
