@@ -1,6 +1,5 @@
 package org.farmas.model.game.phase;
 
-import org.farmas.model.game.Game;
 import org.farmas.model.players.Player;
 import org.farmas.model.questions.Level;
 import org.farmas.model.questions.ListQuestions;
