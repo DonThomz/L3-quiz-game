@@ -3,6 +3,7 @@ package org.farmas.model.game;
 import org.farmas.App;
 import org.farmas.model.game.phase.*;
 import org.farmas.model.players.Player;
+import org.farmas.model.players.StatePlayer;
 import org.farmas.model.themes.Themes;
 
 import java.util.*;
@@ -25,15 +26,6 @@ public class Game {
         // init themes
         this.themes = new Themes();
 
-        // select 4 players
-        //pickPlayers();
-
-        //start();
-    }
-
-
-    public void start() {
-        runPhaseI();
     }
 
     public void runPhaseI() {
@@ -52,6 +44,9 @@ public class Game {
         extraPhase = new ExtraPhase(conflictPlayers, ROUND, themes);
     }
 
+    /*
+        Select MAX_PLAYERS players and put it in players arrayList
+     */
     public void pickPlayers() {
         ArrayList<Integer> randomNbPick = new ArrayList<>();
         for (int i = 0; i < MAX_PLAYERS; i++) {
@@ -65,6 +60,12 @@ public class Game {
         }
     }
 
+    /**
+     * Remove the last player during a round
+     *
+     * @param mapTimer stopwatch of players
+     * @return true if no conflict and remove the player else return false to indicate the need of an extra round
+     */
     public boolean removePlayer(Map<Player, Long> mapTimer) {
         List<Integer> scores = this.players.stream().map(Player::getScore).collect(Collectors.toList());
         int minScore = Collections.min(scores);
@@ -81,6 +82,8 @@ public class Game {
                     if (Objects.equals(minTime, entry.getValue())) {
                         this.playersEliminated.add(entry.getKey());
                         this.players.remove(entry.getKey());
+                        // change stat
+                        this.playersEliminated.get(this.playersEliminated.size() - 1).changeStat(StatePlayer.EXCLUDE);
                     }
                 }
                 return false;
@@ -93,6 +96,12 @@ public class Game {
         }
     }
 
+    /**
+     * Get the list of players who need an extra round
+     *
+     * @param mapTimer stopwatch of players
+     * @return the list of players who need an extra round
+     */
     public ArrayList<Player> getConflictPlayers(Map<Player, Long> mapTimer) {
         int minScore = Collections.min(mapTimer.keySet().stream().map(Player::getScore).collect(Collectors.toList()));
         long minTime = Collections.min(mapTimer.values());

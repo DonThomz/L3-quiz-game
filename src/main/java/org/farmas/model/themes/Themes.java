@@ -65,6 +65,11 @@ public class Themes implements Iterable<String> {
         this.getTitles().set(indexTheme, theme);
     }
 
+    /**
+     * Select an theme randomly in theme array
+     *
+     * @return the theme
+     */
     public String selectRandomTheme() {
         do {
             if (NB_OF_THEMES > 1) {
@@ -81,6 +86,12 @@ public class Themes implements Iterable<String> {
         } while (true);
     }
 
+    /**
+     * Select N theme randomly without duplicate
+     *
+     * @param nbOfThemes the number of theme that we want ( < NB_OF_THEME )
+     * @return array of themes
+     */
     public String[] selectNRandomTheme(int nbOfThemes) {
         if (nbOfThemes > NB_OF_THEMES) {
             System.err.println("Error nb of theme is greater that the number of themes available = " + NB_OF_THEMES);
@@ -103,26 +114,20 @@ public class Themes implements Iterable<String> {
 
     }
 
-
+    /**
+     * Select a theme different that the previous theme
+     *
+     * @return the theme
+     */
     public String selectTheme() {
         if (indicator > 9) indicator = 0; // reset
         indicator++;
         return titles.get((indicator - 1));
     }
 
+
     public String[] selectFiveTheme() {
-        String[] themes = new String[5];
-        ArrayList<Integer> randomNbPick = new ArrayList<>();
-        int randomNumber;
-        for (int i = 0; i < 5; i++) {
-            // pick a random number
-            do {
-                randomNumber = new Random().nextInt(NB_OF_THEMES);
-            } while (randomNbPick.contains(randomNumber)); // check if previously taken
-            randomNbPick.add(randomNumber);
-            themes[i] = this.titles.get(randomNumber);
-        }
-        return themes;
+        return selectNRandomTheme(5);
     }
 
 

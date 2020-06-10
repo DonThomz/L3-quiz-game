@@ -1,6 +1,7 @@
 package org.farmas.model.game.phase;
 
 import org.farmas.model.players.Player;
+import org.farmas.model.players.StatePlayer;
 import org.farmas.model.questions.Level;
 import org.farmas.model.questions.ListQuestions;
 import org.farmas.model.questions.Question;
@@ -43,6 +44,7 @@ public class Phase3 implements Phase {
 
     @Override
     public Player selectPlayer() {
+        this.players.get(ID_PLAYER).changeStat(StatePlayer.SELECT);
         return this.players.get(ID_PLAYER);
     }
 
@@ -57,10 +59,6 @@ public class Phase3 implements Phase {
     }
 
     private void loadQuestionsFromJSON() {
-
-        /*
-            TODO | Mettre ça dans un thread
-         */
 
         // list of JSON Files
         List<JSONObject> questionsFileArray = RessourcesScanner.readJSONFilesFromRessources("questions", themes);
@@ -88,6 +86,11 @@ public class Phase3 implements Phase {
 
     }
 
+    /**
+     * Setup the list of questions for the round
+     *
+     * @param questionsByTheme map with the JSONObject corresponding to the question and a String corresponding to the question's theme
+     */
     private void setupListQuestions(Map<JSONObject, String> questionsByTheme) {
         HashMap<String, Integer> randomNbPicked = new HashMap<>();
         for (int i = 0; i < NB_OF_QUESTIONS; i++) {
@@ -103,6 +106,12 @@ public class Phase3 implements Phase {
         }
     }
 
+    /**
+     * Select a question that depends on the theme
+     *
+     * @param theme the selected theme
+     * @return the question selected
+     */
     public Question<?> getQuestionByTheme(String theme) {
         for (Question<?> question : listQuestions) {
             if (question.getTheme().equals(theme)) {

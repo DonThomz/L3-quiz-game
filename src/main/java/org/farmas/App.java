@@ -45,11 +45,6 @@ public class App extends Application {
         stage.show();
     }
 
-
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
-
     public static Parent loadFXML(String fxml) throws IOException {
         return FXMLLoader.load(App.class.getResource("views/" + fxml + ".fxml"));
     }

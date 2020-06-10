@@ -1,6 +1,7 @@
 package org.farmas.model.game.phase;
 
 import org.farmas.model.players.Player;
+import org.farmas.model.players.StatePlayer;
 import org.farmas.model.questions.Level;
 import org.farmas.model.questions.ListQuestions;
 import org.farmas.model.questions.Question;
@@ -41,6 +42,7 @@ public class Phase1 implements Phase {
 
     @Override
     public Player selectPlayer() {
+        this.players.get(ID_PLAYER).changeStat(StatePlayer.SELECT);
         return this.players.get(ID_PLAYER);
     }
 
@@ -58,9 +60,6 @@ public class Phase1 implements Phase {
     }
 
     private void loadQuestionsFromJSON() {
-        /*
-            TODO | Mettre ça dans un thread
-         */
 
         // list of JSON Files
         List<JSONObject> questionsFileArray = RessourcesScanner.readJSONFilesFromRessources("questions", themes);
@@ -86,9 +85,15 @@ public class Phase1 implements Phase {
 
     }
 
+    /**
+     * Setup the list of questions for the round
+     *
+     * @param questions list of JSONObject corresponding to questions
+     */
     private void setupListQuestions(ArrayList<JSONObject> questions) {
         ArrayList<Integer> nbRandom = new ArrayList<>();
         for (int i = 0; i < NB_OF_QUESTIONS; i++) {
+            // get a random index to pick a random question
             int randomNb;
             do {
                 randomNb = new Random().nextInt(questions.size());

@@ -5,6 +5,9 @@ import org.apache.commons.lang3.time.StopWatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * Stopwatch
+ */
 public class TimerRound extends Thread {
 
     private final AtomicBoolean running = new AtomicBoolean(false);

@@ -68,4 +68,8 @@ public class PlayerSet implements Iterable<Player> {
         this.players.forEach(player -> player.setScore(0));
     }
 
+    public void resetStat() {
+        this.players.forEach(player -> player.changeStat(StatePlayer.WAITING));
+    }
+
 }

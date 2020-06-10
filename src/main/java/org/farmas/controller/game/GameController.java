@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
@@ -29,6 +28,7 @@ import org.farmas.model.game.phase.Phase1;
 import org.farmas.model.game.phase.Phase2;
 import org.farmas.model.game.phase.Phase3;
 import org.farmas.model.players.Player;
+import org.farmas.model.players.StatePlayer;
 import org.farmas.model.questions.Question;
 import org.farmas.model.questions.types.MCQ;
 import org.farmas.model.questions.types.SA;
@@ -41,11 +41,8 @@ import java.util.*;
 
 public class GameController implements Initializable, InitController {
 
-
     @FXML
     private JFXButton returnButton;
-    @FXML
-    private AnchorPane body;
     @FXML
     private HBox content;
     @FXML
@@ -156,6 +153,20 @@ public class GameController implements Initializable, InitController {
         }
     }
 
+    public void resetAttributesRound() {
+
+        // reset timer map
+        this.mapTimer.clear();
+
+        // clear content
+        this.clearContent();
+
+        // show player name
+        titlePlayerInfo.setVisible(true);
+
+        // change submit button
+        submitButton.setText("Submit Answer");
+    }
 
     public void loadPlayerBoard() {
         playersProfiles = new ArrayList<>();
@@ -191,37 +202,6 @@ public class GameController implements Initializable, InitController {
 
     }
 
-    public void resetAttributesRound() {
-
-        // reset timer map
-        this.mapTimer.clear();
-
-        // clear content
-        this.clearContent();
-
-        // show player name
-        titlePlayerInfo.setVisible(true);
-
-        // change submit button
-        submitButton.setText("Submit Answer");
-    }
-
-    public void handleScoresAndConflicts() {
-        // remove the worst player
-        boolean conflict = game.removePlayer(mapTimer);
-
-        System.out.println(conflict);
-        // if no conflict launch player board
-        if (!conflict) {
-            this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
-            this.loadPlayerBoard();
-        } else { // conflict => launch extra round
-            this.launchExtraPhase();
-        }
-
-
-    }
-
     public void setupThemeBoard() {
         this.themeProfile = new ThemeBoard(Phase2.NB_OF_THEMES);
         this.themeProfile.initData(game.getPhaseII().getThemes(), this);
@@ -241,6 +221,20 @@ public class GameController implements Initializable, InitController {
 
     }
 
+    public void handleScoresAndConflicts() {
+        // remove the worst player
+        boolean conflict = game.removePlayer(mapTimer);
+        // if no conflict launch player board
+        if (!conflict) {
+            this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
+            if (game.getPlayers().size() == 1)
+                game.getPlayers().get(game.getPlayers().size() - 1).changeStat(StatePlayer.WINNER); // Change the stat for the winner
+            this.loadPlayerBoard();
+        } else { // conflict => launch extra round
+            this.launchExtraPhase();
+        }
+    }
+
     /*===================
             Phase I
     =====================*/
@@ -257,6 +251,7 @@ public class GameController implements Initializable, InitController {
 
     }
 
+    @SuppressWarnings("unchecked")
     public void loadPlayerQuestionPhaseI(Player player) {
 
         // Run timer in another Thread
@@ -342,6 +337,7 @@ public class GameController implements Initializable, InitController {
         this.loadThemeBoard(game.getPhaseII().selectPlayer());
     }
 
+    @SuppressWarnings("unchecked")
     public void loadPlayerQuestionPhaseII(Player player, String theme) {
 
         // Run timer in another Thread
@@ -437,6 +433,7 @@ public class GameController implements Initializable, InitController {
         this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
     }
 
+    @SuppressWarnings("unchecked")
     public void loadPlayerQuestionPhaseIII(Player player, String theme) {
 
         // Run timer in another Thread
@@ -542,6 +539,7 @@ public class GameController implements Initializable, InitController {
         this.loadPlayerBoard();
     }
 
+    @SuppressWarnings("unchecked")
     public void loadPlayerQuestionExtraPhase(Player player) {
 
         // Run timer in another Thread
@@ -630,6 +628,7 @@ public class GameController implements Initializable, InitController {
     /*===================
         Question GUI
     =====================*/
+    @SuppressWarnings("unchecked")
     public void loadMQCGUI(Question<?> question) {
         try {
             controllerLoader = new FXMLLoader(App.class.getResource("views/mcq.fxml"));
@@ -642,6 +641,7 @@ public class GameController implements Initializable, InitController {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public void loadSAGUI(Question<?> question) {
         try {
             controllerLoader = new FXMLLoader(App.class.getResource("views/sa.fxml"));
@@ -654,6 +654,7 @@ public class GameController implements Initializable, InitController {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public void loadTFGUI(Question<?> question) {
         try {
             controllerLoader = new FXMLLoader(App.class.getResource("views/tf.fxml"));
@@ -698,6 +699,8 @@ public class GameController implements Initializable, InitController {
         ROUND = 0;
         // reset score
         App.playerSet.resetScores();
+        // reset stat
+        App.playerSet.resetStat();
 
         try {
             App.setScene("home");

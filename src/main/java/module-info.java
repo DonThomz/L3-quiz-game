@@ -6,7 +6,18 @@ open module org.farmas {
     requires reflections;
     requires org.apache.commons.text;
     requires org.apache.commons.lang3;
-    //opens org.farmas.controller.game to javafx.controls, javafx.fxml;
-    //opens org.farmas.controller to javafx.controls, javafx.fxml;
+
     exports org.farmas;
+    exports org.farmas.model.game;
+    exports org.farmas.model.game.phase;
+    exports org.farmas.model.themes;
+    exports org.farmas.model.questions;
+    exports org.farmas.model.questions.types;
+    exports org.farmas.model.tools;
+    exports org.farmas.model.players;
+    exports org.farmas.controller;
+    exports org.farmas.controller.game;
+    exports org.farmas.controller.game.questions.types;
+    exports org.farmas.controller.theme;
+    exports org.farmas.controller.rules;
 }

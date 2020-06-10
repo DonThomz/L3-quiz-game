@@ -1,6 +1,7 @@
 package org.farmas.controller.rules;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Hyperlink;
@@ -14,9 +15,9 @@ import java.util.ResourceBundle;
 
 public class Rules implements Initializable, InitController {
     @FXML
-    public Label titlerules;
+    public Label titleRule;
     @FXML
-    public Label textrules;
+    public JFXTextArea textRule;
     @FXML
     public Hyperlink phase3link;
     @FXML
@@ -54,28 +55,24 @@ public class Rules implements Initializable, InitController {
         });
         phase3link.setOnAction(event -> {
             hyperlinkVisited(3);
-            titlerules.setText("Explication de la phase 3");
-            textrules.setText("Nos deux derniers joueurs vont pouvoir se départagé lors d'une serie \nde 6 question de niveau : DIFFICILE \n" +
-                    "Le thème de ces questions sera choisis aléatoirement !\n\n" +
-                    "Qui sera donc le grand gagnant du QUIZZ ? A vous de jouer ! \n" +
-                    "Bonne chance ");
+            titleRule.setText("Round 3");
+            textRule.setText("Our last two players will be able to decide in a series of 6 questions of level: DIFFICULTY\n" +
+                    "The theme of these questions will be chosen randomly!\n" +
+                    "So who will be the big winner of the QUIZ? It's up to you! \n" +
+                    "Good luck!");
         });
         phase2link.setOnAction(event -> {
             hyperlinkVisited(2);
-            titlerules.setText("Explication de la phase 2");
-            textrules.setText("Les joueurs ayant gagné lors de la phase précedente vont pouvoir \n" +
-                    "tour à tour choisir un thème de réponse \n " +
-                    "   -> Celui qui à eu le score(ou le temps)  le plus élévé commence ! \n\n" +
-                    "Les questions proposé seront de niveau MOYEN, celui qui à la fin des \n" +
-                    " 6 questions aura le score le plus faible ce verra éliminé !");
+            titleRule.setText("Round 2");
+            textRule.setText("Players who won in the previous phase will take turns choosing an answer theme.\n" +
+                    "The proposed questions will be of MEDIUM level, the one who has the lowest score at the end of the 6 questions will be eliminated!");
         });
         phase1link.setOnAction(event -> {
             hyperlinkVisited(1);
-            titlerules.setText("Explication de la phase 1");
-            textrules.setText("Nos quatres joueurs vont être chacun confronté à une question de \n niveau : FACILE \n" +
-                    "Chaque bonne réponse vous donnera 2 points, alors soyez rapide \n " +
-                    "car en cas d'égalité c'est le timer qui tranchera ! \n" +
-                    "Les 3 meilleurs joueurs pourront donc accéder à la phase 2 ! ");
+            titleRule.setText("Round 1");
+            textRule.setText("Our four players will each be confronted with a question of level: EASY \n" +
+                    "Each correct answer will give you 2 points, so be quick, because in case of a tie, the timer will decide!\n" +
+                    "The 3 best players will then be able to reach the second round!");
         });
     }
 
@@ -105,11 +102,10 @@ public class Rules implements Initializable, InitController {
 
     public void initData() {
         hyperlinkVisited(1);
-        titlerules.setText("Explication de la phase 1");
-        textrules.setText("Nos quatres joueurs vont être chacun confronté à une question de \n niveau : FACILE \n" +
-                "Chaque bonne réponse vous donnera 2 points, alors soyez rapide \n " +
-                "car en cas d'égalité c'est le timer qui tranchera ! \n" +
-                "Les 3 meilleurs joueurs pourront donc accéder à la phase 2 ! ");
+        titleRule.setText("Round I");
+        textRule.setText("Our four players will each be confronted with a question of level: EASY \n" +
+                "Each correct answer will give you 2 points, so be quick, because in case of a tie, the timer will decide!\n" +
+                "The 3 best players will then be able to reach the second round!");
     }
 
 }

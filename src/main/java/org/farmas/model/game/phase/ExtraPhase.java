@@ -96,6 +96,11 @@ public class ExtraPhase implements Phase {
 
     }
 
+    /**
+     * Setup the list of questions for the round
+     *
+     * @param questions list of JSONObject corresponding to questions
+     */
     private void setupListQuestions(ArrayList<JSONObject> questions) {
         ArrayList<Integer> nbRandom = new ArrayList<>();
         for (int i = 0; i < NB_OF_QUESTIONS; i++) {
@@ -111,6 +116,12 @@ public class ExtraPhase implements Phase {
         }
     }
 
+    /**
+     * get the player who will remove
+     *
+     * @param mapTimer stopwatch of players
+     * @return the corresponding player
+     */
     public Player getPlayerToBeRemove(Map<Player, Long> mapTimer) {
         List<Integer> scores = this.players.stream().map(Player::getScore).collect(Collectors.toList());
         int minScore = Collections.min(scores);
@@ -132,6 +143,11 @@ public class ExtraPhase implements Phase {
         }
     }
 
+    /**
+     * We save old scores before start the extra round and with this methods we replace after
+     *
+     * @param players the list of players of the extra round
+     */
     public void replaceOldScore(ArrayList<Player> players) {
         players.forEach(player -> {
             if (oldScores.containsKey(player)) {
