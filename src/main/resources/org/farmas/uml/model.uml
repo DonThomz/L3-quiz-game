@@ -3,8 +3,8 @@
   <ID>JAVA</ID>
   <OriginalElement>org.farmas.model</OriginalElement>
   <nodes>
-    <node x="0.0" y="296.0">org.farmas.model.game.Game</node>
     <node x="0.0" y="0.0">org.farmas.model.tools.RessourcesScanner</node>
+    <node x="0.0" y="296.0">org.farmas.model.game.Game</node>
     <node x="0.0" y="74.0">org.farmas.model.questions</node>
     <node x="0.0" y="148.0">org.farmas.model.players</node>
     <node x="163.0" y="222.0">org.farmas.model.themes.Themes</node>
@@ -13,8 +13,10 @@
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="255.5" y="358.5" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0" x="152.5" y="162.5" />
+  <SelectedNodes>
+    <node>org.farmas.model.tools.RessourcesScanner</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
