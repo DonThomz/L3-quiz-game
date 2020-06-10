@@ -522,13 +522,12 @@ public class GameController implements Initializable, InitController {
     =====================*/
     public void launchExtraPhase() {
 
-
+        this.titlePlayerInfo.setText("");
         // get conflicted players
         ArrayList<Player> conflictPlayers = game.getConflictPlayers(mapTimer);
         // remove randomly if all players have equal scores;
         if (conflictPlayers.size() == game.getPlayers().size()) {
             game.getPlayers().remove(new Random().nextInt(game.getPlayers().size()));
-            this.loadPlayerBoard();
         } else {
             conflictPlayers.forEach(System.out::println);
             this.resetAttributesRound();
@@ -538,9 +537,9 @@ public class GameController implements Initializable, InitController {
 
             SAVE_ROUND = ROUND; // save previous round
             ROUND = 5; // extra round
-            this.loadPlayerBoard();
 
         }
+        this.loadPlayerBoard();
     }
 
     public void loadPlayerQuestionExtraPhase(Player player) {
