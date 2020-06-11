@@ -528,6 +528,7 @@ public class GameController implements Initializable, InitController {
             game.removePlayerRandomly();
             this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
         } else {
+            System.out.println("Players in conflict :");
             conflictPlayers.forEach(System.out::println);
             this.resetAttributesRound();
 
