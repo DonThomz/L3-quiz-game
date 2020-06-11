@@ -314,6 +314,7 @@ public class GameController implements Initializable, InitController {
             this.submitButton.setDisable(false);
             player.updateScore(Phase1.POINT_BY_QUESTION, isCorrect);
             Phase1.ID_PLAYER++;
+            game.resetSelect(player);
             if (Phase1.ID_PLAYER < game.getPlayers().size()) {
                 // display correction
                 this.loadPlayerQuestionPhaseI(game.getPhaseI().selectPlayer());
@@ -405,6 +406,7 @@ public class GameController implements Initializable, InitController {
             this.submitButton.setDisable(false);
             player.updateScore(Phase2.POINT_BY_QUESTION, isCorrect);
             Phase2.ID_PLAYER++;
+            game.resetSelect(player);
             if (Phase2.ID_PLAYER < game.getPlayers().size()) {
                 this.loadThemeBoard(game.getPhaseII().selectPlayer());
             } else if (game.getPhaseII().TURN < Phase2.NB_OF_QUESTIONS / game.getPlayers().size()) {
@@ -500,6 +502,7 @@ public class GameController implements Initializable, InitController {
             this.submitButton.setDisable(false);
             player.updateScore(Phase3.POINT_BY_QUESTION, isCorrect);
             Phase3.ID_PLAYER++;
+            game.resetSelect(player);
             if (Phase3.ID_PLAYER < game.getPlayers().size()) {
                 this.loadPlayerQuestionPhaseIII(game.getPhaseIII().selectPlayer(), game.getPhaseIII().getThemes()[game.getPhaseIII().CURRENT_ID_THEME]);
             } else if (game.getPhaseIII().TURN < Phase3.NB_OF_QUESTIONS / game.getPlayers().size()) {
@@ -605,6 +608,7 @@ public class GameController implements Initializable, InitController {
             this.submitButton.setDisable(false);
             player.updateScore(ExtraPhase.POINT_BY_QUESTION, isCorrect);
             ExtraPhase.ID_PLAYER++;
+            game.resetSelect(player);
             if (ExtraPhase.ID_PLAYER < game.getExtraPhase().getPlayers().size()) {
                 // display correction
                 this.loadPlayerQuestionExtraPhase(game.getExtraPhase().selectPlayer());

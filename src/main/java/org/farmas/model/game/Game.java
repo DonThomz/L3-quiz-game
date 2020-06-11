@@ -3,6 +3,7 @@ package org.farmas.model.game;
 import org.farmas.App;
 import org.farmas.model.game.phase.*;
 import org.farmas.model.players.Player;
+import org.farmas.model.players.StatePlayer;
 import org.farmas.model.themes.Themes;
 
 import java.util.*;
@@ -42,6 +43,14 @@ public class Game {
 
     public void runExtraPhase(ArrayList<Player> conflictPlayers, int ROUND) {
         extraPhase = new ExtraPhase(conflictPlayers, ROUND, themes);
+    }
+
+    public void resetSelect(Player player){
+        this.players.forEach(player1 ->{
+            if(player1.getId() == player.getId()){
+                player1.changeStat(StatePlayer.WAITING);
+            }
+        });
     }
 
     /*
