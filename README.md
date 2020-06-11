@@ -1,81 +1,42 @@
 # java-project-l3
 Projet de Java L3 
 
+## Exécuter le projet
 
+Prérequis : avoir Java 11 comme version de Java par défaut sur le système. Sinon impossible de run l'executable .jar
 
-Phase I :
-	-> 10 thèmes choisis
-	-> 1 thème par questions
-	-> 4 joueurs
-	-> 4 questions faciles de types QCM ou VF ou RC
-	-> +2 si bonne rep
-	-> 4 timers => 1 par joueur
+Pour lancer le programme,
+Dans le dossier `shade`, lancer le fichier .jar avec la commande `java -jar java-project-l3.jar`
+  
+## Build le projet
 
-Phase II :
-	-> 6 thèmes choisis
-	-> 1 thème par questions => joueur choisi le thème à la suite
-	-> 3 joueurs
-	-> 6 questions moyennes de types QCM ou VF ou RC selon le thème
-	-> +3 si bonne rep
-	-> 3 timers => 1 par joueur
+1. Ouvrir le projet depuis votre IDE (nous avons utilisé Intellij 2020.1)
+2. Spécifier le JDK à utiliser (JDK 11.*)
+3. (Si besoin, faire charger les plugins et librairies Maven depuis le ***pom.xml***)
+4. Lancer les tâches Maven suivantes :
 
-Phase III :
-	-> 3 thèmes choisis aléatoirement
-	-> 1 thème par questions
-	-> 2 joueurs
-	-> 3 questions par joueurs 
-	-> +5 si bonne rep
-	-> 2 timer => 1 par joueur
-	
-Conflit : 
-	-> si égalité score => comparaison timer
-	-> si égalité timer => phase III pour départager
-	-> si égalité score phase III => choisi aléaoirement
+   ```shell
+   javafx:compile
+   javafx:run
+   ```
 
+Sur certains systèmes, il peut être nécessaire de préciser
+au plugin javafx-maven-plugin l'emplacement de Java 11, grâce au fichier de configuration pom.xml
 
-Features Principal :
-	-> afficher les thèmes
-	-> créer une liste de questions pour chaque thèmes
-	-> afficher les questions d'un niveau N par un thème T
-	-> ajouter une question pour un thème T
-	-> supprimer question de numero X dans thème T
-	-> créer un tableau joueurs + afficher stats (score, etat)
-	-> lancer une partie 4 joueurs 
-	-> quitter le jeu
-	-> gérer les persistances ( si bdd ) 
-	-> score board ( bonus ) 
-	
-Lancement Programme :
-	I - Initialization des joueurs
-	II - Charger les thèmes 
-	A - Lancer une partie 
-		II - Lancement partie 
+Il suffit de rajouter la balise `<executable>` contenant l'emplacement de votre JDK 11.
+Autour de la ligne 60, rajouter cette balise dans la balise `<configuration>` du plugin comme
+le montre l'exemple ci-dessous.
 
-			-> Choix de 4 joueurs 
+```xml
+<plugin>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-maven-plugin</artifactId>
+    <version>0.0.1</version>
+    <configuration>
+        <mainClass>org.farmas.App</mainClass>
+        <executable>C:/Program Files/Java/jdk-11.0.7/bin/java.exe</executable>
+```
 
-			-> Lancement Phase I (4 Joueurs)
-				-> Initialization des 4 questions faciles / 4 thèmes
-				-> Chaque joueur répond* + timer incrémenté
-				-> Fin => joueur avec + faible score => éliminé => vérifie les conflits
-
-			-> Lancement Phase II (3 Joueurs)
-				-> joueur choisi 1 thème à la suite (x6) -> associé les thèmes sélectionnés aux joueurs 
-				-> Initialization des 6 questions moyennes
-				-> Chaque joueur répond* à leurs deux questions + timer incrémenté
-				-> Fin => joueur avec + faible score => éliminé => vérifie les conflits
-
-			-> Lancement Phase III (2 Joueurs)
-				-> Initialization des 3 thèmes aléatoirement
-				-> Initialization des 6 questions durs selon les thèmes
-				-> Chaque joueur répond* + timer incrémenté 
-				-> Fin => joueur avec + faible score => éliminé => vérifie les conflit
-				-> Classement + scores affichés 
-			
-			* Politique Round-Robin ( manière circulaire )
-
-			-> Partie enregistrer dans tableaux des scores ( bonus ) 
-
-		
 
 
 
