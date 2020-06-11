@@ -307,6 +307,7 @@ public class GameController implements Initializable, InitController {
     }
 
     private void updateScorePhase1(Player player, boolean isCorrect) {
+
         this.submitButton.setDisable(true);
         PauseTransition pause = new PauseTransition(Duration.seconds(TIME_CORRECTION));
         pause.setOnFinished(action -> {
@@ -521,10 +522,11 @@ public class GameController implements Initializable, InitController {
 
         this.titlePlayerInfo.setText("");
         // get conflicted players
-        ArrayList<Player> conflictPlayers = game.getConflictPlayers(mapTimer);
+        ArrayList<Player> conflictPlayers = game.getConflictPlayers();
         // remove randomly if all players have equal scores;
         if (conflictPlayers.size() == game.getPlayers().size()) {
-            game.getPlayers().remove(new Random().nextInt(game.getPlayers().size()));
+            game.removePlayerRandomly();
+            this.titlePlayerInfo.setText("Player " + game.getPlayersEliminated().get(game.getPlayersEliminated().size() - 1).getName() + " has been eliminated");
         } else {
             conflictPlayers.forEach(System.out::println);
             this.resetAttributesRound();

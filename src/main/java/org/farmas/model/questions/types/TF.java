@@ -17,7 +17,7 @@ public class TF implements TypeQuestions {
 
     public TF(JSONObject question) {
         this.question = question.get("question").toString();
-        this.correctAnswer = question.get("correct_answer").toString().equals("true");
+        this.correctAnswer = question.get("correct_answer").toString().toLowerCase().equals("true");
     }
 
     // Getters
