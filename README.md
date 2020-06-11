@@ -6,14 +6,16 @@ Projet de Java L3
 Prérequis : avoir Java 11 comme version de Java par défaut sur le système. Sinon impossible de run l'executable .jar
 
 Pour lancer le programme,
-Dans le dossier `shade`, lancer le fichier .jar avec la commande `java -jar java-project-l3.jar`
+Dans le dossier `shade`, lancer le fichier .jar avec la commande
+  * pour Windows : `java -jar quiz-windows.jar`
+  * pour Linux : `java -jar quiz-linux.jar`
   
 ## Build le projet
 
 1. Ouvrir le projet depuis votre IDE (nous avons utilisé Intellij 2020.1)
 2. Spécifier le JDK à utiliser (JDK 11.*)
 3. (Si besoin, faire charger les plugins et librairies Maven depuis le ***pom.xml***)
-4. Lancer les tâches Maven suivantes :
+4. Lancer les tâches Maven suivantes : 
 
    ```shell
    javafx:compile
