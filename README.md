@@ -1,4 +1,4 @@
-# java-project-l3
+# java-project-l3 - Quiz Game
 Projet de Java L3 
 
 ## Exécuter le projet
